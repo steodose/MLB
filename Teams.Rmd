@@ -1,0 +1,206 @@
+---
+title: "Teams"
+date: 'Last updated: `r format(Sys.Date())`'
+output:
+  html_document:
+    dpi: 500
+    fig_width: 10
+    fig_height: 7
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+Below you'll find figures showing the latest traditional and advanced metrics I'm tracking for all 30 MLB teams.
+
+```{r, echo = FALSE}
+
+library(baseballr)
+library(tidyverse)
+library(teamcolors) # team colors and logos
+library(extrafont) # for extra fonts
+library(ggrepel) # better labels
+library(ggimage)
+library(glue)
+library(ggtext)
+library(reactable)
+library(reactablefmtr)
+library(gt)
+library(gtExtras)
+library(webshot)
+library(ggforce)
+library(ggsci)
+library(paletteer)
+library(prismatic)
+
+# Optional but makes R prefer not to display numbers in scientific notation
+options(scipen = 9999)
+
+# Custom ggplot theme (inspired by Owen Phillips at the F5 substack blog)
+theme_custom <- function () { 
+  theme_minimal(base_size=11, base_family="Chivo") %+replace% 
+    theme(
+      panel.grid.minor = element_blank(),
+      plot.background = element_rect(fill = 'floralwhite', color = "floralwhite")
+    )
+}
+
+# Define an aspect ratio to use throughout. This value is the golden ratio which provides a wider than tall rectangle
+asp_ratio <- 1.618 
+
+# load teamcolors and logos
+mlb_teamcolors <- read_csv('mlb_teamcolors.csv')
+
+
+## 1. ---------- Pythagorean Win % Plot ----------------------
+
+today <- Sys.Date()
+al_standings <- bref_standings_on_date(today, "AL Overall", from = FALSE)
+nl_standings <- bref_standings_on_date(today, "NL Overall", from = FALSE)
+
+mlb_standings <- rbind(al_standings, nl_standings)
+
+mlb_standings <- mlb_standings %>%
+    arrange(desc(`W-L%`))
+
+# join in team logos and colors
+mlb_standings <- mlb_standings %>%
+    left_join(mlb_teamcolors %>% 
+                  select(name, team_abbr, division, primary, team_logo_espn), by = c("Tm" = "team_abbr"))
+
+# clean up df  
+mlb_standings <- mlb_standings %>%
+    mutate(Rank = row_number()) %>%
+    select(Rank, team_logo_espn, name, division, W:`pythW-L%`, primary)
+
+
+# make visual
+mlb_standings %>% 
+    ggplot(aes(x = `W-L%`, y = `pythW-L%`)) + 
+    geom_image(aes(image = team_logo_espn), size = 0.045, by = "width", asp = asp_ratio) +
+    annotate("text", x=0.35, y=0.55, label = "Better than Actual Record", color = "#00BA38", family = 'Outfit') +
+    annotate("text", x=0.55, y=0.35, label = "Worse than Actual Record", color = "#F8766D", family = 'Outfit') +
+    theme_custom() +
+    #geom_abline(slope = 1, alpha = .2) +
+    geom_smooth(method = "lm", se = FALSE, color="gray", alpha = 0.2) +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_x_continuous(labels = scales::percent_format()) +
+    theme_custom() +
+    labs(title = 'Pythagorean Wins',
+         x = "Actual Win %",
+         y = "Pythagorean Win %",
+         subtitle = "Pythagorean Win % helps evaluate how teams perform vs expectations. Thru **{today}.**",
+         caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu") +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      size = 10,
+      hjust = 0.5)
+  ) +
+  theme(plot.subtitle = element_markdown()) 
+    
+
+```
+
+### Run Differential Evolution
+
+```{r, echo = FALSE}
+
+## 2. ---------- Run Differential Evolution Plot (WIP) ----------------------
+
+# load MLB schedule
+games <- baseballr::mlb_schedule(season = "2024") %>%
+    filter(game_type == 'R')
+
+# Process data frame to get one row per team-game (long format)
+team_games <- games %>%
+     select(teams_away_team_name, teams_away_score, teams_home_team_name, teams_home_score) %>%
+    rename(away_team = teams_away_team_name,
+         away_score = teams_away_score,
+         home_team = teams_home_team_name,
+         home_score = teams_home_score) %>%
+    pivot_longer(
+    cols = c(away_team, home_team),
+    names_to = "home_away",
+    values_to = "team"
+  ) %>%
+     mutate(score = ifelse(home_away == "home", home_score, away_score),
+           opp_score = ifelse(home_away == "home", away_score, home_score
+                              )
+     )
+
+
+
+
+
+
+```
+
+
+### Performance vs Expectations
+
+The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2025.
+
+```{r, echo = FALSE}
+
+# load preseason win totals from Fangraphs
+fangraphs <- read_csv("/Users/Stephan/Desktop/R Projects/MLB/fangraphs_projections_2025.csv")
+
+fangraphs <- fangraphs %>% 
+    left_join(mlb_teamcolors %>% 
+                  select(name, team_abbr, mascot), by = c("team" = "mascot")) 
+    
+# join current standings data
+expectations <- mlb_standings %>%
+     left_join(fangraphs, by = c("name" = "name")) %>%
+    mutate(win_total_diff = W - w)
+
+
+# create barplot
+expectations %>% 
+  ggplot(aes(x = fct_reorder(team, -win_total_diff), y = win_total_diff)) +
+  geom_col(aes(fill = primary,
+               color = after_scale(clr_darken(fill, 0.3))
+  ),
+  width = 0.4, 
+  alpha = .75,
+  ) + 
+  scale_color_identity(aesthetics =  c("fill"))  +
+  geom_image(
+    aes(
+      image = team_logo_espn                                  
+    ), 
+    size = 0.025, 
+    by = "width", 
+    asp = asp_ratio
+  ) +
+  geom_hline(yintercept = 0, color = "black", size = 1) +
+  scale_y_continuous(
+      #labels = scales::percent_format(),
+      breaks = scales::pretty_breaks(n = 10)) +
+  theme_custom() + 
+  theme(axis.text.x = element_blank(), 
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_blank()) + 
+  labs(x = "", 
+       y = "Wins over Expected", 
+       caption = "Data: baseballR (Bill Petti/FanGraphs | Plot: @steodosescu",
+       title = glue("Performance Relative to Expecations"),
+       subtitle = glue("Actual win totals vs. Predicted. Estimated totals pulled from FanGraphs as of March 9, 2025.")) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      hjust = 0.5)
+  )
+  
+
+
+```
+

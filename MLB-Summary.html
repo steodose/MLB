@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MLB Summary</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-17.0.0/react.min.js"></script>
+<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><div><img src="mlb-logo.png" width="24px"></img> MLB Analytics</div></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="MLB-Summary.html">Summary</a>
+</li>
+<li>
+  <a href="teams.html">Teams</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://stephanteodosescu.com/">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/steodosescu">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/steodose/NFL">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://betweenthepipes.substack.com/">
+    <span class="fa fa-wordpress fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">MLB Summary</h1>
+<h4 class="date">Last updated: 2025-03-07</h4>
+
+</div>
+
+
+<p>Below you’ll find figures showing the current MLB standings and key advanced metrics I’m tracking for all 30 MLB teams.</p>
+<hr />
+<div id="current-standings" class="section level3">
+<h3>Current Standings</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-94a8c5bc6c69cd2e890e" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-94a8c5bc6c69cd2e890e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],"logo":["http://content.sportslogos.net/logos/54/63/thumbs/efvfv5b5g1zgpsf56gb04lthx.gif","http://content.sportslogos.net/logos/54/70/thumbs/7075792019.gif","http://content.sportslogos.net/logos/53/68/thumbs/1256.gif","http://content.sportslogos.net/logos/54/73/thumbs/7375172020.gif","http://content.sportslogos.net/logos/54/64/thumbs/6464742020.gif","http://content.sportslogos.net/logos/53/57/thumbs/5753472014.gif","http://content.sportslogos.net/logos/53/52/thumbs/5258002019.gif","http://content.sportslogos.net/logos/54/51/thumbs/5171502018.gif","http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif","http://content.sportslogos.net/logos/54/50/thumbs/gnnnrbxcmjhdgeu6mavqk3945.gif","http://content.sportslogos.net/logos/53/4929/thumbs/492995032000.gif","http://content.sportslogos.net/logos/53/59/thumbs/5989642016.gif","http://content.sportslogos.net/logos/53/62/thumbs/6283222019.gif","http://content.sportslogos.net/logos/53/75/thumbs/1305.gif","http://content.sportslogos.net/logos/54/72/thumbs/3zhma0aeq17tktge1huh7yok5.gif","http://content.sportslogos.net/logos/54/54/thumbs/q9gvs07u72gc9xr3395u6jh68.gif","http://content.sportslogos.net/logos/53/65/thumbs/peii986yf4l42v3aa3hy0ovlf.gif","http://content.sportslogos.net/logos/53/53/thumbs/c0whfsa9j0vbs079opk2s05lx.gif","http://content.sportslogos.net/logos/53/2535/thumbs/253594482019.gif","http://content.sportslogos.net/logos/54/74/thumbs/cpqj6up5bvgpoedg5fwsk20ve.gif","http://content.sportslogos.net/logos/53/77/thumbs/ajfeh4oqeealq37er15r3673h.gif","http://content.sportslogos.net/logos/54/56/thumbs/z9e0rqit393ojiizsemd0t1hx.gif","http://content.sportslogos.net/logos/54/71/thumbs/7112502014.gif","http://content.sportslogos.net/logos/53/78/thumbs/2559d7603ouedg7ldhw0br4fn.gif","http://content.sportslogos.net/logos/54/578/thumbs/rcehah9k0kekjkgzm077fflws.gif","http://content.sportslogos.net/logos/53/69/thumbs/6xk2lpc36146pbg2kydf13e50.gif","http://content.sportslogos.net/logos/53/6521/thumbs/652143892016.gif","http://content.sportslogos.net/logos/54/3637/thumbs/363775442019.gif","http://content.sportslogos.net/logos/54/58/thumbs/5868712017.gif","http://content.sportslogos.net/logos/53/55/thumbs/oxvkprv7v4inf5dgqdebp0yse.gif"],"name":["Los Angeles Dodgers","Philadelphia Phillies","New York Yankees","San Diego Padres","Milwaukee Brewers","Cleveland Indians","Baltimore Orioles","Atlanta Braves","New York Mets","Arizona Diamondbacks","Houston Astros","Detroit Tigers","Kansas City Royals","Seattle Mariners","St. Louis Cardinals","Chicago Cubs","Minnesota Twins","Boston Red Sox","Tampa Bay Rays","San Francisco Giants","Texas Rangers","Cincinnati Reds","Pittsburgh Pirates","Toronto Blue Jays","Washington Nationals","Oakland Athletics","Los Angeles Angels","Miami Marlins","Colorado Rockies","Chicago White Sox"],"division":["NL West","NL East","AL East","NL West","NL Central","AL Central","AL East","NL East","NL East","NL West","AL West","AL Central","AL Central","AL West","NL Central","NL Central","AL Central","AL East","AL East","NL West","AL West","NL Central","NL Central","AL East","NL East","AL West","AL West","NL East","NL West","AL Central"],"W":[98,95,94,93,93,92,91,89,89,89,88,86,86,85,83,83,82,81,80,80,78,77,76,74,71,69,63,62,61,41],"L":[64,67,68,69,69,69,71,73,73,73,73,76,76,77,79,79,80,81,82,82,84,85,86,88,91,93,99,100,101,121],"W-L%":[0.605,0.586,0.58,0.574,0.574,0.571,0.562,0.549,0.549,0.549,0.547,0.531,0.531,0.525,0.512,0.512,0.506,0.5,0.494,0.494,0.481,0.475,0.469,0.457,0.438,0.426,0.389,0.383,0.377,0.253],"GB":["--","3.0","--","5.0","5.0","1.5","3.0","9.0","9.0","9.0","5.5","8.0","8.0","9.0","15.0","15.0","12.0","13.0","14.0","18.0","16.0","21.0","22.0","20.0","27.0","25.0","31.0","36.0","37.0","53.0"],"RS":[842,784,815,760,777,708,786,704,768,886,740,682,735,676,672,736,742,751,604,693,683,699,665,671,660,643,635,637,682,507],"RA":[686,671,668,669,641,621,699,607,697,788,649,642,644,607,719,669,735,747,663,699,738,694,739,743,764,764,797,841,929,813],"pythW-L%":[0.593,0.571,0.59,0.558,0.587,0.56,0.553,0.567,0.544,0.553,0.56,0.528,0.56,0.549,0.469,0.544,0.504,0.502,0.457,0.496,0.465,0.503,0.452,0.454,0.433,0.422,0.398,0.376,0.362,0.296]},"columns":[{"id":"Rank","name":"Rank","type":"numeric","minWidth":95,"align":"center"},{"id":"logo","name":"","type":"character","minWidth":95,"align":"center","cell":[{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/63/thumbs/efvfv5b5g1zgpsf56gb04lthx.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/70/thumbs/7075792019.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/68/thumbs/1256.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/73/thumbs/7375172020.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/64/thumbs/6464742020.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/57/thumbs/5753472014.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/52/thumbs/5258002019.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/51/thumbs/5171502018.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/67/thumbs/m01gfgeorgvbfw15fy04alujm.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/50/thumbs/gnnnrbxcmjhdgeu6mavqk3945.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/4929/thumbs/492995032000.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/59/thumbs/5989642016.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/62/thumbs/6283222019.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/75/thumbs/1305.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/72/thumbs/3zhma0aeq17tktge1huh7yok5.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/54/thumbs/q9gvs07u72gc9xr3395u6jh68.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/65/thumbs/peii986yf4l42v3aa3hy0ovlf.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/53/thumbs/c0whfsa9j0vbs079opk2s05lx.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/2535/thumbs/253594482019.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/74/thumbs/cpqj6up5bvgpoedg5fwsk20ve.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/77/thumbs/ajfeh4oqeealq37er15r3673h.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/56/thumbs/z9e0rqit393ojiizsemd0t1hx.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/71/thumbs/7112502014.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/78/thumbs/2559d7603ouedg7ldhw0br4fn.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/578/thumbs/rcehah9k0kekjkgzm077fflws.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/69/thumbs/6xk2lpc36146pbg2kydf13e50.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/6521/thumbs/652143892016.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/3637/thumbs/363775442019.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/54/58/thumbs/5868712017.gif","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"http://content.sportslogos.net/logos/53/55/thumbs/oxvkprv7v4inf5dgqdebp0yse.gif","align":"center","height":"25","width":"30"},"children":[]}]}]}],"maxWidth":70},{"id":"name","name":"Team","type":"character","minWidth":95,"align":"left"},{"id":"division","name":"division","type":"character","minWidth":95,"align":"center"},{"id":"W","name":"W","type":"numeric","minWidth":95,"align":"center"},{"id":"L","name":"L","type":"numeric","minWidth":95,"align":"center"},{"id":"W-L%","name":"W-L%","type":"numeric","minWidth":95,"align":"center"},{"id":"GB","name":"GB","type":"character","minWidth":95,"align":"center"},{"id":"RS","name":"RS","type":"numeric","minWidth":95,"align":"center"},{"id":"RA","name":"RA","type":"numeric","minWidth":95,"align":"center"},{"id":"pythW-L%","name":"pythW-L%","type":"numeric","minWidth":95,"align":"center"}],"searchable":true,"pagination":false,"defaultPageSize":100,"compact":true,"inline":true,"theme":{"borderColor":"#CDCDCD","style":{"fontFamily":"Chivo"},"headerStyle":{"&:hover[aria-sort]":{"background":"hsl(0, 0%, 80%)"},"&[aria-sort='ascending'], &[aria-sort='descending']":{"background":"#555","color":"#FFF"},"borderColor":"#333"},"searchInputStyle":{"width":"31%","backgroundColor":"#F9F9F9"}},"language":{"searchPlaceholder":"SEARCH FOR A TEAM..."},"dataKey":"125ed2476b30d090dcfe9e3c677783c4"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
