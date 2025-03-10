@@ -1,0 +1,20 @@
+---
+title: "Welcome"
+---
+
+This website is a visual look at how the MLB season has transpired.
+
+Explore the various pages available using the links below.
+
+Read more at my blog [Between the Pipes](https://betweenthepipes.substack.com/).
+
+This site is not associated with Major League Baseball.
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+<img src="mlb-logo.png" style="width:25%">
