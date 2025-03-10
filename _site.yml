@@ -6,7 +6,7 @@ navbar:
     - text: "Summary"
       href: MLB-Summary.html
     - text: "Teams"
-      href: teams.html
+      href: Teams.html
     - text: "About"
       href: about.html
   right:
