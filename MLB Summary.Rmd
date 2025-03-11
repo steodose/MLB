@@ -184,7 +184,7 @@ standings_table <- reactable(
                   borderless = FALSE, 
                   striped = FALSE,
                   fullWidth = FALSE, 
-                  defaultColDef = colDef(align = "center", minWidth = 95)
+                  defaultColDef = colDef(align = "center", minWidth = 75)
   ) 
 
 standings_table

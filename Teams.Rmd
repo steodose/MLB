@@ -48,6 +48,15 @@ asp_ratio <- 1.618
 mlb_teamcolors <- read_csv('mlb_teamcolors.csv')
 
 
+```
+
+
+### Pythagorean Wins
+
+The below shows each team's actual win percentage vs their pythagoroean win percentage. Pythagorean winning percentage is a formula developed by renowned statistician Bill James. The concept strives to determine the number of games that a team *should* have won -- based on its total number of runs scored versus its number of runs allowed. It can help identify teams that have either overachieved or underachieved, and better predict a team's future performance.
+
+```{r Pythagorean Wins, echo = FALSE}
+
 ## 1. ---------- Pythagorean Win % Plot ----------------------
 
 today <- Sys.Date()
@@ -85,7 +94,7 @@ mlb_standings %>%
     labs(title = 'Pythagorean Wins',
          x = "Actual Win %",
          y = "Pythagorean Win %",
-         subtitle = "Pythagorean Win % helps evaluate how teams perform vs expectations. Thru **{today}.**",
+         subtitle = glue("Pythagorean Win % helps evaluate how teams perform vs expectations. Thru **{today}.**"),
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu") +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
@@ -97,11 +106,46 @@ mlb_standings %>%
       hjust = 0.5)
   ) +
   theme(plot.subtitle = element_markdown()) 
-    
 
 ```
 
+***
+### MLB Team Performance 
+
+```{r RS vs RA, echo = FALSE}
+
+## 2. ---------- Runs Scored vs Runs Allowed ----------------------
+
+mlb_standings %>% 
+    ggplot(aes(x = RS, y = RA)) + 
+    geom_image(aes(image = team_logo_espn), size = 0.055, by = "width", asp = asp_ratio) +
+    geom_hline(yintercept = mean(mlb_standings$RS), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(mlb_standings$RA), color = "red", linetype = "dashed") +
+    theme_custom() +
+  #geom_abline(slope = -1.5, intercept = c(.4, .3, .2, .1, 0, -.1, -.2, -.3, -.4), alpha = .2) +
+    labs(x = "Runs Scored",
+         y = "Runs Allowed",
+         caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
+         title = glue("MLB Scoring Performance"),
+        subtitle = glue("2025 season, data thru {today}.")) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      size = 10,
+      hjust = 0.5)
+  ) +
+  theme(plot.subtitle = element_markdown()) +
+  scale_y_reverse()
+
+```
+
+
 ### Run Differential Evolution
+
+Coming soon...
 
 ```{r, echo = FALSE}
 
@@ -136,6 +180,7 @@ team_games <- games %>%
 ```
 
 
+***
 ### Performance vs Expectations
 
 The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2025.
@@ -198,4 +243,63 @@ expectations %>%
 
 
 ```
+
+
+***
+### Attendance Profiles
+
+```{r, echo = FALSE}
+
+# load attendance data
+attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2024)
+
+attendance <- attendance %>% 
+    left_join(mlb_teamcolors %>% 
+                  select(team_id, name, team_abbr, primary, team_logo_espn), by = "team_id")
+
+# create attendance barplot
+attendance %>% 
+  ggplot(aes(x = fct_reorder(name, -attendance_average_home), y = attendance_average_home)) +
+  geom_col(aes(fill = primary,
+               color = after_scale(clr_darken(fill, 0.3))
+  ),
+  width = 0.4, 
+  alpha = .75,
+  ) + 
+  scale_color_identity(aesthetics =  c("fill"))  +
+  geom_image(
+    aes(
+      image = team_logo_espn                                  
+    ), 
+    size = 0.025, 
+    by = "width", 
+    asp = asp_ratio
+  ) +
+  geom_hline(yintercept = 0, color = "black", size = 1) +
+    scale_y_reverse() +
+  scale_y_continuous(
+      breaks = scales::pretty_breaks(n = 10)) +
+  theme_custom() + 
+  theme(axis.text.x = element_blank(), 
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_blank()) + 
+  labs(x = "", 
+       y = "Average Home Attendance", 
+       caption = "Data: baseballR (Bill Petti/FanGraphs | Plot: @steodosescu",
+       title = glue("Take me out to the Ballgame"),
+       subtitle = glue("Average home attendance totals. Thru **{today}.**")) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      hjust = 0.5)
+  ) +
+  theme(plot.subtitle = element_markdown()) 
+  
+
+
+```
+
 
