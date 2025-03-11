@@ -152,12 +152,14 @@ mlb_teamcolors <- read_csv('mlb_teamcolors.csv')
 # join in team logos and colors
 mlb_standings <- mlb_standings %>%
     left_join(mlb_teamcolors %>% 
-                  select(name, team_abbr, division, primary, logo), by = c("Tm" = "team_abbr"))
+                  select(name, team_abbr, division, primary, team_logo_espn), by = c("Tm" = "team_abbr"))
 
 # make reactable standings table  
 mlb_standings <- mlb_standings %>%
     mutate(Rank = row_number()) %>%
-    select(Rank, logo, name, division, W:`pythW-L%`)
+    select(Rank, team_logo_espn, name, division, W:`pythW-L%`) %>%
+    mutate(proj_w = round(162*`pythW-L%`),
+           proj_l = round(162-proj_w))
 
 standings_table <- reactable(
   mlb_standings,
@@ -169,8 +171,9 @@ standings_table <- reactable(
                   defaultPageSize = 100,
                   columns = list(
                       name = colDef(name = "Team",
+                                    minWidth = 140,
                                        align = "left"),
-                      logo = colDef(
+                      team_logo_espn = colDef(
                           name = "",
                           maxWidth = 70,
                           align = "center",
