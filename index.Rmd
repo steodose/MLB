@@ -2,7 +2,7 @@
 title: "Welcome"
 ---
 
-This website is a visual look at how the MLB season has transpired.
+This website is a visual look at how the MLB season has transpired. Consider this a poor man's Baseball Savant.
 
 Explore the various pages available using the links below.
 

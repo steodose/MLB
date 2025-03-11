@@ -158,8 +158,10 @@ mlb_standings <- mlb_standings %>%
 mlb_standings <- mlb_standings %>%
     mutate(Rank = row_number()) %>%
     select(Rank, team_logo_espn, name, division, W:`pythW-L%`) %>%
-    mutate(proj_w = round(162*`pythW-L%`),
-           proj_l = round(162-proj_w))
+    mutate(run_diff = RS-RA,
+           proj_w = round(162*`pythW-L%`),
+           proj_l = round(162-proj_w)) %>%
+    select(Rank:GB,`pythW-L%`:proj_l)
 
 standings_table <- reactable(
   mlb_standings,
@@ -171,8 +173,11 @@ standings_table <- reactable(
                   defaultPageSize = 100,
                   columns = list(
                       name = colDef(name = "Team",
-                                    minWidth = 140,
+                                    minWidth = 150,
                                        align = "left"),
+                      run_diff = colDef(name = "Run Diff"),
+                      proj_w = colDef(name = "Proj. W"),
+                       proj_l = colDef(name = "Proj. L"),
                       team_logo_espn = colDef(
                           name = "",
                           maxWidth = 70,

@@ -147,7 +147,7 @@ mlb_standings %>%
 
 Coming soon...
 
-```{r, echo = FALSE}
+```{r, Run Differential, echo = FALSE}
 
 ## 2. ---------- Run Differential Evolution Plot (WIP) ----------------------
 
@@ -185,7 +185,7 @@ team_games <- games %>%
 
 The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2025.
 
-```{r, echo = FALSE}
+```{r expecations, echo = FALSE}
 
 # load preseason win totals from Fangraphs
 fangraphs <- read_csv("/Users/Stephan/Desktop/R Projects/MLB/fangraphs_projections_2025.csv")
@@ -248,7 +248,7 @@ expectations %>%
 ***
 ### Attendance Profiles
 
-```{r, echo = FALSE}
+```{r attendance, echo = FALSE}
 
 # load attendance data
 attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2024)
