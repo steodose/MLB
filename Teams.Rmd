@@ -241,7 +241,7 @@ The below shows current win totals -- expressed in win totals -- compared to pre
 ```{r expecations, echo = FALSE}
 
 # load preseason win totals from Fangraphs
-projections <- read_csv("/Users/Stephan/Desktop/R Projects/MLB/conensus_projections_2025.csv")
+projections <- read_csv("conensus_projections_2025.csv")
 
 projections <- projections %>% 
     left_join(mlb_teamcolors %>% 
@@ -284,9 +284,9 @@ expectations %>%
         panel.grid.major.y = element_blank()) + 
   labs(x = "", 
        y = "Win % over Expected", 
-       caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API | Plot: @steodosescu",
-       title = glue("Performance Relative to Preseason Expecations"),
-       subtitle = glue("Actual win percentage vs. Predicted. Estimated totals pulled from various source systems as of March 26, 2025.")) +
+       caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API/Neil Paine/Clay Davenport | Plot: @steodosescu",
+       title = glue("Performance Relative to Expecations"),
+       subtitle = glue("Actual win percentage vs. preseason model and odds predictions. Estimated totals pulled from various source systems as of March 26, 2025.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
