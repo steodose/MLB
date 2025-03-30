@@ -147,7 +147,10 @@ mlb_standings <- mlb_standings %>%
     arrange(desc(`W-L%`))
 
 # load teamcolors and logos
-mlb_teamcolors <- read_csv('mlb_teamcolors.csv')
+mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>% 
+    mutate(team_abbr = case_when(team_abbr == "OAK" ~ "ATH",
+                     TRUE ~ team_abbr)
+           )
 
 # join in team logos and colors
 mlb_standings <- mlb_standings %>%
@@ -173,11 +176,13 @@ standings_table <- reactable(
                   defaultPageSize = 100,
                   columns = list(
                       name = colDef(name = "Team",
-                                    minWidth = 150,
+                                    minWidth = 160,
                                        align = "left"),
                       run_diff = colDef(name = "Run Diff"),
+                      division = colDef(name = "Division", 
+                                        minWidth = 100),
                       proj_w = colDef(name = "Proj. W"),
-                       proj_l = colDef(name = "Proj. L"),
+                      proj_l = colDef(name = "Proj. L"),
                       team_logo_espn = colDef(
                           name = "",
                           maxWidth = 70,

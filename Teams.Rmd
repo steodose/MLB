@@ -45,7 +45,11 @@ theme_custom <- function () {
 asp_ratio <- 1.618 
 
 # load teamcolors and logos
-mlb_teamcolors <- read_csv('mlb_teamcolors.csv')
+mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>% 
+    mutate(team_abbr = case_when(team_abbr == "OAK" ~ "ATH",
+                     TRUE ~ team_abbr)
+           )
+    
 
 
 ```
@@ -152,7 +156,7 @@ Coming soon...
 ## 2. ---------- Run Differential Evolution Plot (WIP) ----------------------
 
 # load MLB schedule
-games <- baseballr::mlb_schedule(season = "2024") %>%
+games <- baseballr::mlb_schedule(season = "2025") %>%
     filter(game_type == 'R')
 
 # Process data frame to get one row per team-game (long format)
@@ -188,16 +192,18 @@ The below shows current win totals -- expressed in win totals -- compared to pre
 ```{r expecations, echo = FALSE}
 
 # load preseason win totals from Fangraphs
-fangraphs <- read_csv("/Users/Stephan/Desktop/R Projects/MLB/fangraphs_projections_2025.csv")
+projections <- read_csv("/Users/Stephan/Desktop/R Projects/MLB/conensus_projections_2025.csv")
 
-fangraphs <- fangraphs %>% 
+projections <- projections %>% 
     left_join(mlb_teamcolors %>% 
                   select(name, team_abbr, mascot), by = c("team" = "mascot")) 
     
 # join current standings data
 expectations <- mlb_standings %>%
-     left_join(fangraphs, by = c("name" = "name")) %>%
-    mutate(win_total_diff = W - w)
+     left_join(projections, by = c("name" = "name")) %>%
+    mutate(gp = W+L,
+        win_perc_actual= W/gp,
+        win_total_diff = win_perc_actual - win_perc_avg)
 
 
 # create barplot
@@ -220,17 +226,18 @@ expectations %>%
   ) +
   geom_hline(yintercept = 0, color = "black", size = 1) +
   scale_y_continuous(
-      #labels = scales::percent_format(),
-      breaks = scales::pretty_breaks(n = 10)) +
+      labels = scales::percent_format(),
+      #breaks = scales::pretty_breaks(n = 10)
+      ) +
   theme_custom() + 
   theme(axis.text.x = element_blank(), 
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank()) + 
   labs(x = "", 
-       y = "Wins over Expected", 
-       caption = "Data: baseballR (Bill Petti/FanGraphs | Plot: @steodosescu",
-       title = glue("Performance Relative to Expecations"),
-       subtitle = glue("Actual win totals vs. Predicted. Estimated totals pulled from FanGraphs as of March 9, 2025.")) +
+       y = "Win % over Expected", 
+       caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API | Plot: @steodosescu",
+       title = glue("Performance Relative to Preseason Expecations"),
+       subtitle = glue("Actual win percentage vs. Predicted. Estimated totals pulled from various source systems as of March 26, 2025.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
@@ -285,9 +292,9 @@ attendance %>%
         panel.grid.major.y = element_blank()) + 
   labs(x = "", 
        y = "Average Home Attendance", 
-       caption = "Data: baseballR (Bill Petti/FanGraphs | Plot: @steodosescu",
+       caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
        title = glue("Take me out to the Ballgame"),
-       subtitle = glue("Average home attendance totals. Thru **{today}.**")) +
+       subtitle = glue("Average home attendance totals in 2024. Thru **{today}.**")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
