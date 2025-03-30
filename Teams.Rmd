@@ -46,8 +46,8 @@ asp_ratio <- 1.618
 
 # load teamcolors and logos
 mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>% 
-    mutate(team_abbr = case_when(team_abbr == "OAK" ~ "ATH",
-                     TRUE ~ team_abbr)
+    mutate(team_abbr = case_when(team_abbr == "OAK" ~ "ATH", # A's are no longer called OAK
+                     TRUE ~ team_abbr,)
            )
     
 
@@ -149,7 +149,7 @@ mlb_standings %>%
 
 ### Run Differential Evolution
 
-Coming soon...
+Evolution of each team's run differential this season. 
 
 ```{r, Run Differential, echo = FALSE}
 
@@ -171,12 +171,61 @@ team_games <- games %>%
     names_to = "home_away",
     values_to = "team"
   ) %>%
-     mutate(score = ifelse(home_away == "home", home_score, away_score),
-           opp_score = ifelse(home_away == "home", away_score, home_score
+     mutate(score = ifelse(home_away == "home_team", home_score, away_score),
+           opp_score = ifelse(home_away == "home_team", away_score, home_score
                               )
      )
 
 
+team_games2 <- team_games %>% 
+    select(-c(home_score, away_score, home_away)) %>%
+    group_by(team) %>%
+    mutate(run_diff = score - opp_score) %>% 
+    # calculate the running counts for points, wins, reg. wins, reg. + OT wins, and games
+    mutate(
+           rd_running = cumsum(run_diff),
+           game_count = row_number())
+
+# join in teamcolors
+team_games2 <- team_games2 %>% 
+    left_join(mlb_teamcolors %>% 
+                  select(name, team_abbr, primary, team_logo_espn), by = c("team" = "name")
+              )
+
+# determine endpoints for logos
+endpoints <- team_games2 %>%
+  group_by(team) %>%
+  filter(!is.na(rd_running)) %>%
+  slice_max(order_by = game_count, n = 1) %>%
+  ungroup()
+
+
+# make plot
+team_games2 %>% 
+    ggplot(aes(x=game_count, y = rd_running, color = team, group = team)) +
+    geom_line(size = 1.2) +
+    geom_image(data = endpoints, aes(x = game_count, y = rd_running, image = team_logo_espn), 
+             size = 0.05, inherit.aes = FALSE) +
+    labs(x = "", y = "Run Differential",
+         title = "2025 MLB Run Differential",
+         subtitle = glue("Daily cumulative run differential totals. Data thru {today} games."),
+         caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
+         color = "") +
+    theme_custom() +
+    scale_color_manual(values = team_games2$primary) +
+    theme(legend.position="none") +
+    theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      size = 10,
+      hjust = 0.5)
+  ) +
+    theme(plot.title = element_text(face="bold")) +
+    theme(plot.title = element_markdown()) +
+    theme(plot.subtitle = element_markdown())
 
 
 
@@ -254,6 +303,8 @@ expectations %>%
 
 ***
 ### Attendance Profiles
+
+2025 Attendance statistics coming soon...
 
 ```{r attendance, echo = FALSE}
 
