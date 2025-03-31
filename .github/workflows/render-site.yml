@@ -22,7 +22,7 @@ jobs:
       - name: Install system dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libfreetype6-dev libpng-dev
 
       - name: Cache R packages
         uses: actions/cache@v3
@@ -34,8 +34,8 @@ jobs:
 
       - name: Install R dependencies
         run: |
-          R -e 'install.packages(c("rmarkdown", "tidyverse", "ggplot2", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
-          R -e 'pkgs <- c("rmarkdown", "tidyverse", "ggplot2", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"); stopifnot(all(pkgs %in% rownames(installed.packages())))'
+          R -e 'install.packages(c("rmarkdown", "tidyverse", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
+          R -e 'pkgs <- c("rmarkdown", "tidyverse", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"); stopifnot(all(pkgs %in% rownames(installed.packages())))'
 
       - name: Render site
         run: |
