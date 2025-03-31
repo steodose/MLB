@@ -2,8 +2,8 @@ name: Render and Deploy MLB Website
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # Runs every day at 8 AM PT (15:00 UTC)
-  workflow_dispatch:  # Optional: allows manual trigger
+    - cron: '0 15 * * *'  # Runs every day at 8 AM PT
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   build-deploy:
@@ -24,9 +24,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 
+      - name: Cache R packages
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
+
       - name: Install R dependencies
         run: |
           R -e 'install.packages(c("rmarkdown", "tidyverse", "ggplot2", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
+          R -e 'pkgs <- c("rmarkdown", "tidyverse", "ggplot2", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"); stopifnot(all(pkgs %in% rownames(installed.packages())))'
 
       - name: Render site
         run: |
