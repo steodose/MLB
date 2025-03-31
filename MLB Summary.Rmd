@@ -21,18 +21,18 @@ library(baseballr)
 library(tidyverse)
 library(teamcolors) # NFL team colors and logos
 library(extrafont) # for extra fonts
-library(ggrepel) # better labels
+# library(ggrepel) # better labels
 library(ggimage)
 library(glue)
 library(ggtext)
 library(reactable)
 library(reactablefmtr)
-library(gt)
-library(gtExtras)
-library(webshot)
-library(ggalt) #for dumbbell plot
-library(ggforce)
-library(ggsci)
+# library(gt)
+# library(gtExtras)
+# library(webshot)
+# library(ggalt) #for dumbbell plot
+# library(ggforce)
+# library(ggsci)
 
 # Optional but makes R prefer not to display numbers in scientific notation
 options(scipen = 9999)
