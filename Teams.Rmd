@@ -37,7 +37,8 @@ theme_custom <- function () {
   theme_minimal(base_size=11, base_family="Chivo") %+replace% 
     theme(
       panel.grid.minor = element_blank(),
-      plot.background = element_rect(fill = 'floralwhite', color = "floralwhite")
+      plot.background = element_rect(fill = 'floralwhite', color = "floralwhite"),
+      plot.subtitle = element_text(color = "grey60")
     )
 }
 
@@ -120,15 +121,23 @@ mlb_standings %>%
 
 ## 2. ---------- Runs Scored vs Runs Allowed ----------------------
 
-mlb_standings %>% 
-    ggplot(aes(x = RS, y = RA)) + 
+mlb_standings2 <- mlb_standings %>%
+      mutate(gp = W+L,
+           rs_g = RS/gp,
+           ra_g = RA/gp)
+    
+mlb_standings2 %>% 
+    mutate(gp = W+L,
+           rs_g = RS/gp,
+           ra_g = RA/gp) %>% 
+    ggplot(aes(x = rs_g, y = ra_g)) + 
     geom_image(aes(image = team_logo_espn), size = 0.055, by = "width", asp = asp_ratio) +
-    geom_hline(yintercept = mean(mlb_standings$RS), color = "red", linetype = "dashed") +
-    geom_vline(xintercept =  mean(mlb_standings$RA), color = "red", linetype = "dashed") +
+    geom_hline(yintercept = mean(mlb_standings2$rs_g), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(mlb_standings2$ra_g), color = "red", linetype = "dashed") +
     theme_custom() +
   #geom_abline(slope = -1.5, intercept = c(.4, .3, .2, .1, 0, -.1, -.2, -.3, -.4), alpha = .2) +
-    labs(x = "Runs Scored",
-         y = "Runs Allowed",
+    labs(x = "Runs Scored/Game",
+         y = "Runs Allowed/Game",
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
          title = glue("MLB Scoring Performance"),
         subtitle = glue("2025 season, data thru {today}.")) +
