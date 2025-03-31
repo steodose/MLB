@@ -238,7 +238,7 @@ team_games2 %>%
 
 The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2025.
 
-```{r expecations, echo = FALSE}
+```{r Expectations, echo = FALSE}
 
 # load preseason win totals from Fangraphs
 projections <- read_csv("conensus_projections_2025.csv")
@@ -286,7 +286,7 @@ expectations %>%
        y = "Win % over Expected", 
        caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API/Neil Paine/Clay Davenport | Plot: @steodosescu",
        title = glue("Performance Relative to Expecations"),
-       subtitle = glue("Actual win percentage vs. preseason model and odds predictions. Estimated totals pulled from various source systems as of March 26, 2025.")) +
+       subtitle = glue("Actual win % vs. preseason model and odds predictions. Estimated totals pulled from various source systems March 26, 2025.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
@@ -306,7 +306,7 @@ expectations %>%
 
 2025 Attendance statistics coming soon...
 
-```{r attendance, echo = FALSE}
+```{r Attendance, echo = FALSE}
 
 # load attendance data
 attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2024)

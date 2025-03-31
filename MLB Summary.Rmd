@@ -132,7 +132,7 @@ my_color_pal <- c("#ffffff", "#f2fbd2", "#c9ecb4", "#93d3ab", "#35b0ab")
 ***
 ### Current Standings
 
-```{r}
+```{r Standings}
 
 today <- Sys.Date()
 #today <- as.character(today)
