@@ -313,12 +313,12 @@ expectations %>%
 ***
 ### Attendance Profiles
 
-2025 Attendance statistics coming soon...
+2025 Attendance totals
 
 ```{r Attendance, echo = FALSE}
 
 # load attendance data
-attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2024)
+attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2025)
 
 attendance <- attendance %>% 
     left_join(mlb_teamcolors %>% 
@@ -326,6 +326,7 @@ attendance <- attendance %>%
 
 # create attendance barplot
 attendance %>% 
+    drop_na() %>%
   ggplot(aes(x = fct_reorder(name, -attendance_average_home), y = attendance_average_home)) +
   geom_col(aes(fill = primary,
                color = after_scale(clr_darken(fill, 0.3))
@@ -354,7 +355,7 @@ attendance %>%
        y = "Average Home Attendance", 
        caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
        title = glue("Take me out to the Ballgame"),
-       subtitle = glue("Average home attendance totals in 2024. Thru **{today}.**")) +
+       subtitle = glue("Average home attendance totals in 2025. Thru **{today}.**")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
