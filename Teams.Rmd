@@ -28,6 +28,8 @@ library(ggforce)
 library(ggsci)
 library(paletteer)
 library(prismatic)
+library(gt)
+library(gtExtras)
 
 # Optional but makes R prefer not to display numbers in scientific notation
 options(scipen = 9999)
@@ -371,8 +373,54 @@ attendance %>%
 ```
 
 
+***
+### Team Ranks
 
-```{r Team WAR, echo = FALSE}
+```{r Team Ranks, echo = FALSE}
+
+# load Fangraphs stat categories
+fg_team_batter <- fg_team_batter(startseason = 2025, endseason = 2025, qual = 400)
+fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
+fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
+
+fg_team_batter <- fg_team_batter %>% 
+    select(team_name, OBP, OPS, WAR, wOBA, wRC)
+
+fg_team_pitcher <- fg_team_pitcher %>% 
+    select(team_name, ERA, WHIP)
+
+# join with team colors
+fg_totals <- fg_team_batter %>% 
+    left_join(fg_team_pitcher) %>% 
+    left_join(mlb_teamcolors %>% 
+                  select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr"))
+
+
+# create GT table
+fg_totals %>% 
+    mutate(rank = row_number()) %>% 
+    select(rank, team_logo_espn, team_name, OBP:WHIP) %>% 
+    gt() %>% 
+     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
+     data_color(
+    columns = 4:10, 
+    colors = scales::col_numeric(
+      palette = paletteer::paletteer_d(
+        palette = "ggsci::amber_material",
+        direction = 1
+      ) %>% as.character(),
+      domain = NULL, 
+      na.color = "#005C55FF"
+    )) %>%
+  cols_align(align = "left",
+             columns = 1) %>%
+  tab_header(title = md("**MLB Team Ranks**"),
+             subtitle = glue("Data last updated on {today}.")) %>%
+  tab_source_note(
+    source_note = md("DATA: baseballR<br>TABLE: @steodosescu"))
+
+
+
 
 
 ```
