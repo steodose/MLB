@@ -7,13 +7,13 @@ This website is your home for everything modern, public MLB analytics have to of
 ## Glossary of Terms
 
 * On-Base Percentage (OBP): Measures how frequently a batter reaches base per plate appearance. Times on base include hits, walks and hit-by-pitches, but do not include errors, times reached on a fielder's choice or a dropped third strike. Sacrifice bunts are removed from the equation.
-* On-base plus slugging (OPS): On-base percentage plus slugging percentage. OPS adds on-base percentage and slugging percentage to get one number that unites the two. Slugging percentage (SLG) represents the total number of bases a player records per at-bat. The formula for slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to combine how well a hitter can reach base, with how well he can hit for average and for power. 
+* On-base plus slugging (OPS): On-base percentage plus slugging percentage. OPS adds on-base percentage and slugging percentage to get one number that unites the two. Slugging percentage (SLG) represents the total number of bases a player records per at-bat. The formula for slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to combine how well a hitter can reach base, with how well he can hit for average and for power.
  
 
 ***
 
 ## Run Expectancy Charts
-<img src="Run Expectancy.png" style="width:50%">
+<img src="https://github.com/steodose/MLB/blob/main/Run%20Expectancy.png?raw=true" style="width:50%">
 
 ***
 
