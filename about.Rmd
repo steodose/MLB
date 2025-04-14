@@ -10,7 +10,10 @@ This website is your home for everything modern, public MLB analytics have to of
 * On-base plus slugging (OPS): On-base percentage plus slugging percentage. OPS adds on-base percentage and slugging percentage to get one number that unites the two. Slugging percentage (SLG) represents the total number of bases a player records per at-bat. The formula for slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to combine how well a hitter can reach base, with how well he can hit for average and for power. 
  
 
-More on these metrics and the models underpinning them can be found at [Open Source Football](https://www.opensourcefootball.com/posts/2020-09-28-nflfastr-ep-wp-and-cp-models/).
+***
+
+## Run Expectancy Charts
+<img src="Run Expectancy.png" style="width:50%">
 
 ***
 
