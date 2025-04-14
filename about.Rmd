@@ -6,10 +6,9 @@ This website is your home for everything modern, public MLB analytics have to of
 
 ## Glossary of Terms
 
-* Expected Points Added (EPA): The change in Expected Points (EP) from play to play.
-* Completion Percentage Over Expectation (CPOE): Difference in expected completion percentage and actual completion percentage. Expected completion percentage is the likelihood of a given pass being completed given target depth. 
-* Average Depth of Target (aDOT): Air yards on passing plays (ie does not consider yards gained after the catch). 
-* Success Rate (SR): The percentage of plays that were successful, defined as plays resulting in positive EPA for the offense and negative EPA for the defense. 
+* On-Base Percentage (OBP): Measures how frequently a batter reaches base per plate appearance. Times on base include hits, walks and hit-by-pitches, but do not include errors, times reached on a fielder's choice or a dropped third strike. Sacrifice bunts are removed from the equation.
+* On-base plus slugging (OPS): On-base percentage plus slugging percentage. OPS adds on-base percentage and slugging percentage to get one number that unites the two. Slugging percentage (SLG) represents the total number of bases a player records per at-bat. The formula for slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to combine how well a hitter can reach base, with how well he can hit for average and for power. 
+ 
 
 More on these metrics and the models underpinning them can be found at [Open Source Football](https://www.opensourcefootball.com/posts/2020-09-28-nflfastr-ep-wp-and-cp-models/).
 
@@ -21,12 +20,9 @@ The below resources were used to create the above plots within this document. Ma
 
 | Title/Link | Author | Description |
 | :--- | :--- |:---------------|
-| [R for Data Science](https://r4ds.had.co.nz/) | Hadley Wickham, Garret Grolemund | A great overview of the `tidyverse`, covers everything from reading data in, data manipulation/summarization, data viz, and general programming in R |
+| [Tango Tiger blog](http://www.tangotiger.com/index.php) | Tom Tango | One of the Godfathers of sabermetrics/baseball analytics |
+| [Fangraphs](https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&qual=0&type=8&season=2025&month=0&season1=2025&ind=0&team=0,ts&rost=&age=&filter=&players=0) | Fangraphs | Top tier advanced stats and analysis. |
+| [Baseball Savant](https://baseballsavant.mlb.com) | MLB | The official home of MLB's advanced stats and analysis including Statcast data. |
 | [nflfastR Graphics Cookbook](https://jthomasmock.github.io/nfl_plotting_cookbook/#Scatter_plots) | Thomas Mock | As step-by-step guide on how to improve your nflfastR graphics. |
-| [Beginner's Guide to nflfastR](http://www.nflfastr.com/articles/beginners_guide.html) | Ben Baldwin | Covers introductory examples of how to get started with the nflfastR package, and more broadly, how to use R and the tidyverse. |
-| [R Markdown Intro Guide](https://rmarkdown.rstudio.com/lesson-1.html) | R Studio | Intro primer to authoring R Markdown documents.: |
-| [`ggplot2` Cookbook](http://www.cookbook-r.com/Graphs/) |  Winston Chang | Quick cookbook of `ggplot2` plots |
-| [Making Websites in R Markdown](https://www.p8105.com/making_websites.html) |  Jeff Goldsmith | Nice introduction from his course at Columbia on how to make websites using only R and Rstudio. |
-| [R Markdown Book ](https://bookdown.org/yihui/rmarkdown/) | Yihui Xie, J. J. Allaire, Garrett Grolemund | The definitive guide outlining what you can do with the rmarkdown package (Allaire, Xie, McPherson, et al. 2021), which was first created in early 2014. The package has steadily evolved into a complete ecosystem for authoring documents in a variety of output formats including the output of this document that you're reading. |
 
 

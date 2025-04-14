@@ -384,30 +384,77 @@ fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
 fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
 
 fg_team_batter <- fg_team_batter %>% 
-    select(team_name, OBP, OPS, WAR, wOBA, wRC)
+    select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR)
 
 fg_team_pitcher <- fg_team_pitcher %>% 
     select(team_name, ERA, WHIP)
 
+fg_team_fielder <- fg_team_fielder %>% 
+    select(team_name, team_name_abb, FP, DRS)
+
 # join with team colors
 fg_totals <- fg_team_batter %>% 
     left_join(fg_team_pitcher) %>% 
+    left_join(fg_team_fielder, by = c("team_name" = "team_name_abb")
+              ) %>% 
+    select(-team_name.y) %>% 
     left_join(mlb_teamcolors %>% 
                   select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr"))
 
+# create ranking columns for each stat
+fg_ranks <- fg_totals %>%
+  mutate(across(c(OBP, OPS, WAR, wOBA, wRC, XBR, FP, DRS), ~ min_rank(desc(.x)), .names = "{.col}_rank"),
+         across(c(ERA, WHIP), ~ min_rank(.x), .names = "{.col}_rank")
+  )
 
 # create GT table
-fg_totals %>% 
+fg_ranks %>% 
     mutate(rank = row_number()) %>% 
-    select(rank, team_logo_espn, team_name, OBP:WHIP) %>% 
+    select(rank, team_logo_espn, team_name, OBP_rank:WHIP_rank) %>% 
     gt() %>% 
+    cols_label(rank = "",
+               team_logo_espn = "",
+               team_name = "Team",
+               OBP_rank = "OBP",
+               OPS_rank = "OPS",
+               WAR_rank = "WAR",
+               wOBA_rank = "wOBA",
+               wRC_rank = "wRC",
+               XBR_rank = "XBR",
+               FP_rank = "FP",
+               DRS_rank = "DRS",
+               ERA_rank = "ERA",
+               WHIP_rank = "WHIP"
+               ) %>% 
+     tab_spanner(
+    label = "Batting",
+    columns = c(4:9)
+  ) %>%
+     tab_spanner(
+    label = "Fielding",
+    columns = c(10:11)
+  ) %>%
+     tab_spanner(
+    label = "Pitching",
+    columns = c(12:13)
+  ) %>%
      gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
      data_color(
-    columns = 4:10, 
+    columns = 4:11, 
     colors = scales::col_numeric(
       palette = paletteer::paletteer_d(
         palette = "ggsci::amber_material",
-        direction = 1
+        direction = -1 # Offensive stats
+      ) %>% as.character(),
+      domain = NULL, 
+      na.color = "#005C55FF"
+    )) %>%
+     data_color(
+    columns = 12:13, 
+    colors = scales::col_numeric(
+      palette = paletteer::paletteer_d(
+        palette = "ggsci::amber_material",
+        direction = 1 #Pitching stats
       ) %>% as.character(),
       domain = NULL, 
       na.color = "#005C55FF"
@@ -415,11 +462,24 @@ fg_totals %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Team Ranks**"),
-             subtitle = glue("Data last updated on {today}.")) %>%
+             subtitle = glue("Rankings across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by batting WAR. Data last updated on {today}.")) %>%
   tab_source_note(
-    source_note = md("DATA: baseballR<br>TABLE: @steodosescu"))
-
-
+    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
+    tab_options(
+        column_labels.background.color = "white",
+        table.border.top.width = px(3),
+        table.border.top.color = "white",
+        table.border.bottom.color = "white",
+        table.border.bottom.width = px(3),
+        column_labels.border.top.width = px(3),
+        column_labels.border.top.color = "white",
+        column_labels.border.bottom.width = px(3),
+        column_labels.border.bottom.color = "black",
+        data_row.padding = px(3),
+        source_notes.font.size = 12,
+        table.font.size = 16,
+        heading.align = "center"
+    ) 
 
 
 

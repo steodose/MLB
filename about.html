@@ -298,17 +298,18 @@ have to offer.</p>
 <div id="glossary-of-terms" class="section level2">
 <h2>Glossary of Terms</h2>
 <ul>
-<li>Expected Points Added (EPA): The change in Expected Points (EP) from
-play to play.</li>
-<li>Completion Percentage Over Expectation (CPOE): Difference in
-expected completion percentage and actual completion percentage.
-Expected completion percentage is the likelihood of a given pass being
-completed given target depth.</li>
-<li>Average Depth of Target (aDOT): Air yards on passing plays (ie does
-not consider yards gained after the catch).</li>
-<li>Success Rate (SR): The percentage of plays that were successful,
-defined as plays resulting in positive EPA for the offense and negative
-EPA for the defense.</li>
+<li>On-Base Percentage (OBP): Measures how frequently a batter reaches
+base per plate appearance. Times on base include hits, walks and
+hit-by-pitches, but do not include errors, times reached on a fielder’s
+choice or a dropped third strike. Sacrifice bunts are removed from the
+equation.</li>
+<li>On-base plus slugging (OPS): On-base percentage plus slugging
+percentage. OPS adds on-base percentage and slugging percentage to get
+one number that unites the two. Slugging percentage (SLG) represents the
+total number of bases a player records per at-bat. The formula for
+slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to
+combine how well a hitter can reach base, with how well he can hit for
+average and for power.</li>
 </ul>
 <p>More on these metrics and the models underpinning them can be found
 at <a
@@ -336,12 +337,24 @@ resources:</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://r4ds.had.co.nz/">R for Data
-Science</a></td>
-<td align="left">Hadley Wickham, Garret Grolemund</td>
-<td align="left">A great overview of the <code>tidyverse</code>, covers
-everything from reading data in, data manipulation/summarization, data
-viz, and general programming in R</td>
+<td align="left"><a href="http://www.tangotiger.com/index.php">Tango
+Tiger blog</a></td>
+<td align="left">Tom Tango</td>
+<td align="left">One of the Godfathers of sabermetrics/baseball
+analytics</td>
+</tr>
+<tr class="even">
+<td align="left"><a
+href="https://www.fangraphs.com/leaders/major-league?pos=all&amp;stats=bat&amp;lg=all&amp;qual=0&amp;type=8&amp;season=2025&amp;month=0&amp;season1=2025&amp;ind=0&amp;team=0,ts&amp;rost=&amp;age=&amp;filter=&amp;players=0">Fangraphs</a></td>
+<td align="left">Fangraphs</td>
+<td align="left">Top tier advanced stats and analysis.</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://baseballsavant.mlb.com">Baseball
+Savant</a></td>
+<td align="left">MLB</td>
+<td align="left">The official home of MLB’s advanced stats and analysis
+including Statcast data.</td>
 </tr>
 <tr class="even">
 <td align="left"><a
@@ -350,46 +363,6 @@ Graphics Cookbook</a></td>
 <td align="left">Thomas Mock</td>
 <td align="left">As step-by-step guide on how to improve your nflfastR
 graphics.</td>
-</tr>
-<tr class="odd">
-<td align="left"><a
-href="http://www.nflfastr.com/articles/beginners_guide.html">Beginner’s
-Guide to nflfastR</a></td>
-<td align="left">Ben Baldwin</td>
-<td align="left">Covers introductory examples of how to get started with
-the nflfastR package, and more broadly, how to use R and the
-tidyverse.</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://rmarkdown.rstudio.com/lesson-1.html">R
-Markdown Intro Guide</a></td>
-<td align="left">R Studio</td>
-<td align="left">Intro primer to authoring R Markdown documents.:</td>
-</tr>
-<tr class="odd">
-<td align="left"><a
-href="http://www.cookbook-r.com/Graphs/"><code>ggplot2</code>
-Cookbook</a></td>
-<td align="left">Winston Chang</td>
-<td align="left">Quick cookbook of <code>ggplot2</code> plots</td>
-</tr>
-<tr class="even">
-<td align="left"><a
-href="https://www.p8105.com/making_websites.html">Making Websites in R
-Markdown</a></td>
-<td align="left">Jeff Goldsmith</td>
-<td align="left">Nice introduction from his course at Columbia on how to
-make websites using only R and Rstudio.</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://bookdown.org/yihui/rmarkdown/">R
-Markdown Book</a></td>
-<td align="left">Yihui Xie, J. J. Allaire, Garrett Grolemund</td>
-<td align="left">The definitive guide outlining what you can do with the
-rmarkdown package (Allaire, Xie, McPherson, et al. 2021), which was
-first created in early 2014. The package has steadily evolved into a
-complete ecosystem for authoring documents in a variety of output
-formats including the output of this document that you’re reading.</td>
 </tr>
 </tbody>
 </table>
