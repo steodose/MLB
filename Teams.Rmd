@@ -376,6 +376,8 @@ attendance %>%
 ***
 ### Team Ranks
 
+League rankings among several popular advanced stats metrics. 
+
 ```{r Team Ranks, echo = FALSE}
 
 # load Fangraphs stat categories
@@ -384,10 +386,12 @@ fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
 fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
 
 fg_team_batter <- fg_team_batter %>% 
-    select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR)
+    select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR) %>% 
+    rename(b_WAR = WAR)
 
 fg_team_pitcher <- fg_team_pitcher %>% 
-    select(team_name, ERA, WHIP)
+    select(team_name, WAR, ERA, FIP) %>% 
+    rename(p_WAR = WAR)
 
 fg_team_fielder <- fg_team_fielder %>% 
     select(team_name, team_name_abb, FP, DRS)
@@ -399,48 +403,53 @@ fg_totals <- fg_team_batter %>%
               ) %>% 
     select(-team_name.y) %>% 
     left_join(mlb_teamcolors %>% 
-                  select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr"))
+                  select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr")) %>% 
+    mutate(WAR = b_WAR + p_WAR) %>% 
+    select(-b_WAR, -p_WAR)
 
 # create ranking columns for each stat
 fg_ranks <- fg_totals %>%
   mutate(across(c(OBP, OPS, WAR, wOBA, wRC, XBR, FP, DRS), ~ min_rank(desc(.x)), .names = "{.col}_rank"),
-         across(c(ERA, WHIP), ~ min_rank(.x), .names = "{.col}_rank")
+         across(c(ERA, FIP), ~ min_rank(.x), .names = "{.col}_rank")
   )
 
 # create GT table
 fg_ranks %>% 
     mutate(rank = row_number()) %>% 
-    select(rank, team_logo_espn, team_name, OBP_rank:WHIP_rank) %>% 
+    select(rank, team_logo_espn, team_name, OBP_rank:FIP_rank, -WAR_rank) %>% 
     gt() %>% 
     cols_label(rank = "",
                team_logo_espn = "",
                team_name = "Team",
                OBP_rank = "OBP",
                OPS_rank = "OPS",
-               WAR_rank = "WAR",
+              # WAR_rank = "WAR",
                wOBA_rank = "wOBA",
                wRC_rank = "wRC",
                XBR_rank = "XBR",
                FP_rank = "FP",
                DRS_rank = "DRS",
                ERA_rank = "ERA",
-               WHIP_rank = "WHIP"
+               FIP_rank = "FIP"
                ) %>% 
+  #    cols_width(
+  #        everything() ~ px(60)
+  # ) %>% 
      tab_spanner(
     label = "Batting",
-    columns = c(4:9)
+    columns = c(4:8)
   ) %>%
      tab_spanner(
     label = "Fielding",
-    columns = c(10:11)
+    columns = c(9:10)
   ) %>%
      tab_spanner(
     label = "Pitching",
-    columns = c(12:13)
+    columns = c(11:12)
   ) %>%
      gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
      data_color(
-    columns = 4:11, 
+    columns = 4:9, 
     colors = scales::col_numeric(
       palette = paletteer::paletteer_d(
         palette = "ggsci::amber_material",
@@ -450,7 +459,7 @@ fg_ranks %>%
       na.color = "#005C55FF"
     )) %>%
      data_color(
-    columns = 12:13, 
+    columns = 10:12, 
     colors = scales::col_numeric(
       palette = paletteer::paletteer_d(
         palette = "ggsci::amber_material",
@@ -462,7 +471,7 @@ fg_ranks %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Team Ranks**"),
-             subtitle = glue("Rankings across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by batting WAR. Data last updated on {today}.")) %>%
+             subtitle = glue("League rankings (1-30) across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by overall WAR. Data last updated on {today}.")) %>%
   tab_source_note(
     source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
     tab_options(
@@ -479,8 +488,12 @@ fg_ranks %>%
         source_notes.font.size = 12,
         table.font.size = 16,
         heading.align = "center"
-    ) 
-
+    ) %>% 
+    tab_style(
+        style = cell_text(weight = "bold"),
+        locations = cells_column_labels(everything())
+        ) %>%
+    gtsave('MLB Stats Table.png')
 
 
 ```
