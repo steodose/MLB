@@ -492,8 +492,9 @@ fg_ranks %>%
     tab_style(
         style = cell_text(weight = "bold"),
         locations = cells_column_labels(everything())
-        ) %>%
-    gtsave('MLB Stats Table.png')
+        ) 
+# %>%
+#     gtsave('MLB Stats Table.png')
 
 
 ```
