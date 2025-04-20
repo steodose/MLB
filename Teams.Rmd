@@ -66,7 +66,7 @@ The below shows each team's actual win percentage vs their pythagoroean win perc
 
 ## 1. ---------- Pythagorean Win % Plot ----------------------
 
-today <- Sys.Date()
+today <- Sys.Date()-1
 al_standings <- bref_standings_on_date(today, "AL Overall", from = FALSE)
 nl_standings <- bref_standings_on_date(today, "NL Overall", from = FALSE)
 
@@ -213,8 +213,8 @@ endpoints <- team_games2 %>%
 
 # make plot
 team_games2 %>% 
-    ggplot(aes(x=game_count, y = rd_running, color = team, group = team)) +
-    geom_line(size = 1.2) +
+    ggplot(aes(x=game_count, y = rd_running, group = team)) +
+    geom_line(size = 1, color = "grey") +
     geom_image(data = endpoints, aes(x = game_count, y = rd_running, image = team_logo_espn), 
              size = 0.05, inherit.aes = FALSE) +
     labs(x = "", y = "Run Differential",
@@ -223,7 +223,7 @@ team_games2 %>%
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
          color = "") +
     theme_custom() +
-    scale_color_manual(values = team_games2$primary) +
+    #scale_color_manual(values = team_games2$primary) +
     theme(legend.position="none") +
     theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
@@ -242,6 +242,70 @@ team_games2 %>%
 
 
 ```
+
+
+***
+### Team ERA vs Team OPS
+Comparison of team-level pitching (ERA) and hitting (OPS)
+
+```{r ERA vs OPS, echo = FALSE}
+
+# load Fangraphs stat categories
+fg_team_batter <- fg_team_batter(startseason = 2025, endseason = 2025, qual = 400)
+fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
+fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
+
+fg_team_batter <- fg_team_batter %>% 
+    select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR) %>% 
+    rename(b_WAR = WAR)
+
+fg_team_pitcher <- fg_team_pitcher %>% 
+    select(team_name, WAR, ERA, FIP) %>% 
+    rename(p_WAR = WAR)
+
+fg_team_fielder <- fg_team_fielder %>% 
+    select(team_name, team_name_abb, FP, DRS)
+
+# join with team colors
+fg_totals <- fg_team_batter %>% 
+    left_join(fg_team_pitcher) %>% 
+    left_join(fg_team_fielder, by = c("team_name" = "team_name_abb")
+              ) %>% 
+    select(-team_name.y) %>% 
+    left_join(mlb_teamcolors %>% 
+                  select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr")) %>% 
+    mutate(WAR = b_WAR + p_WAR) %>% 
+    select(-b_WAR, -p_WAR)
+
+# create OPS vs ERA chart
+fg_totals %>% 
+    ggplot(aes(x = ERA, y = OPS)) + 
+    geom_image(aes(image = team_logo_espn), size = 0.055, by = "width", asp = asp_ratio) +
+    geom_hline(yintercept = mean(fg_totals$OPS), color = "red", linetype = "dashed") +
+    geom_vline(xintercept =  mean(fg_totals$ERA), color = "red", linetype = "dashed") +
+    theme_custom() +
+  #geom_abline(slope = -1.5, intercept = c(.4, .3, .2, .1, 0, -.1, -.2, -.3, -.4), alpha = .2) +
+    labs(x = "Team ERA",
+         y = "Team OPS",
+         caption = "Data: Fangraphs/baseballR (Bill Petti) | Plot: @steodosescu",
+         title = glue("MLB Hitting vs Pitching Performance"),
+        subtitle = glue("2025 season, data thru {today}.")) +
+  theme(plot.title.position = "plot",
+        plot.title = element_text(face = "bold", 
+                                  size = 20, 
+                                  hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      size = 10,
+      hjust = 0.5)
+  ) +
+  theme(plot.subtitle = element_markdown()) +
+    scale_x_reverse(labels = scales::label_number(accuracy = 0.01))
+
+
+
+```
+
 
 
 ***
@@ -379,33 +443,6 @@ attendance %>%
 League rankings among several popular advanced stats metrics. 
 
 ```{r Team Ranks, echo = FALSE}
-
-# load Fangraphs stat categories
-fg_team_batter <- fg_team_batter(startseason = 2025, endseason = 2025, qual = 400)
-fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
-fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
-
-fg_team_batter <- fg_team_batter %>% 
-    select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR) %>% 
-    rename(b_WAR = WAR)
-
-fg_team_pitcher <- fg_team_pitcher %>% 
-    select(team_name, WAR, ERA, FIP) %>% 
-    rename(p_WAR = WAR)
-
-fg_team_fielder <- fg_team_fielder %>% 
-    select(team_name, team_name_abb, FP, DRS)
-
-# join with team colors
-fg_totals <- fg_team_batter %>% 
-    left_join(fg_team_pitcher) %>% 
-    left_join(fg_team_fielder, by = c("team_name" = "team_name_abb")
-              ) %>% 
-    select(-team_name.y) %>% 
-    left_join(mlb_teamcolors %>% 
-                  select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr")) %>% 
-    mutate(WAR = b_WAR + p_WAR) %>% 
-    select(-b_WAR, -p_WAR)
 
 # create ranking columns for each stat
 fg_ranks <- fg_totals %>%
