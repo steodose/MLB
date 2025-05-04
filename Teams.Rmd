@@ -185,14 +185,15 @@ team_games <- games %>%
      mutate(score = ifelse(home_away == "home_team", home_score, away_score),
            opp_score = ifelse(home_away == "home_team", away_score, home_score
                               )
-     )
+     ) %>% 
+    drop_na()
 
 
 team_games2 <- team_games %>% 
     select(-c(home_score, away_score, home_away)) %>%
     group_by(team) %>%
     mutate(run_diff = score - opp_score) %>% 
-    # calculate the running counts for points, wins, reg. wins, reg. + OT wins, and games
+    # calculate the running counts for run differential and games
     mutate(
            rd_running = cumsum(run_diff),
            game_count = row_number())
@@ -222,6 +223,7 @@ team_games2 %>%
          subtitle = glue("Daily cumulative run differential totals. Data thru {today} games."),
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
          color = "") +
+    scale_x_continuous(limits = c(1, 162)) +
     theme_custom() +
     #scale_color_manual(values = team_games2$primary) +
     theme(legend.position="none") +
