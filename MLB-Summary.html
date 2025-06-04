@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>MLB Summary</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet" />
+<script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><div><img src="mlb-logo.png" width="24px"></img> MLB Analytics</div></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="MLB-Summary.html">Summary</a>
+</li>
+<li>
+  <a href="Teams.html">Teams</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://stephanteodosescu.com/">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/steodosescu">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/steodose/MLB">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://betweenthepipes.substack.com/">
+    <span class="fa fa-wordpress fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">MLB Summary</h1>
+<h4 class="date">Last updated: 2025-06-04</h4>
+
+</div>
+
+
+<p>Below you’ll find figures showing the current MLB standings and key
+advanced metrics I’m tracking for all 30 MLB teams.</p>
+<hr />
+<div id="current-standings" class="section level3">
+<h3>Current Standings</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-2c3ea3c872c315d06dfa" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2c3ea3c872c315d06dfa">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Rank":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],"team_logo_espn":["https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/DET.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHC.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAD.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIN.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/STL.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SEA.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CLE.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SF.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIL.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/KC.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TB.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TOR.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CIN.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ARI.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TEX.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAA.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/WAS.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BOS.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ATL.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BAL.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIA.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/OAK.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PIT.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHW.png","https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/COL.png"],"name":["Detroit Tigers","Chicago Cubs","New York Yankees","New York Mets","Philadelphia Phillies","Los Angeles Dodgers","San Diego Padres","Minnesota Twins","Houston Astros","St. Louis Cardinals","Seattle Mariners","Cleveland Guardians","San Francisco Giants","Milwaukee Brewers","Kansas City Royals","Tampa Bay Rays","Toronto Blue Jays","Cincinnati Reds","Arizona Diamondbacks","Texas Rangers","Los Angeles Angels","Washington Nationals","Boston Red Sox","Atlanta Braves","Baltimore Orioles","Miami Marlins","Athletics","Pittsburgh Pirates","Chicago White Sox","Colorado Rockies"],"division":["AL Central","NL Central","AL East","NL East","NL East","NL West","NL West","AL Central","AL West","NL Central","AL West","AL Central","NL West","NL Central","AL Central","AL East","AL East","NL Central","NL West","AL West","AL West","NL East","AL East","NL East","AL East","NL East","AL West","NL Central","AL Central","NL West"],"W":[40,38,37,38,37,37,35,33,33,33,32,32,33,33,32,31,31,30,29,29,28,28,29,27,23,23,23,22,19,11],"L":[22,22,22,23,23,24,24,27,27,27,27,27,28,29,29,29,29,32,31,32,32,32,34,32,36,36,39,39,42,50],"W-L%":[0.645,0.633,0.627,0.623,0.617,0.607,0.593,0.55,0.55,0.55,0.542,0.542,0.541,0.532,0.525,0.517,0.517,0.484,0.483,0.475,0.467,0.467,0.46,0.458,0.39,0.39,0.371,0.361,0.311,0.18],"GB":["--","--","1.5","0.5","1.0","1.5","2.5","6.0","6.0","5.0","6.5","6.5","5.5","6.0","7.5","8.0","8.0","9.0","9.0","10.5","11.0","10.0","11.5","10.5","15.5","14.5","17.0","16.5","20.5","27.5"],"pythW-L%":[0.654,0.653,0.662,0.628,0.545,0.616,0.535,0.584,0.535,0.546,0.507,0.468,0.579,0.529,0.491,0.586,0.482,0.554,0.493,0.498,0.409,0.434,0.518,0.516,0.353,0.368,0.33,0.377,0.392,0.229],"run_diff":[91,102,99,67,27,80,18,43,18,27,4,-17,40,17,-4,45,-10,31,-5,-1,-55,-42,11,8,-89,-82,-123,-61,-57,-182],"proj_w":[106,106,107,102,88,100,87,95,87,88,82,76,94,86,80,95,78,90,80,81,66,70,84,84,57,60,53,61,64,37],"proj_l":[56,56,55,60,74,62,75,67,75,74,80,86,68,76,82,67,84,72,82,81,96,92,78,78,105,102,109,101,98,125]},"columns":[{"id":"Rank","name":"Rank","type":"numeric","minWidth":75,"align":"center"},{"id":"team_logo_espn","name":"","type":"character","minWidth":75,"align":"center","cell":[{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/DET.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHC.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAD.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIN.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/STL.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SEA.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CLE.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SF.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIL.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/KC.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TB.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TOR.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CIN.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ARI.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TEX.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAA.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/WAS.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BOS.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ATL.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BAL.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIA.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/OAK.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PIT.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHW.png","align":"center","height":"25","width":"30"},"children":[]}]}]},{"name":"Fragment","attribs":[],"children":[{"name":"div","attribs":{"style":{"display":"flex","justifyContent":"center"}},"children":[{"name":"img","attribs":{"src":"https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/COL.png","align":"center","height":"25","width":"30"},"children":[]}]}]}],"maxWidth":70},{"id":"name","name":"Team","type":"character","minWidth":160,"align":"left"},{"id":"division","name":"Division","type":"character","minWidth":100,"align":"center"},{"id":"W","name":"W","type":"numeric","minWidth":75,"align":"center"},{"id":"L","name":"L","type":"numeric","minWidth":75,"align":"center"},{"id":"W-L%","name":"W-L%","type":"numeric","minWidth":75,"align":"center"},{"id":"GB","name":"GB","type":"character","minWidth":75,"align":"center"},{"id":"pythW-L%","name":"pythW-L%","type":"numeric","minWidth":75,"align":"center"},{"id":"run_diff","name":"Run Diff","type":"numeric","minWidth":75,"align":"center"},{"id":"proj_w","name":"Proj. W","type":"numeric","minWidth":75,"align":"center"},{"id":"proj_l","name":"Proj. L","type":"numeric","minWidth":75,"align":"center"}],"searchable":true,"pagination":false,"defaultPageSize":100,"compact":true,"inline":true,"theme":{"borderColor":"#CDCDCD","style":{"fontFamily":"Chivo"},"headerStyle":{"&:hover[aria-sort]":{"background":"hsl(0, 0%, 80%)"},"&[aria-sort='ascending'], &[aria-sort='descending']":{"background":"#555","color":"#FFF"},"borderColor":"#333"},"searchInputStyle":{"width":"31%","backgroundColor":"#F9F9F9"}},"language":{"searchPlaceholder":"SEARCH FOR A TEAM..."},"dataKey":"027d75e1c6396429791e69bdd92fc200"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
