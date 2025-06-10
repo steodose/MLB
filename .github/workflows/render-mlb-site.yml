@@ -2,8 +2,8 @@ name: Render and Deploy MLB Website
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # 8 AM PT
-  workflow_dispatch:
+    - cron: '0 15 * * *'  # 8 AM Pacific Time
+  workflow_dispatch:      # Optional: allows manual trigger
 
 jobs:
   build-deploy:
@@ -37,8 +37,7 @@ jobs:
 
       - name: Install R dependencies
         run: |
-          R -e 'install.packages(c("remotes", "rmarkdown", "tidyverse", "glue", "ggimage", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
-          R -e 'remotes::install_github("BillPetti/baseballr", upgrade = "never")'
+          R -e 'install.packages(c("rmarkdown", "tidyverse", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
 
       - name: Render site
         run: |
@@ -46,7 +45,7 @@ jobs:
 
       - name: Update README Last Updated date
         run: |
-          sed -i "s|Last Updated:.*|Last Updated: $(date +'%B %d, %Y')|" README.md
+          sed -i "s|Last Updated:.*|Last Updated: $(date +'%B %d, %Y')|" README.md || true
 
       - name: Commit & push changes
         run: |
