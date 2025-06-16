@@ -92,6 +92,8 @@ top_pitchers %>%
                K_BB = "K/BB"
                ) %>% 
     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
+    fmt_number(columns = c(ERA, WHIP, BABIP), decimals = 3) %>%
+    fmt_number(columns = c(K_BB, WAR), decimals = 1) %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Pitching Leaders**"),
@@ -128,7 +130,7 @@ top_pitchers %>%
 ## 2. ---------- Batting Leaders Table ----------------------
 
 top_batters <- fg_batter_leaders %>% 
-    select(team_name, PlayerName, AVG, OPS, wOBA, WAR) %>% 
+    select(team_name, PlayerName, AVG, OPS, wOBA, R, RBI, HR, WAR) %>% 
     slice_head(n = 20) %>% 
     left_join(mlb_teamcolors %>% 
                   select(name, team_abbr, division, primary, team_logo_espn), by = c("team_name" = "team_abbr"))
@@ -145,6 +147,8 @@ top_batters %>%
                PlayerName = "Player"
                ) %>% 
     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
+    fmt_number(columns = c(AVG, OPS, wOBA), decimals = 3) %>% 
+    fmt_number(columns = WAR, decimals = 1) %>% 
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Batting Leaders**"),
@@ -169,7 +173,7 @@ top_batters %>%
     tab_style(
         style = cell_text(weight = "bold"),
         locations = cells_column_labels(everything())
-        ) 
+        )
     
 
 
