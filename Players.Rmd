@@ -93,7 +93,8 @@ top_pitchers %>%
                ) %>% 
     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
     fmt_number(columns = c(ERA, WHIP, BABIP), decimals = 3) %>%
-    fmt_number(columns = c(K_BB, WAR), decimals = 1) %>%
+    fmt_number(columns = c(K_BB), decimals = 1) %>%
+    fmt_number(columns = c(WAR), decimals = 2) %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Pitching Leaders**"),
@@ -148,7 +149,7 @@ top_batters %>%
                ) %>% 
     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
     fmt_number(columns = c(AVG, OPS, wOBA), decimals = 3) %>% 
-    fmt_number(columns = WAR, decimals = 1) %>% 
+    fmt_number(columns = WAR, decimals = 2) %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Batting Leaders**"),
