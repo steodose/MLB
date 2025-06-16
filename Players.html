@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Players</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><div><img src="mlb-logo.png" width="24px"></img> MLB Analytics</div></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="MLB-Summary.html">Summary</a>
+</li>
+<li>
+  <a href="Teams.html">Teams</a>
+</li>
+<li>
+  <a href="Players.html">Players</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://stephanteodosescu.com/">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/steodosescu">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/steodose/MLB">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://betweenthepipes.substack.com/">
+    <span class="fa fa-wordpress fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Players</h1>
+<h4 class="date">Last updated: 2025-06-15</h4>
+
+</div>
+
+
+<p>Below you’ll find figures showing the latest traditional and advanced
+metrics I’m tracking for all 30 MLB teams.</p>
+<div id="mlb-leaders" class="section level2 tabset">
+<h2 class="tabset">MLB Leaders</h2>
+<div id="pitching" class="section level3">
+<h3>Pitching</h3>
+<p>The below shows MLB pitching and hitting leaders. Data sourced from
+Fangraphs.</p>
+<div id="ubsrogkvpk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ubsrogkvpk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ubsrogkvpk thead, #ubsrogkvpk tbody, #ubsrogkvpk tfoot, #ubsrogkvpk tr, #ubsrogkvpk td, #ubsrogkvpk th {
+  border-style: none;
+}
+
+#ubsrogkvpk p {
+  margin: 0;
+  padding: 0;
+}
+
+#ubsrogkvpk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ubsrogkvpk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ubsrogkvpk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ubsrogkvpk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ubsrogkvpk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ubsrogkvpk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ubsrogkvpk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ubsrogkvpk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ubsrogkvpk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ubsrogkvpk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ubsrogkvpk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ubsrogkvpk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ubsrogkvpk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ubsrogkvpk .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ubsrogkvpk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubsrogkvpk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ubsrogkvpk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ubsrogkvpk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ubsrogkvpk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubsrogkvpk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ubsrogkvpk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubsrogkvpk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ubsrogkvpk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubsrogkvpk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ubsrogkvpk .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubsrogkvpk .gt_left {
+  text-align: left;
+}
+
+#ubsrogkvpk .gt_center {
+  text-align: center;
+}
+
+#ubsrogkvpk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ubsrogkvpk .gt_font_normal {
+  font-weight: normal;
+}
+
+#ubsrogkvpk .gt_font_bold {
+  font-weight: bold;
+}
+
+#ubsrogkvpk .gt_font_italic {
+  font-style: italic;
+}
+
+#ubsrogkvpk .gt_super {
+  font-size: 65%;
+}
+
+#ubsrogkvpk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ubsrogkvpk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ubsrogkvpk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ubsrogkvpk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ubsrogkvpk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ubsrogkvpk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ubsrogkvpk .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ubsrogkvpk .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ubsrogkvpk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="12" class="gt_heading gt_title gt_font_normal" style><span class='gt_from_md'><strong>MLB Pitching Leaders</strong></span></td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="12" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Top 20 pitchers, according to Fangraphs, sorted by overall WAR. Data last updated thru 2025-06-14.</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rank"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="team_logo_espn"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="team_name">Team</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="PlayerName">Player</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="IP">IP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="W">W</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="L">L</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="ERA">ERA</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="WHIP">WHIP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="BABIP">BABIP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="K_BB">K/BB</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="WAR">WAR</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="rank" class="gt_row gt_left">1</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/DET.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">DET</td>
+<td headers="PlayerName" class="gt_row gt_left">Tarik Skubal</td>
+<td headers="IP" class="gt_row gt_right">90.1</td>
+<td headers="W" class="gt_row gt_right">7</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">1.9926</td>
+<td headers="WHIP" class="gt_row gt_right">0.8081</td>
+<td headers="BABIP" class="gt_row gt_right">0.2762</td>
+<td headers="K_BB" class="gt_row gt_right">12.3333</td>
+<td headers="WAR" class="gt_row gt_right">3.6282</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">2</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PIT.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PIT</td>
+<td headers="PlayerName" class="gt_row gt_left">Paul Skenes</td>
+<td headers="IP" class="gt_row gt_right">96.0</td>
+<td headers="W" class="gt_row gt_right">4</td>
+<td headers="L" class="gt_row gt_right">6</td>
+<td headers="ERA" class="gt_row gt_right">1.7812</td>
+<td headers="WHIP" class="gt_row gt_right">0.8542</td>
+<td headers="BABIP" class="gt_row gt_right">0.2301</td>
+<td headers="K_BB" class="gt_row gt_right">4.4091</td>
+<td headers="WAR" class="gt_row gt_right">3.0023</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">3</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SF.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SFG</td>
+<td headers="PlayerName" class="gt_row gt_left">Logan Webb</td>
+<td headers="IP" class="gt_row gt_right">94.1</td>
+<td headers="W" class="gt_row gt_right">6</td>
+<td headers="L" class="gt_row gt_right">5</td>
+<td headers="ERA" class="gt_row gt_right">2.5760</td>
+<td headers="WHIP" class="gt_row gt_right">1.1237</td>
+<td headers="BABIP" class="gt_row gt_right">0.3226</td>
+<td headers="K_BB" class="gt_row gt_right">5.2500</td>
+<td headers="WAR" class="gt_row gt_right">2.7841</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">4</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BOS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">BOS</td>
+<td headers="PlayerName" class="gt_row gt_left">Garrett Crochet</td>
+<td headers="IP" class="gt_row gt_right">96.1</td>
+<td headers="W" class="gt_row gt_right">6</td>
+<td headers="L" class="gt_row gt_right">4</td>
+<td headers="ERA" class="gt_row gt_right">2.2422</td>
+<td headers="WHIP" class="gt_row gt_right">1.0277</td>
+<td headers="BABIP" class="gt_row gt_right">0.2719</td>
+<td headers="K_BB" class="gt_row gt_right">4.1786</td>
+<td headers="WAR" class="gt_row gt_right">2.7130</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">5</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">HOU</td>
+<td headers="PlayerName" class="gt_row gt_left">Hunter Brown</td>
+<td headers="IP" class="gt_row gt_right">86.0</td>
+<td headers="W" class="gt_row gt_right">8</td>
+<td headers="L" class="gt_row gt_right">3</td>
+<td headers="ERA" class="gt_row gt_right">1.8837</td>
+<td headers="WHIP" class="gt_row gt_right">0.9302</td>
+<td headers="BABIP" class="gt_row gt_right">0.2541</td>
+<td headers="K_BB" class="gt_row gt_right">4.0385</td>
+<td headers="WAR" class="gt_row gt_right">2.5637</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">6</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/WAS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">WSN</td>
+<td headers="PlayerName" class="gt_row gt_left">MacKenzie Gore</td>
+<td headers="IP" class="gt_row gt_right">81.1</td>
+<td headers="W" class="gt_row gt_right">3</td>
+<td headers="L" class="gt_row gt_right">5</td>
+<td headers="ERA" class="gt_row gt_right">2.8770</td>
+<td headers="WHIP" class="gt_row gt_right">1.1189</td>
+<td headers="BABIP" class="gt_row gt_right">0.3333</td>
+<td headers="K_BB" class="gt_row gt_right">5.1818</td>
+<td headers="WAR" class="gt_row gt_right">2.5629</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">7</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/KC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">KCR</td>
+<td headers="PlayerName" class="gt_row gt_left">Kris Bubic</td>
+<td headers="IP" class="gt_row gt_right">79.2</td>
+<td headers="W" class="gt_row gt_right">5</td>
+<td headers="L" class="gt_row gt_right">4</td>
+<td headers="ERA" class="gt_row gt_right">1.9205</td>
+<td headers="WHIP" class="gt_row gt_right">1.0669</td>
+<td headers="BABIP" class="gt_row gt_right">0.2745</td>
+<td headers="K_BB" class="gt_row gt_right">3.1538</td>
+<td headers="WAR" class="gt_row gt_right">2.4943</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">8</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PHI</td>
+<td headers="PlayerName" class="gt_row gt_left">Jesús Luzardo</td>
+<td headers="IP" class="gt_row gt_right">78.2</td>
+<td headers="W" class="gt_row gt_right">6</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">4.2331</td>
+<td headers="WHIP" class="gt_row gt_right">1.3983</td>
+<td headers="BABIP" class="gt_row gt_right">0.3756</td>
+<td headers="K_BB" class="gt_row gt_right">3.8750</td>
+<td headers="WAR" class="gt_row gt_right">2.3601</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">9</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">HOU</td>
+<td headers="PlayerName" class="gt_row gt_left">Framber Valdez</td>
+<td headers="IP" class="gt_row gt_right">90.0</td>
+<td headers="W" class="gt_row gt_right">7</td>
+<td headers="L" class="gt_row gt_right">4</td>
+<td headers="ERA" class="gt_row gt_right">3.1000</td>
+<td headers="WHIP" class="gt_row gt_right">1.0889</td>
+<td headers="BABIP" class="gt_row gt_right">0.2844</td>
+<td headers="K_BB" class="gt_row gt_right">3.4286</td>
+<td headers="WAR" class="gt_row gt_right">2.3307</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">10</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TEX.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">TEX</td>
+<td headers="PlayerName" class="gt_row gt_left">Nathan Eovaldi</td>
+<td headers="IP" class="gt_row gt_right">69.1</td>
+<td headers="W" class="gt_row gt_right">4</td>
+<td headers="L" class="gt_row gt_right">3</td>
+<td headers="ERA" class="gt_row gt_right">1.5577</td>
+<td headers="WHIP" class="gt_row gt_right">0.8077</td>
+<td headers="BABIP" class="gt_row gt_right">0.2400</td>
+<td headers="K_BB" class="gt_row gt_right">7.3000</td>
+<td headers="WAR" class="gt_row gt_right">2.2394</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">11</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYY</td>
+<td headers="PlayerName" class="gt_row gt_left">Max Fried</td>
+<td headers="IP" class="gt_row gt_right">88.0</td>
+<td headers="W" class="gt_row gt_right">9</td>
+<td headers="L" class="gt_row gt_right">1</td>
+<td headers="ERA" class="gt_row gt_right">1.8409</td>
+<td headers="WHIP" class="gt_row gt_right">0.9318</td>
+<td headers="BABIP" class="gt_row gt_right">0.2447</td>
+<td headers="K_BB" class="gt_row gt_right">4.5000</td>
+<td headers="WAR" class="gt_row gt_right">2.2393</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">12</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PHI</td>
+<td headers="PlayerName" class="gt_row gt_left">Zack Wheeler</td>
+<td headers="IP" class="gt_row gt_right">82.0</td>
+<td headers="W" class="gt_row gt_right">6</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">2.8537</td>
+<td headers="WHIP" class="gt_row gt_right">0.9024</td>
+<td headers="BABIP" class="gt_row gt_right">0.2446</td>
+<td headers="K_BB" class="gt_row gt_right">5.3158</td>
+<td headers="WAR" class="gt_row gt_right">2.1705</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">13</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ATL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ATL</td>
+<td headers="PlayerName" class="gt_row gt_left">Chris Sale</td>
+<td headers="IP" class="gt_row gt_right">80.2</td>
+<td headers="W" class="gt_row gt_right">4</td>
+<td headers="L" class="gt_row gt_right">4</td>
+<td headers="ERA" class="gt_row gt_right">2.7893</td>
+<td headers="WHIP" class="gt_row gt_right">1.2149</td>
+<td headers="BABIP" class="gt_row gt_right">0.3438</td>
+<td headers="K_BB" class="gt_row gt_right">4.2800</td>
+<td headers="WAR" class="gt_row gt_right">2.1622</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">14</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYY</td>
+<td headers="PlayerName" class="gt_row gt_left">Carlos Rodón</td>
+<td headers="IP" class="gt_row gt_right">89.2</td>
+<td headers="W" class="gt_row gt_right">8</td>
+<td headers="L" class="gt_row gt_right">5</td>
+<td headers="ERA" class="gt_row gt_right">3.0112</td>
+<td headers="WHIP" class="gt_row gt_right">0.9926</td>
+<td headers="BABIP" class="gt_row gt_right">0.2293</td>
+<td headers="K_BB" class="gt_row gt_right">3.3438</td>
+<td headers="WAR" class="gt_row gt_right">1.9780</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">15</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TEX.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">TEX</td>
+<td headers="PlayerName" class="gt_row gt_left">Jacob deGrom</td>
+<td headers="IP" class="gt_row gt_right">82.1</td>
+<td headers="W" class="gt_row gt_right">6</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">2.1862</td>
+<td headers="WHIP" class="gt_row gt_right">0.9109</td>
+<td headers="BABIP" class="gt_row gt_right">0.2367</td>
+<td headers="K_BB" class="gt_row gt_right">4.7059</td>
+<td headers="WAR" class="gt_row gt_right">1.8858</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">16</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SDP</td>
+<td headers="PlayerName" class="gt_row gt_left">Dylan Cease</td>
+<td headers="IP" class="gt_row gt_right">75.2</td>
+<td headers="W" class="gt_row gt_right">2</td>
+<td headers="L" class="gt_row gt_right">5</td>
+<td headers="ERA" class="gt_row gt_right">4.2819</td>
+<td headers="WHIP" class="gt_row gt_right">1.2952</td>
+<td headers="BABIP" class="gt_row gt_right">0.3262</td>
+<td headers="K_BB" class="gt_row gt_right">3.3103</td>
+<td headers="WAR" class="gt_row gt_right">1.8132</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">17</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYM</td>
+<td headers="PlayerName" class="gt_row gt_left">David Peterson</td>
+<td headers="IP" class="gt_row gt_right">79.2</td>
+<td headers="W" class="gt_row gt_right">5</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">2.4854</td>
+<td headers="WHIP" class="gt_row gt_right">1.1925</td>
+<td headers="BABIP" class="gt_row gt_right">0.2920</td>
+<td headers="K_BB" class="gt_row gt_right">2.8400</td>
+<td headers="WAR" class="gt_row gt_right">1.8089</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">18</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SF.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SFG</td>
+<td headers="PlayerName" class="gt_row gt_left">Robbie Ray</td>
+<td headers="IP" class="gt_row gt_right">81.1</td>
+<td headers="W" class="gt_row gt_right">8</td>
+<td headers="L" class="gt_row gt_right">1</td>
+<td headers="ERA" class="gt_row gt_right">2.5451</td>
+<td headers="WHIP" class="gt_row gt_right">1.1189</td>
+<td headers="BABIP" class="gt_row gt_right">0.2653</td>
+<td headers="K_BB" class="gt_row gt_right">2.7879</td>
+<td headers="WAR" class="gt_row gt_right">1.7586</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">19</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/STL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">STL</td>
+<td headers="PlayerName" class="gt_row gt_left">Sonny Gray</td>
+<td headers="IP" class="gt_row gt_right">79.2</td>
+<td headers="W" class="gt_row gt_right">7</td>
+<td headers="L" class="gt_row gt_right">2</td>
+<td headers="ERA" class="gt_row gt_right">3.8410</td>
+<td headers="WHIP" class="gt_row gt_right">1.1799</td>
+<td headers="BABIP" class="gt_row gt_right">0.3224</td>
+<td headers="K_BB" class="gt_row gt_right">5.6667</td>
+<td headers="WAR" class="gt_row gt_right">1.7507</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">20</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ATL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ATL</td>
+<td headers="PlayerName" class="gt_row gt_left">Spencer Schwellenbach</td>
+<td headers="IP" class="gt_row gt_right">89.2</td>
+<td headers="W" class="gt_row gt_right">5</td>
+<td headers="L" class="gt_row gt_right">4</td>
+<td headers="ERA" class="gt_row gt_right">3.1115</td>
+<td headers="WHIP" class="gt_row gt_right">1.0037</td>
+<td headers="BABIP" class="gt_row gt_right">0.2661</td>
+<td headers="K_BB" class="gt_row gt_right">6.0000</td>
+<td headers="WAR" class="gt_row gt_right">1.7492</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="12"><span class='gt_from_md'>DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu</span></td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+<div id="batting" class="section level3">
+<h3>Batting</h3>
+<div id="xqadycllfp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xqadycllfp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xqadycllfp thead, #xqadycllfp tbody, #xqadycllfp tfoot, #xqadycllfp tr, #xqadycllfp td, #xqadycllfp th {
+  border-style: none;
+}
+
+#xqadycllfp p {
+  margin: 0;
+  padding: 0;
+}
+
+#xqadycllfp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xqadycllfp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xqadycllfp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xqadycllfp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xqadycllfp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xqadycllfp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xqadycllfp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xqadycllfp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xqadycllfp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xqadycllfp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xqadycllfp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xqadycllfp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xqadycllfp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xqadycllfp .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xqadycllfp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xqadycllfp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xqadycllfp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xqadycllfp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xqadycllfp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xqadycllfp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xqadycllfp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xqadycllfp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xqadycllfp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xqadycllfp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xqadycllfp .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xqadycllfp .gt_left {
+  text-align: left;
+}
+
+#xqadycllfp .gt_center {
+  text-align: center;
+}
+
+#xqadycllfp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xqadycllfp .gt_font_normal {
+  font-weight: normal;
+}
+
+#xqadycllfp .gt_font_bold {
+  font-weight: bold;
+}
+
+#xqadycllfp .gt_font_italic {
+  font-style: italic;
+}
+
+#xqadycllfp .gt_super {
+  font-size: 65%;
+}
+
+#xqadycllfp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xqadycllfp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xqadycllfp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xqadycllfp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xqadycllfp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xqadycllfp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xqadycllfp .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#xqadycllfp .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#xqadycllfp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="8" class="gt_heading gt_title gt_font_normal" style><span class='gt_from_md'><strong>MLB Batting Leaders</strong></span></td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="8" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Top 20 batters, according to Fangraphs, sorted by overall WAR. Data last updated thru 2025-06-14.</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="rank"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="team_logo_espn"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="team_name">Team</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="PlayerName">Player</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="AVG">AVG</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="OPS">OPS</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="wOBA">wOBA</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="WAR">WAR</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="rank" class="gt_row gt_left">1</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYY</td>
+<td headers="PlayerName" class="gt_row gt_left">Aaron Judge</td>
+<td headers="AVG" class="gt_row gt_right">0.3837</td>
+<td headers="OPS" class="gt_row gt_right">1.2463</td>
+<td headers="wOBA" class="gt_row gt_right">0.5133</td>
+<td headers="WAR" class="gt_row gt_right">5.9224</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">2</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SEA.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SEA</td>
+<td headers="PlayerName" class="gt_row gt_left">Cal Raleigh</td>
+<td headers="AVG" class="gt_row gt_right">0.2629</td>
+<td headers="OPS" class="gt_row gt_right">0.9974</td>
+<td headers="wOBA" class="gt_row gt_right">0.4185</td>
+<td headers="WAR" class="gt_row gt_right">4.0803</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">3</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CHC</td>
+<td headers="PlayerName" class="gt_row gt_left">Pete Crow-Armstrong</td>
+<td headers="AVG" class="gt_row gt_right">0.2717</td>
+<td headers="OPS" class="gt_row gt_right">0.8519</td>
+<td headers="wOBA" class="gt_row gt_right">0.3629</td>
+<td headers="WAR" class="gt_row gt_right">3.7630</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">4</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">HOU</td>
+<td headers="PlayerName" class="gt_row gt_left">Jeremy Peña</td>
+<td headers="AVG" class="gt_row gt_right">0.3284</td>
+<td headers="OPS" class="gt_row gt_right">0.8712</td>
+<td headers="wOBA" class="gt_row gt_right">0.3797</td>
+<td headers="WAR" class="gt_row gt_right">3.5755</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">5</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">LAD</td>
+<td headers="PlayerName" class="gt_row gt_left">Shohei Ohtani</td>
+<td headers="AVG" class="gt_row gt_right">0.2899</td>
+<td headers="OPS" class="gt_row gt_right">1.0228</td>
+<td headers="wOBA" class="gt_row gt_right">0.4244</td>
+<td headers="WAR" class="gt_row gt_right">3.5552</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">6</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CLE.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CLE</td>
+<td headers="PlayerName" class="gt_row gt_left">José Ramírez</td>
+<td headers="AVG" class="gt_row gt_right">0.3294</td>
+<td headers="OPS" class="gt_row gt_right">0.9424</td>
+<td headers="wOBA" class="gt_row gt_right">0.3991</td>
+<td headers="WAR" class="gt_row gt_right">3.3582</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">7</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/OAK.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ATH</td>
+<td headers="PlayerName" class="gt_row gt_left">Jacob Wilson</td>
+<td headers="AVG" class="gt_row gt_right">0.3688</td>
+<td headers="OPS" class="gt_row gt_right">0.9207</td>
+<td headers="wOBA" class="gt_row gt_right">0.4009</td>
+<td headers="WAR" class="gt_row gt_right">3.3208</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">8</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ARI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ARI</td>
+<td headers="PlayerName" class="gt_row gt_left">Corbin Carroll</td>
+<td headers="AVG" class="gt_row gt_right">0.2563</td>
+<td headers="OPS" class="gt_row gt_right">0.9095</td>
+<td headers="wOBA" class="gt_row gt_right">0.3867</td>
+<td headers="WAR" class="gt_row gt_right">3.2949</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">9</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/KC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">KCR</td>
+<td headers="PlayerName" class="gt_row gt_left">Bobby Witt Jr.</td>
+<td headers="AVG" class="gt_row gt_right">0.2754</td>
+<td headers="OPS" class="gt_row gt_right">0.7982</td>
+<td headers="wOBA" class="gt_row gt_right">0.3383</td>
+<td headers="WAR" class="gt_row gt_right">3.2503</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">10</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYM</td>
+<td headers="PlayerName" class="gt_row gt_left">Francisco Lindor</td>
+<td headers="AVG" class="gt_row gt_right">0.2816</td>
+<td headers="OPS" class="gt_row gt_right">0.8346</td>
+<td headers="wOBA" class="gt_row gt_right">0.3609</td>
+<td headers="WAR" class="gt_row gt_right">3.0575</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">11</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SDP</td>
+<td headers="PlayerName" class="gt_row gt_left">Fernando Tatis Jr.</td>
+<td headers="AVG" class="gt_row gt_right">0.2664</td>
+<td headers="OPS" class="gt_row gt_right">0.8076</td>
+<td headers="wOBA" class="gt_row gt_right">0.3521</td>
+<td headers="WAR" class="gt_row gt_right">2.9463</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">12</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CHC</td>
+<td headers="PlayerName" class="gt_row gt_left">Kyle Tucker</td>
+<td headers="AVG" class="gt_row gt_right">0.2765</td>
+<td headers="OPS" class="gt_row gt_right">0.8911</td>
+<td headers="wOBA" class="gt_row gt_right">0.3819</td>
+<td headers="WAR" class="gt_row gt_right">2.8993</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">13</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/WAS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">WSN</td>
+<td headers="PlayerName" class="gt_row gt_left">James Wood</td>
+<td headers="AVG" class="gt_row gt_right">0.2820</td>
+<td headers="OPS" class="gt_row gt_right">0.9089</td>
+<td headers="wOBA" class="gt_row gt_right">0.3901</td>
+<td headers="WAR" class="gt_row gt_right">2.7537</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">14</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYM</td>
+<td headers="PlayerName" class="gt_row gt_left">Pete Alonso</td>
+<td headers="AVG" class="gt_row gt_right">0.2970</td>
+<td headers="OPS" class="gt_row gt_right">0.9739</td>
+<td headers="wOBA" class="gt_row gt_right">0.4153</td>
+<td headers="WAR" class="gt_row gt_right">2.6672</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">15</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SDP</td>
+<td headers="PlayerName" class="gt_row gt_left">Manny Machado</td>
+<td headers="AVG" class="gt_row gt_right">0.3180</td>
+<td headers="OPS" class="gt_row gt_right">0.8851</td>
+<td headers="wOBA" class="gt_row gt_right">0.3836</td>
+<td headers="WAR" class="gt_row gt_right">2.6658</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">16</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PHI</td>
+<td headers="PlayerName" class="gt_row gt_left">Trea Turner</td>
+<td headers="AVG" class="gt_row gt_right">0.2986</td>
+<td headers="OPS" class="gt_row gt_right">0.7983</td>
+<td headers="wOBA" class="gt_row gt_right">0.3519</td>
+<td headers="WAR" class="gt_row gt_right">2.6536</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">17</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">LAD</td>
+<td headers="PlayerName" class="gt_row gt_left">Freddie Freeman</td>
+<td headers="AVG" class="gt_row gt_right">0.3378</td>
+<td headers="OPS" class="gt_row gt_right">0.9748</td>
+<td headers="wOBA" class="gt_row gt_right">0.4136</td>
+<td headers="WAR" class="gt_row gt_right">2.6331</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">18</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SEA.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SEA</td>
+<td headers="PlayerName" class="gt_row gt_left">Julio Rodríguez</td>
+<td headers="AVG" class="gt_row gt_right">0.2633</td>
+<td headers="OPS" class="gt_row gt_right">0.7470</td>
+<td headers="wOBA" class="gt_row gt_right">0.3279</td>
+<td headers="WAR" class="gt_row gt_right">2.5471</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">19</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ARI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ARI</td>
+<td headers="PlayerName" class="gt_row gt_left">Geraldo Perdomo</td>
+<td headers="AVG" class="gt_row gt_right">0.2713</td>
+<td headers="OPS" class="gt_row gt_right">0.7949</td>
+<td headers="wOBA" class="gt_row gt_right">0.3486</td>
+<td headers="WAR" class="gt_row gt_right">2.5107</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">20</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BOS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">BOS</td>
+<td headers="PlayerName" class="gt_row gt_left">Carlos Narváez</td>
+<td headers="AVG" class="gt_row gt_right">0.2865</td>
+<td headers="OPS" class="gt_row gt_right">0.8333</td>
+<td headers="wOBA" class="gt_row gt_right">0.3663</td>
+<td headers="WAR" class="gt_row gt_right">2.4753</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="8"><span class='gt_from_md'>DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu</span></td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
