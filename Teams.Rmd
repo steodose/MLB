@@ -262,7 +262,7 @@ fg_team_batter <- fg_team_batter %>%
     rename(b_WAR = WAR)
 
 fg_team_pitcher <- fg_team_pitcher %>% 
-    select(team_name, WAR, ERA, FIP) %>% 
+    select(team_name, WAR, ERA, AVG, WHIP) %>% 
     rename(p_WAR = WAR)
 
 fg_team_fielder <- fg_team_fielder %>% 
@@ -449,13 +449,13 @@ League rankings among several popular advanced stats metrics.
 # create ranking columns for each stat
 fg_ranks <- fg_totals %>%
   mutate(across(c(OBP, OPS, WAR, wOBA, wRC, XBR, FP, DRS), ~ min_rank(desc(.x)), .names = "{.col}_rank"),
-         across(c(ERA, FIP), ~ min_rank(.x), .names = "{.col}_rank")
+         across(c(ERA, WHIP, AVG), ~ min_rank(.x), .names = "{.col}_rank")
   )
 
 # create GT table
 fg_ranks %>% 
     mutate(rank = row_number()) %>% 
-    select(rank, team_logo_espn, team_name, OBP_rank:FIP_rank, -WAR_rank) %>% 
+    select(rank, team_logo_espn, team_name, OBP_rank:AVG_rank, -WAR_rank) %>% 
     gt() %>% 
     cols_label(rank = "",
                team_logo_espn = "",
@@ -469,13 +469,14 @@ fg_ranks %>%
                FP_rank = "FP",
                DRS_rank = "DRS",
                ERA_rank = "ERA",
-               FIP_rank = "FIP"
+              WHIP_rank = "WHIP",
+               AVG_rank = "AVG"
                ) %>% 
   #    cols_width(
   #        everything() ~ px(60)
   # ) %>% 
      tab_spanner(
-    label = "Batting",
+    label = "Batting/Baserunning",
     columns = c(4:8)
   ) %>%
      tab_spanner(
@@ -484,7 +485,7 @@ fg_ranks %>%
   ) %>%
      tab_spanner(
     label = "Pitching",
-    columns = c(11:12)
+    columns = c(11:13)
   ) %>%
      gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
      data_color(
@@ -498,7 +499,7 @@ fg_ranks %>%
       na.color = "#005C55FF"
     )) %>%
      data_color(
-    columns = 10:12, 
+    columns = 10:13, 
     colors = scales::col_numeric(
       palette = paletteer::paletteer_d(
         palette = "ggsci::amber_material",

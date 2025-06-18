@@ -1,0 +1,38 @@
+---
+title: "About"
+---
+
+This website is your home for everything modern, public MLB analytics have to offer.
+
+## Glossary of Terms
+
+* On-Base Percentage (OBP): Measures how frequently a batter reaches base per plate appearance. Times on base include hits, walks and hit-by-pitches, but do not include errors, times reached on a fielder's choice or a dropped third strike. Sacrifice bunts are removed from the equation.
+* On-base plus slugging (OPS): On-base percentage plus slugging percentage. OPS adds on-base percentage and slugging percentage to get one number that unites the two. Slugging percentage (SLG) represents the total number of bases a player records per at-bat. The formula for slugging percentage is: (1B + 2Bx2 + 3Bx3 + HRx4)/AB). OPS is meant to combine how well a hitter can reach base, with how well he can hit for average and for power.
+ * Weighted on-base Average (wOBA): a version of on-base percentage that accounts for how a player reached base -- instead of simply considering whether a player reached base.
+ * Wins Above Replacement (WAR): measures a player's value in all facets of the game by deciphering how many more wins he's worth than a replacement-level player at his same position. It answers the question: How valuable is a player in comparison to replacement level?
+ * Weighted runs created (wRC): estimates a player's offensive value in terms of total runs. It combines a player's ability to get on base with his ability to hit for extra bases, and divides those two by the player's total opportunities.
+ * Statcast baserunning above average (XBR): a Statcast metric designed to use data to evaluate the performance of baserunners and outfielders in taking or preventing extra bases.
+ * Fielding Percentage (FP): total number of putouts and assists by a defender, divided by the total number of chances (putouts, assists and errors).
+ * Defensive Runs Saved (DRS): quantifies a player's entire defensive performance by attempting to measure how many runs a defender saved. It takes into account errors, range, outfield arm and double-play ability.
+ * Fielding Independent Pitching (FIP): similar to ERA, but it focuses solely on the events a pitcher has the most control over -- strikeouts, walks, hit-by-pitches and home runs. It entirely removes results on balls hit into the field of play.
+ 
+
+***
+
+## Run Expectancy Charts
+<img src="https://github.com/steodose/MLB/blob/main/Run%20Expectancy.png?raw=true" style="width:50%">
+
+***
+
+## Resources and Inspiration
+
+The below resources were used to create the above plots within this document. Many thanks to all the authors of these fantastic resources:  
+
+| Title/Link | Author | Description |
+| :--- | :--- |:---------------|
+| [Tango Tiger blog](http://www.tangotiger.com/index.php) | Tom Tango | One of the Godfathers of sabermetrics/baseball analytics |
+| [Fangraphs](https://www.fangraphs.com/leaders/major-league?pos=all&stats=bat&lg=all&qual=0&type=8&season=2025&month=0&season1=2025&ind=0&team=0,ts&rost=&age=&filter=&players=0) | Fangraphs | Top tier advanced stats and analysis. |
+| [Baseball Savant](https://baseballsavant.mlb.com) | MLB | The official home of MLB's advanced stats and analysis including Statcast data. |
+| [nflfastR Graphics Cookbook](https://jthomasmock.github.io/nfl_plotting_cookbook/#Scatter_plots) | Thomas Mock | As step-by-step guide on how to improve your nflfastR graphics. |
+
+
