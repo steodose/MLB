@@ -511,7 +511,7 @@ fg_ranks %>%
   cols_align(align = "left",
              columns = 1) %>%
   tab_header(title = md("**MLB Team Ranks**"),
-             subtitle = glue("League rankings (1-30) across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by overall WAR. Data last updated on {today}.")) %>%
+             subtitle = glue("League rankings (1-30) across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by overall team WAR. Data last updated on {today}.")) %>%
   tab_source_note(
     source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
     tab_options(
