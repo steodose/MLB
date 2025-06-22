@@ -392,7 +392,7 @@ attendance_leader <- attendance %>%
   filter(!is.na(attendance_average_home)) %>%
   slice_max(order_by = attendance_average_home, n = 1) %>%
   mutate(
-    leader_line = glue("The **{team_name}** lead the league in attendance, averaging **{scales::comma(attendance_average_home)}** per game.")
+    leader_line = glue("The **{team_name}** lead the league in attendance, averaging **{scales::comma(attendance_average_home)}** fans per game.")
   )
 
 ```
@@ -427,7 +427,8 @@ attendance %>%
   geom_hline(yintercept = 0, color = "black", size = 1) +
     scale_y_reverse() +
   scale_y_continuous(
-      breaks = scales::pretty_breaks(n = 10)) +
+      labels = scales::label_number(scale_cut = scales::cut_short_scale())
+      ) +
   theme_custom() + 
   theme(axis.text.x = element_blank(), 
         panel.grid.major.x = element_blank(),
