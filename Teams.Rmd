@@ -381,12 +381,25 @@ expectations %>%
 ***
 ### Attendance Profiles
 
-2025 Attendance totals
 
-```{r Attendance, echo = FALSE}
+```{r Attendance Leader, echo = FALSE}
 
 # load attendance data
 attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2025)
+
+# Get the team with the highest average attendance
+attendance_leader <- attendance %>%
+  filter(!is.na(attendance_average_home)) %>%
+  slice_max(order_by = attendance_average_home, n = 1) %>%
+  mutate(
+    leader_line = glue("The **{team_name}** lead the league in attendance, averaging **{scales::comma(attendance_average_home)}** per game.")
+  )
+
+```
+
+2025 Attendance totals. `r attendance_leader$leader_line`
+
+```{r Attendance, echo = FALSE}
 
 attendance <- attendance %>% 
     left_join(mlb_teamcolors %>% 
