@@ -15,8 +15,6 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 
 ## Stats & Standings {.tabset}
 
-### Overall Standings
-
 Below you'll find figures showing the current MLB standings and key advanced metrics I'm tracking for all 30 MLB teams.
 
 ```{r, echo =FALSE}
