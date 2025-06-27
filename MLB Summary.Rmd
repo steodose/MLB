@@ -141,7 +141,7 @@ mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>%
 
 
 ***
-### Current Standings
+### Overall Standings
 
 ```{r Standings}
 
@@ -212,239 +212,69 @@ standings_table
 
 ``` {r Division Standings}
 
-prior_day <- Sys.Date()-1
-#### Division Standings ####
+prior_day <- Sys.Date() - 1
 
-nl_west <- bref_standings_on_date(prior_day, "NL West", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
+# Reusable helper functions to get division standings from baseballr
+get_division_standings <- function(division_name) {
+  bref_standings_on_date(prior_day, division_name, from = FALSE) %>%
+    left_join(mlb_teamcolors %>% select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")) %>%
+    select(team_logo_espn, Tm, W:`pythW-L%`)
+}
 
-nl_central <- bref_standings_on_date(prior_day, "NL Central", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
-
-nl_east <- bref_standings_on_date(prior_day, "NL East", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
-
-al_west <- bref_standings_on_date(prior_day, "AL West", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
-
-al_central <- bref_standings_on_date(prior_day, "AL Central", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
-
-al_east <- bref_standings_on_date(prior_day, "AL East", from = FALSE) %>% 
-    left_join(mlb_teamcolors %>% # join in team logos and colors
-                  select(team_abbr, team_logo_espn), by = c("Tm" = "team_abbr")
-              ) %>% 
-    select(team_logo_espn, Tm, W:`pythW-L%`
-           )
-
-
-
-# NL West
-nl_west %>% 
-    gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
+make_standings_table <- function(df, division_name) {
+  df %>%
+    gt() %>%
+    cols_label(team_logo_espn = "") %>%
     gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**NL West**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
+    tab_header(title = md(glue::glue("**{division_name}**")),
+               subtitle = glue::glue("Data thru games as of {prior_day}.")) %>%
+    tab_source_note(source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>%
     tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
+      column_labels.background.color = "white",
+      table.border.top.width = px(3),
+      table.border.top.color = "white",
+      table.border.bottom.color = "white",
+      table.border.bottom.width = px(3),
+      column_labels.border.top.width = px(3),
+      column_labels.border.top.color = "white",
+      column_labels.border.bottom.width = px(3),
+      column_labels.border.bottom.color = "black",
+      data_row.padding = px(3),
+      source_notes.font.size = 12,
+      table.font.size = 16,
+      heading.align = "center"
+    ) %>%
     tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
+      style = cell_text(weight = "bold"),
+      locations = cells_column_labels(everything())
+    )
+}
 
 
-# NL Central
-nl_central %>% 
-     gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
-    gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**NL Central**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
-    tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
-    tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
-
-
-# NL East
-nl_east %>% 
-     gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
-    gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**NL East**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
-    tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
-    tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
-
-
-# AL West
-al_west %>% 
-     gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
-    gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**AL West**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
-    tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
-    tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
-
-# AL Central
-al_central %>% 
-     gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
-    gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**AL Central**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
-    tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
-    tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
-
-
-# AL East
-al_east %>% 
-     gt() %>% 
-    cols_label(team_logo_espn = "",
-               ) %>% 
-    gt_img_rows(columns = team_logo_espn, img_source = "web", height = 30) %>%
-     tab_header(title = md("**AL East**"),
-             subtitle = glue("Data thru games as of {prior_day}.")) %>%
-  tab_source_note(
-    source_note = md("DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu")) %>% 
-    tab_options(
-        column_labels.background.color = "white",
-        table.border.top.width = px(3),
-        table.border.top.color = "white",
-        table.border.bottom.color = "white",
-        table.border.bottom.width = px(3),
-        column_labels.border.top.width = px(3),
-        column_labels.border.top.color = "white",
-        column_labels.border.bottom.width = px(3),
-        column_labels.border.bottom.color = "black",
-        data_row.padding = px(3),
-        source_notes.font.size = 12,
-        table.font.size = 16,
-        heading.align = "center"
-    ) %>% 
-    tab_style(
-        style = cell_text(weight = "bold"),
-        locations = cells_column_labels(everything())
-        ) 
-
+# call for each division
+# divisions <- c("NL West", "NL Central", "NL East", "AL West", "AL Central", "AL East")
+# 
+# for (div in divisions) {
+#   standings <- get_division_standings(div)
+#   print(make_standings_table(standings, div))
+# }
 
 
 ```
+
+<div style="display: flex; gap: 30px; flex-wrap: wrap;">
+
+
+<div style="flex: 1; min-width: 400px;">
+`r make_standings_table(get_division_standings("NL West"), "NL West") %>% as_raw_html()`
+</div>
+
+
+<div style="flex: 1; min-width: 400px;">
+`r make_standings_table(get_division_standings("AL West"), "AL West") %>% as_raw_html()`
+</div>
+
+</div>
+
 
 
