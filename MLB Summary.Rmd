@@ -255,11 +255,11 @@ make_standings_table <- function(df, division_name) {
 nl_west <- make_standings_table(get_division_standings("NL West"), "NL West")
 al_west <- make_standings_table(get_division_standings("AL West"), "AL West")
 
-# nl_central <- make_standings_table(get_division_standings("NL Central"), "NL Central")
-# al_central <- make_standings_table(get_division_standings("AL Central"), "AL Central")
-# 
-# nl_east <- make_standings_table(get_division_standings("NL East"), "NL East")
-# al_east <- make_standings_table(get_division_standings("AL East"), "AL East")
+nl_central <- make_standings_table(get_division_standings("NL Central"), "NL Central")
+al_central <- make_standings_table(get_division_standings("AL Central"), "AL Central")
+
+nl_east <- make_standings_table(get_division_standings("NL East"), "NL East")
+al_east <- make_standings_table(get_division_standings("AL East"), "AL East")
 
 
 ```
@@ -278,23 +278,23 @@ gt_two_column_layout(
 
 ```{r Central, echo = FALSE}
 
-# gt_two_column_layout(
-#   list(nl_central, al_central),
-#   output = "html",
-#   vwidth = 725,
-#   vheight = 475
-# )
-# 
-# ```
-# 
-# ```{r East, echo = FALSE}
-# 
-# gt_two_column_layout(
-#   list(nl_east, al_east),
-#   output = "html",
-#   vwidth = 725,
-#   vheight = 475
-# )
+gt_two_column_layout(
+  list(nl_central, al_central),
+  output = "html",
+  vwidth = 725,
+  vheight = 475
+)
+
+```
+
+```{r East, echo = FALSE}
+
+gt_two_column_layout(
+  list(nl_east, al_east),
+  output = "html",
+  vwidth = 725,
+  vheight = 475
+)
 
 ```
 
