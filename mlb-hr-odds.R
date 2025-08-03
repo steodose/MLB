@@ -8,6 +8,12 @@ library(jsonlite) # for getting data
 # get today's date
 today <- Sys.Date() 
 
+# load teamcolors and logos
+mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>% 
+    mutate(team_abbr = case_when(team_abbr == "OAK" ~ "ATH", # A's are no longer called OAK
+                                 TRUE ~ team_abbr,)
+    )
+
 # ensure data output folder exists
 if (!dir.exists("data_hr")) dir.create("data_hr")
 
