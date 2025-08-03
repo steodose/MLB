@@ -1,8 +1,9 @@
+name: Get MLB HR Odds
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 15 * * *'
+    - cron: '30 15 * * *'  # 8:30 AM PT
 
 jobs:
   Get-MLB-HR-Odds:
@@ -10,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-   steps:
+    steps:
       - name: Check out repo
         uses: actions/checkout@v3
         with:
-          ref: main  # Ensure we check out the main branch
+          ref: main
       
       - uses: r-lib/actions/setup-r@v2
         with: 
@@ -45,11 +46,9 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git checkout main
           git add data_hr/hr_odds*.csv
           git diff --cached --quiet || git commit -m "Auto-update: hr odds"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
         shell: bash
-
-      - name: Push changes
-        run: git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
