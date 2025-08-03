@@ -36,7 +36,7 @@ jobs:
       - name: Install CRAN packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with: 
-          packages: jsonlite, dplyr
+          packages: jsonlite, dplyr, readr
           
       - name: Run R update script
         run: Rscript mlb-hr-odds.R

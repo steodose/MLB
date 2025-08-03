@@ -222,7 +222,10 @@ hr_data <- map2_dfr(names(players), players, safe_fg_logs)
 
 hr_data2 <- hr_data %>% 
     left_join(mlb_teamcolors %>% 
-                  select(team_abbr, division, primary, secondary, team_logo_espn), by = c("Team" = "team_abbr"))
+                  select(team_abbr, division, primary, secondary, team_logo_espn), by = c("Team" = "team_abbr")) %>% 
+    mutate(secondary = case_when(Team == "NYY" ~ "#003087", #change Yankees secondary color from white to blue
+                                 TRUE ~ secondary,)
+    )
 
 
 # -------------------------------
