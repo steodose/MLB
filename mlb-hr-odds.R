@@ -1,5 +1,6 @@
 #### 2025 Home Run Odds Chase ####
 library(dplyr)
+library(readr)
 library(jsonlite) # for getting data 
 
 # This repository automatically fetches daily MLB HR champ odds from RotoWire and archives the data 
