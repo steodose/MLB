@@ -39,7 +39,7 @@ jobs:
           packages: jsonlite, dplyr
           
       - name: Run R update script
-        run: Rscript mlb_hr_odds.R
+        run: Rscript mlb-hr-odds.R
         shell: bash
 
       - name: Commit changes in data folder
