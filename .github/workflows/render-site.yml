@@ -1,0 +1,56 @@
+name: Render and Deploy MLB Website
+
+on:
+  schedule:
+    - cron: '0 15 * * *'  # Runs every day at 8 AM PT
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Set up Pandoc
+        uses: r-lib/actions/setup-pandoc@v2
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev libfreetype6-dev libpng-dev
+
+      - name: Cache R packages
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-r-${{ hashFiles('**/DESCRIPTION') }}
+          restore-keys: |
+            ${{ runner.os }}-r-
+
+      - name: Install R dependencies
+        run: |
+          R -e 'install.packages(c("rmarkdown", "tidyverse", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"))'
+          R -e 'pkgs <- c("rmarkdown", "tidyverse", "glue", "ggimage", "baseballr", "reactable", "reactablefmtr", "ggtext", "ggrepel", "ggforce", "ggsci", "paletteer", "prismatic"); stopifnot(all(pkgs %in% rownames(installed.packages())))'
+
+      - name: Render site
+        run: |
+          R -e 'rmarkdown::render_site()'
+
+      - name: Update README Last Updated date
+        run: |
+          sed -i "s|Last Updated:.*|Last Updated: $(date +'%B %d, %Y')|" README.md
+
+      - name: Commit & push changes
+        run: |
+          git config --local user.email "[email protected]"
+          git config --local user.name "GitHub Actions"
+          git add -A
+          git commit -m "Automated site update (daily): $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

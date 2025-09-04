@@ -1,0 +1,2456 @@
+away_team,away_score,home_team,home_score
+Los Angeles Dodgers,4,Chicago Cubs,1
+Los Angeles Dodgers,6,Chicago Cubs,3
+Milwaukee Brewers,2,New York Yankees,4
+Baltimore Orioles,12,Toronto Blue Jays,2
+Boston Red Sox,5,Texas Rangers,2
+Philadelphia Phillies,7,Washington Nationals,3
+Cleveland Guardians,7,Kansas City Royals,4
+New York Mets,1,Houston Astros,3
+San Francisco Giants,6,Cincinnati Reds,4
+Atlanta Braves,4,San Diego Padres,7
+Los Angeles Angels,1,Chicago White Sox,8
+Pittsburgh Pirates,4,Miami Marlins,5
+Minnesota Twins,3,St. Louis Cardinals,5
+Detroit Tigers,4,Los Angeles Dodgers,5
+Chicago Cubs,10,Arizona Diamondbacks,6
+Athletics,2,Seattle Mariners,4
+Colorado Rockies,2,Tampa Bay Rays,3
+Baltimore Orioles,2,Toronto Blue Jays,8
+Pittsburgh Pirates,4,Miami Marlins,3
+Boston Red Sox,1,Texas Rangers,4
+New York Mets,3,Houston Astros,1
+Chicago Cubs,1,Arizona Diamondbacks,8
+Athletics,7,Seattle Mariners,0
+Atlanta Braves,3,San Diego Padres,4
+Detroit Tigers,5,Los Angeles Dodgers,8
+Milwaukee Brewers,9,New York Yankees,20
+Los Angeles Angels,1,Chicago White Sox,0
+Minnesota Twins,1,St. Louis Cardinals,5
+Baltimore Orioles,9,Toronto Blue Jays,5
+Philadelphia Phillies,11,Washington Nationals,6
+Cleveland Guardians,3,Kansas City Royals,4
+San Francisco Giants,2,Cincinnati Reds,3
+Colorado Rockies,2,Tampa Bay Rays,1
+Pittsburgh Pirates,4,Miami Marlins,5
+Boston Red Sox,3,Texas Rangers,4
+New York Mets,1,Houston Astros,2
+Atlanta Braves,0,San Diego Padres,1
+Chicago Cubs,4,Arizona Diamondbacks,3
+Detroit Tigers,3,Los Angeles Dodgers,7
+Athletics,4,Seattle Mariners,2
+Philadelphia Phillies,1,Washington Nationals,5
+Milwaukee Brewers,3,New York Yankees,12
+Baltimore Orioles,1,Toronto Blue Jays,3
+San Francisco Giants,6,Cincinnati Reds,3
+Colorado Rockies,4,Tampa Bay Rays,6
+Pittsburgh Pirates,2,Miami Marlins,3
+Cleveland Guardians,6,Kansas City Royals,2
+Los Angeles Angels,3,Chicago White Sox,2
+Minnesota Twins,2,St. Louis Cardinals,9
+Boston Red Sox,2,Texas Rangers,3
+Chicago Cubs,6,Arizona Diamondbacks,10
+Athletics,1,Seattle Mariners,2
+Atlanta Braves,0,San Diego Padres,5
+Minnesota Twins,0,Chicago White Sox,9
+Kansas City Royals,11,Milwaukee Brewers,1
+Boston Red Sox,5,Baltimore Orioles,8
+Colorado Rockies,1,Philadelphia Phillies,6
+Texas Rangers,3,Cincinnati Reds,14
+New York Mets,10,Miami Marlins,4
+Pittsburgh Pirates,1,Tampa Bay Rays,6
+Washington Nationals,2,Toronto Blue Jays,5
+Los Angeles Angels,5,St. Louis Cardinals,4
+San Francisco Giants,7,Houston Astros,2
+Cleveland Guardians,2,San Diego Padres,7
+Detroit Tigers,9,Seattle Mariners,6
+Chicago Cubs,18,Athletics,3
+Atlanta Braves,1,Los Angeles Dodgers,6
+Texas Rangers,1,Cincinnati Reds,0
+New York Mets,2,Miami Marlins,4
+Pittsburgh Pirates,0,Tampa Bay Rays,7
+Arizona Diamondbacks,7,New York Yankees,5
+Washington Nationals,3,Toronto Blue Jays,5
+Minnesota Twins,8,Chicago White Sox,3
+Kansas City Royals,0,Milwaukee Brewers,5
+Los Angeles Angels,9,St. Louis Cardinals,7
+San Francisco Giants,3,Houston Astros,1
+Cleveland Guardians,0,San Diego Padres,7
+Detroit Tigers,4,Seattle Mariners,1
+Chicago Cubs,7,Athletics,4
+Atlanta Braves,1,Los Angeles Dodgers,3
+Texas Rangers,1,Cincinnati Reds,0
+Pittsburgh Pirates,4,Tampa Bay Rays,2
+Kansas City Royals,2,Milwaukee Brewers,3
+Los Angeles Angels,5,St. Louis Cardinals,12
+Minnesota Twins,6,Chicago White Sox,1
+Washington Nationals,2,Toronto Blue Jays,4
+Chicago Cubs,10,Athletics,2
+Cleveland Guardians,2,San Diego Padres,5
+Detroit Tigers,2,Seattle Mariners,3
+San Francisco Giants,6,Houston Astros,3
+New York Mets,6,Miami Marlins,5
+Boston Red Sox,3,Baltimore Orioles,0
+Colorado Rockies,1,Philadelphia Phillies,5
+Arizona Diamondbacks,4,New York Yankees,3
+Atlanta Braves,5,Los Angeles Dodgers,6
+Boston Red Sox,8,Baltimore Orioles,4
+Colorado Rockies,1,Philadelphia Phillies,3
+Houston Astros,5,Minnesota Twins,2
+Arizona Diamondbacks,7,New York Yankees,9
+Cincinnati Reds,0,Milwaukee Brewers,1
+Chicago White Sox,4,Detroit Tigers,7
+St. Louis Cardinals,9,Boston Red Sox,13
+San Diego Padres,1,Chicago Cubs,3
+Toronto Blue Jays,0,New York Mets,5
+Athletics,6,Colorado Rockies,3
+New York Yankees,9,Pittsburgh Pirates,4
+Seattle Mariners,9,San Francisco Giants,10
+Arizona Diamondbacks,6,Washington Nationals,4
+Los Angeles Dodgers,2,Philadelphia Phillies,3
+Miami Marlins,0,Atlanta Braves,10
+Baltimore Orioles,2,Kansas City Royals,8
+Tampa Bay Rays,2,Texas Rangers,5
+Cincinnati Reds,2,Milwaukee Brewers,3
+Cleveland Guardians,8,Los Angeles Angels,6
+Chicago White Sox,2,Detroit Tigers,7
+Houston Astros,1,Minnesota Twins,6
+San Diego Padres,1,Chicago Cubs,7
+Arizona Diamondbacks,3,Washington Nationals,4
+Los Angeles Dodgers,3,Philadelphia Phillies,1
+New York Yankees,10,Pittsburgh Pirates,4
+Baltimore Orioles,8,Kansas City Royals,1
+Tampa Bay Rays,4,Texas Rangers,6
+Toronto Blue Jays,2,New York Mets,3
+Cincinnati Reds,11,Milwaukee Brewers,7
+Miami Marlins,4,Atlanta Braves,0
+Athletics,7,Colorado Rockies,4
+Seattle Mariners,1,San Francisco Giants,4
+Cleveland Guardians,4,Los Angeles Angels,10
+St. Louis Cardinals,NA,Boston Red Sox,NA
+Arizona Diamondbacks,4,Washington Nationals,5
+St. Louis Cardinals,4,Boston Red Sox,5
+St. Louis Cardinals,7,Boston Red Sox,18
+Los Angeles Dodgers,7,Philadelphia Phillies,8
+New York Yankees,4,Pittsburgh Pirates,5
+Toronto Blue Jays,1,New York Mets,2
+Chicago White Sox,3,Detroit Tigers,4
+Baltimore Orioles,1,Kansas City Royals,4
+Houston Astros,9,Minnesota Twins,7
+Cincinnati Reds,2,Milwaukee Brewers,8
+San Diego Padres,8,Chicago Cubs,7
+Tampa Bay Rays,3,Texas Rangers,4
+Athletics,5,Colorado Rockies,12
+Seattle Mariners,4,San Francisco Giants,5
+Cleveland Guardians,2,Los Angeles Angels,6
+Miami Marlins,NA,Atlanta Braves,NA
+New York Yankees,2,Detroit Tigers,6
+St. Louis Cardinals,4,Pittsburgh Pirates,8
+Los Angeles Dodgers,4,Washington Nationals,6
+Toronto Blue Jays,6,Boston Red Sox,2
+Miami Marlins,0,New York Mets,2
+Texas Rangers,0,Chicago Cubs,7
+Minnesota Twins,2,Kansas City Royals,4
+Baltimore Orioles,5,Arizona Diamondbacks,1
+Houston Astros,3,Seattle Mariners,4
+Cincinnati Reds,2,San Francisco Giants,0
+San Diego Padres,5,Athletics,4
+New York Yankees,0,Detroit Tigers,5
+Chicago White Sox,0,Cleveland Guardians,1
+Miami Marlins,5,New York Mets,10
+St. Louis Cardinals,5,Pittsburgh Pirates,3
+Los Angeles Dodgers,2,Washington Nationals,8
+Toronto Blue Jays,6,Boston Red Sox,1
+Los Angeles Angels,4,Tampa Bay Rays,3
+Philadelphia Phillies,5,Atlanta Braves,7
+Texas Rangers,6,Chicago Cubs,10
+Minnesota Twins,1,Kansas City Royals,2
+Milwaukee Brewers,7,Colorado Rockies,1
+Baltimore Orioles,3,Arizona Diamondbacks,4
+Houston Astros,2,Seattle Mariners,1
+Cincinnati Reds,1,San Francisco Giants,0
+San Diego Padres,4,Athletics,10
+St. Louis Cardinals,1,Pittsburgh Pirates,2
+Miami Marlins,5,New York Mets,0
+New York Yankees,4,Detroit Tigers,3
+Texas Rangers,6,Chicago Cubs,2
+San Diego Padres,2,Athletics,1
+Baltimore Orioles,0,Arizona Diamondbacks,9
+Cincinnati Reds,6,San Francisco Giants,8
+Los Angeles Dodgers,6,Washington Nationals,5
+Houston Astros,6,Seattle Mariners,7
+Chicago White Sox,2,Cleveland Guardians,3
+Toronto Blue Jays,2,Boston Red Sox,1
+Los Angeles Angels,4,Tampa Bay Rays,5
+Philadelphia Phillies,4,Atlanta Braves,3
+Minnesota Twins,4,Kansas City Royals,0
+Milwaukee Brewers,17,Colorado Rockies,2
+Los Angeles Angels,11,Tampa Bay Rays,1
+Chicago White Sox,1,Cleveland Guardians,6
+Minnesota Twins,2,Kansas City Royals,3
+Milwaukee Brewers,2,Colorado Rockies,7
+Toronto Blue Jays,3,Boston Red Sox,4
+Philadelphia Phillies,2,Atlanta Braves,4
+Kansas City Royals,0,Cleveland Guardians,7
+Pittsburgh Pirates,3,Cincinnati Reds,5
+Atlanta Braves,3,Tampa Bay Rays,6
+San Francisco Giants,9,New York Yankees,1
+Washington Nationals,7,Miami Marlins,4
+Boston Red Sox,1,Chicago White Sox,11
+Los Angeles Angels,3,Houston Astros,14
+Detroit Tigers,7,Minnesota Twins,6
+Philadelphia Phillies,0,St. Louis Cardinals,2
+Colorado Rockies,0,San Diego Padres,8
+Texas Rangers,3,Seattle Mariners,5
+Milwaukee Brewers,7,Arizona Diamondbacks,0
+New York Mets,7,Athletics,6
+Chicago Cubs,0,Los Angeles Dodgers,3
+Toronto Blue Jays,NA,Baltimore Orioles,NA
+Detroit Tigers,4,Minnesota Twins,0
+Philadelphia Phillies,4,St. Louis Cardinals,1
+San Francisco Giants,4,New York Yankees,8
+New York Mets,1,Athletics,3
+Toronto Blue Jays,4,Baltimore Orioles,5
+Atlanta Braves,5,Tampa Bay Rays,4
+Boston Red Sox,2,Chicago White Sox,3
+Washington Nationals,6,Miami Marlins,7
+Kansas City Royals,3,Cleveland Guardians,6
+Pittsburgh Pirates,2,Cincinnati Reds,5
+Los Angeles Angels,4,Houston Astros,1
+Milwaukee Brewers,4,Arizona Diamondbacks,5
+Colorado Rockies,0,San Diego Padres,2
+Chicago Cubs,16,Los Angeles Dodgers,0
+Texas Rangers,2,Seattle Mariners,9
+Toronto Blue Jays,7,Baltimore Orioles,6
+San Francisco Giants,5,New York Yankees,4
+Kansas City Royals,4,Cleveland Guardians,2
+Pittsburgh Pirates,0,Cincinnati Reds,4
+Atlanta Braves,3,Tampa Bay Rays,8
+Washington Nationals,4,Miami Marlins,11
+Los Angeles Angels,3,Houston Astros,7
+Detroit Tigers,1,Minnesota Twins,5
+Boston Red Sox,3,Chicago White Sox,1
+Philadelphia Phillies,0,St. Louis Cardinals,7
+New York Mets,8,Athletics,0
+Colorado Rockies,0,San Diego Padres,6
+Texas Rangers,1,Seattle Mariners,3
+Milwaukee Brewers,2,Arizona Diamondbacks,5
+Chicago Cubs,4,Los Angeles Dodgers,2
+Washington Nationals,3,Pittsburgh Pirates,10
+San Francisco Giants,10,Philadelphia Phillies,4
+Boston Red Sox,1,Tampa Bay Rays,16
+Kansas City Royals,1,New York Yankees,4
+Atlanta Braves,8,Toronto Blue Jays,4
+New York Mets,5,Minnesota Twins,1
+Detroit Tigers,9,Milwaukee Brewers,1
+Houston Astros,3,St. Louis Cardinals,8
+Chicago Cubs,4,San Diego Padres,10
+Colorado Rockies,3,Los Angeles Dodgers,5
+Washington Nationals,3,Pittsburgh Pirates,0
+Seattle Mariners,4,Cincinnati Reds,8
+Arizona Diamondbacks,10,Miami Marlins,4
+San Francisco Giants,4,Philadelphia Phillies,6
+Cleveland Guardians,6,Baltimore Orioles,3
+Boston Red Sox,7,Tampa Bay Rays,4
+Kansas City Royals,2,New York Yankees,4
+Atlanta Braves,3,Toronto Blue Jays,6
+New York Mets,3,Minnesota Twins,6
+Athletics,12,Chicago White Sox,3
+Detroit Tigers,0,Milwaukee Brewers,5
+Houston Astros,2,St. Louis Cardinals,0
+Los Angeles Angels,0,Texas Rangers,4
+Chicago Cubs,2,San Diego Padres,1
+Colorado Rockies,2,Los Angeles Dodgers,6
+Atlanta Braves,1,Toronto Blue Jays,3
+New York Mets,3,Minnesota Twins,4
+Detroit Tigers,1,Milwaukee Brewers,5
+Houston Astros,1,St. Louis Cardinals,4
+Chicago Cubs,2,San Diego Padres,4
+Cleveland Guardians,1,Baltimore Orioles,9
+Washington Nationals,1,Pittsburgh Pirates,6
+Seattle Mariners,5,Cincinnati Reds,3
+Arizona Diamondbacks,6,Miami Marlins,2
+San Francisco Giants,11,Philadelphia Phillies,4
+Boston Red Sox,1,Tampa Bay Rays,0
+Kansas City Royals,3,New York Yankees,4
+Athletics,3,Chicago White Sox,1
+Los Angeles Angels,1,Texas Rangers,3
+Colorado Rockies,7,Los Angeles Dodgers,8
+Arizona Diamondbacks,6,Miami Marlins,4
+Washington Nationals,0,Pittsburgh Pirates,1
+Seattle Mariners,11,Cincinnati Reds,7
+Athletics,8,Chicago White Sox,0
+San Francisco Giants,4,Philadelphia Phillies,6
+Cleveland Guardians,2,Baltimore Orioles,6
+Kansas City Royals,1,Detroit Tigers,6
+New York Yankees,6,Tampa Bay Rays,3
+St. Louis Cardinals,1,New York Mets,4
+Los Angeles Angels,3,Texas Rangers,5
+Arizona Diamondbacks,11,Chicago Cubs,13
+Kansas City Royals,3,Detroit Tigers,7
+Cleveland Guardians,10,Pittsburgh Pirates,7
+Miami Marlins,2,Philadelphia Phillies,7
+Cincinnati Reds,8,Baltimore Orioles,3
+New York Yankees,1,Tampa Bay Rays,0
+Seattle Mariners,1,Toronto Blue Jays,3
+St. Louis Cardinals,4,New York Mets,5
+Chicago White Sox,3,Boston Red Sox,10
+Minnesota Twins,4,Atlanta Braves,6
+Los Angeles Dodgers,3,Texas Rangers,0
+San Diego Padres,4,Houston Astros,6
+Athletics,3,Milwaukee Brewers,5
+San Francisco Giants,0,Los Angeles Angels,2
+Washington Nationals,NA,Colorado Rockies,NA
+Miami Marlins,10,Philadelphia Phillies,11
+Kansas City Royals,1,Detroit Tigers,3
+Arizona Diamondbacks,2,Chicago Cubs,6
+Seattle Mariners,8,Toronto Blue Jays,4
+Cincinnati Reds,5,Baltimore Orioles,9
+Cleveland Guardians,3,Pittsburgh Pirates,0
+St. Louis Cardinals,0,New York Mets,3
+Los Angeles Dodgers,3,Texas Rangers,4
+Washington Nationals,12,Colorado Rockies,11
+Chicago White Sox,3,Boston Red Sox,4
+New York Yankees,8,Tampa Bay Rays,10
+San Diego Padres,2,Houston Astros,3
+Athletics,3,Milwaukee Brewers,1
+Minnesota Twins,3,Atlanta Braves,4
+San Francisco Giants,3,Los Angeles Angels,2
+Cincinnati Reds,24,Baltimore Orioles,2
+Cleveland Guardians,5,Pittsburgh Pirates,4
+Minnesota Twins,2,Atlanta Braves,6
+Chicago White Sox,8,Boston Red Sox,4
+Miami Marlins,7,Philadelphia Phillies,5
+Seattle Mariners,8,Toronto Blue Jays,3
+Kansas City Royals,4,Detroit Tigers,3
+St. Louis Cardinals,4,New York Mets,7
+New York Yankees,4,Tampa Bay Rays,0
+Athletics,1,Milwaukee Brewers,14
+Arizona Diamondbacks,3,Chicago Cubs,2
+Los Angeles Dodgers,1,Texas Rangers,0
+Washington Nationals,3,Colorado Rockies,2
+Washington Nationals,1,Colorado Rockies,3
+San Francisco Giants,4,Los Angeles Angels,5
+San Diego Padres,3,Houston Astros,2
+Chicago White Sox,2,Boston Red Sox,4
+New York Yankees,4,Cleveland Guardians,6
+San Diego Padres,4,Detroit Tigers,6
+Cincinnati Reds,3,Miami Marlins,6
+Philadelphia Phillies,4,New York Mets,5
+St. Louis Cardinals,6,Atlanta Braves,7
+Toronto Blue Jays,0,Houston Astros,7
+Milwaukee Brewers,2,San Francisco Giants,5
+New York Yankees,2,Cleveland Guardians,3
+San Diego Padres,2,Detroit Tigers,0
+Cincinnati Reds,3,Miami Marlins,4
+Baltimore Orioles,0,Washington Nationals,7
+Seattle Mariners,3,Boston Red Sox,8
+Philadelphia Phillies,1,New York Mets,5
+St. Louis Cardinals,10,Atlanta Braves,4
+Colorado Rockies,3,Kansas City Royals,4
+Los Angeles Dodgers,10,Chicago Cubs,11
+Chicago White Sox,2,Minnesota Twins,4
+Toronto Blue Jays,1,Houston Astros,5
+Pittsburgh Pirates,9,Los Angeles Angels,3
+Tampa Bay Rays,1,Arizona Diamondbacks,5
+Milwaukee Brewers,11,San Francisco Giants,3
+Texas Rangers,8,Athletics,5
+St. Louis Cardinals,1,Atlanta Braves,4
+San Diego Padres,0,Detroit Tigers,6
+Philadelphia Phillies,3,New York Mets,4
+Cincinnati Reds,5,Miami Marlins,2
+New York Yankees,5,Cleveland Guardians,1
+Baltimore Orioles,3,Washington Nationals,4
+Seattle Mariners,8,Boston Red Sox,5
+Los Angeles Dodgers,6,Chicago Cubs,7
+Toronto Blue Jays,1,Houston Astros,3
+Chicago White Sox,3,Minnesota Twins,6
+Pittsburgh Pirates,3,Los Angeles Angels,0
+Tampa Bay Rays,7,Arizona Diamondbacks,6
+Milwaukee Brewers,2,San Francisco Giants,4
+Texas Rangers,2,Athletics,5
+Colorado Rockies,NA,Kansas City Royals,NA
+Chicago White Sox,3,Minnesota Twins,0
+Seattle Mariners,4,Boston Red Sox,3
+Colorado Rockies,4,Kansas City Royals,7
+Colorado Rockies,2,Kansas City Royals,6
+Milwaukee Brewers,5,San Francisco Giants,6
+Baltimore Orioles,2,Washington Nationals,1
+Pittsburgh Pirates,3,Los Angeles Angels,4
+Tampa Bay Rays,7,Arizona Diamondbacks,4
+Texas Rangers,3,Athletics,4
+Philadelphia Phillies,0,Chicago Cubs,4
+New York Mets,4,Washington Nationals,5
+Toronto Blue Jays,4,New York Yankees,2
+Houston Astros,0,Kansas City Royals,2
+Los Angeles Angels,4,Minnesota Twins,11
+Milwaukee Brewers,2,St. Louis Cardinals,3
+Cincinnati Reds,8,Colorado Rockies,7
+Tampa Bay Rays,1,San Diego Padres,0
+Atlanta Braves,8,Arizona Diamondbacks,2
+Miami Marlins,8,Seattle Mariners,4
+Chicago White Sox,5,Athletics,6
+Pittsburgh Pirates,3,Los Angeles Dodgers,0
+Texas Rangers,2,San Francisco Giants,0
+Baltimore Orioles,NA,Detroit Tigers,NA
+Boston Red Sox,NA,Cleveland Guardians,NA
+Boston Red Sox,4,Cleveland Guardians,5
+Boston Red Sox,7,Cleveland Guardians,3
+Baltimore Orioles,3,Detroit Tigers,4
+Baltimore Orioles,2,Detroit Tigers,6
+Los Angeles Angels,1,Minnesota Twins,5
+Milwaukee Brewers,5,St. Louis Cardinals,6
+Cincinnati Reds,6,Colorado Rockies,4
+New York Mets,2,Washington Nationals,0
+Texas Rangers,2,San Francisco Giants,3
+Philadelphia Phillies,10,Chicago Cubs,4
+Chicago White Sox,10,Athletics,3
+Houston Astros,0,Kansas City Royals,2
+Atlanta Braves,8,Arizona Diamondbacks,7
+Tampa Bay Rays,4,San Diego Padres,1
+Pittsburgh Pirates,4,Los Angeles Dodgers,8
+Miami Marlins,0,Seattle Mariners,14
+Toronto Blue Jays,NA,New York Yankees,NA
+New York Mets,7,Washington Nationals,8
+Toronto Blue Jays,2,New York Yankees,11
+Toronto Blue Jays,1,New York Yankees,5
+Boston Red Sox,13,Cleveland Guardians,3
+Baltimore Orioles,0,Detroit Tigers,7
+Los Angeles Angels,0,Minnesota Twins,5
+Houston Astros,7,Kansas City Royals,3
+Milwaukee Brewers,7,St. Louis Cardinals,1
+Cincinnati Reds,8,Colorado Rockies,1
+Texas Rangers,2,San Francisco Giants,3
+Chicago White Sox,2,Athletics,3
+Pittsburgh Pirates,2,Los Angeles Dodgers,9
+Tampa Bay Rays,4,San Diego Padres,2
+Atlanta Braves,4,Arizona Diamondbacks,6
+Miami Marlins,6,Seattle Mariners,7
+Philadelphia Phillies,3,Chicago Cubs,1
+New York Mets,19,Washington Nationals,5
+Minnesota Twins,11,Cleveland Guardians,1
+New York Yankees,3,Baltimore Orioles,4
+St. Louis Cardinals,1,Cincinnati Reds,3
+Athletics,2,Texas Rangers,1
+Detroit Tigers,5,Houston Astros,8
+Atlanta Braves,6,Colorado Rockies,3
+Miami Marlins,6,Los Angeles Dodgers,7
+Minnesota Twins,1,Cleveland Guardians,2
+New York Yankees,15,Baltimore Orioles,3
+Chicago Cubs,9,Pittsburgh Pirates,0
+Washington Nationals,6,Philadelphia Phillies,7
+Kansas City Royals,3,Tampa Bay Rays,1
+Boston Red Sox,10,Toronto Blue Jays,2
+Arizona Diamondbacks,3,New York Mets,8
+Milwaukee Brewers,7,Chicago White Sox,2
+Athletics,2,Texas Rangers,15
+Detroit Tigers,4,Houston Astros,6
+Atlanta Braves,8,Colorado Rockies,2
+Los Angeles Angels,3,Seattle Mariners,5
+San Francisco Giants,4,San Diego Padres,7
+Miami Marlins,2,Los Angeles Dodgers,15
+St. Louis Cardinals,NA,Cincinnati Reds,NA
+St. Louis Cardinals,6,Cincinnati Reds,0
+St. Louis Cardinals,9,Cincinnati Reds,1
+Detroit Tigers,7,Houston Astros,4
+Atlanta Braves,1,Colorado Rockies,2
+Miami Marlins,7,Los Angeles Dodgers,12
+Los Angeles Angels,3,Seattle Mariners,9
+San Francisco Giants,3,San Diego Padres,5
+Minnesota Twins,2,Cleveland Guardians,4
+New York Yankees,4,Baltimore Orioles,5
+Chicago Cubs,3,Pittsburgh Pirates,4
+Washington Nationals,2,Philadelphia Phillies,7
+Kansas City Royals,3,Tampa Bay Rays,0
+Boston Red Sox,6,Toronto Blue Jays,7
+Arizona Diamondbacks,4,New York Mets,3
+Milwaukee Brewers,6,Chicago White Sox,4
+Athletics,7,Texas Rangers,1
+Chicago Cubs,8,Pittsburgh Pirates,3
+St. Louis Cardinals,1,Cincinnati Reds,9
+Arizona Diamondbacks,4,New York Mets,2
+Kansas City Royals,8,Tampa Bay Rays,2
+Minnesota Twins,3,Cleveland Guardians,4
+Milwaukee Brewers,0,Chicago White Sox,8
+Athletics,3,Texas Rangers,0
+Washington Nationals,4,Philadelphia Phillies,2
+Boston Red Sox,2,Toronto Blue Jays,4
+Detroit Tigers,10,Los Angeles Angels,4
+Colorado Rockies,4,San Francisco Giants,3
+Washington Nationals,1,Cincinnati Reds,6
+San Diego Padres,9,Pittsburgh Pirates,4
+Arizona Diamondbacks,2,Philadelphia Phillies,3
+Kansas City Royals,0,Baltimore Orioles,3
+Tampa Bay Rays,0,New York Yankees,3
+Cleveland Guardians,3,Toronto Blue Jays,5
+Minnesota Twins,1,Boston Red Sox,6
+Athletics,6,Miami Marlins,1
+Los Angeles Dodgers,2,Atlanta Braves,1
+Houston Astros,3,Chicago White Sox,7
+Seattle Mariners,13,Texas Rangers,1
+Chicago Cubs,10,Milwaukee Brewers,0
+New York Mets,9,St. Louis Cardinals,3
+Detroit Tigers,9,Los Angeles Angels,1
+Colorado Rockies,0,San Francisco Giants,4
+Tampa Bay Rays,3,New York Yankees,2
+Houston Astros,8,Chicago White Sox,3
+Cleveland Guardians,5,Toronto Blue Jays,3
+San Diego Padres,2,Pittsburgh Pirates,1
+Colorado Rockies,3,San Francisco Giants,6
+Minnesota Twins,4,Boston Red Sox,3
+Athletics,6,Miami Marlins,9
+Arizona Diamondbacks,2,Philadelphia Phillies,7
+Washington Nationals,11,Cincinnati Reds,6
+Seattle Mariners,2,Texas Rangers,1
+Chicago Cubs,6,Milwaukee Brewers,2
+Kansas City Royals,4,Baltimore Orioles,0
+Los Angeles Dodgers,10,Atlanta Braves,3
+Detroit Tigers,2,Los Angeles Angels,5
+New York Mets,NA,St. Louis Cardinals,NA
+New York Mets,5,St. Louis Cardinals,6
+New York Mets,4,St. Louis Cardinals,5
+Kansas City Royals,11,Baltimore Orioles,6
+San Diego Padres,4,Pittsburgh Pirates,0
+Minnesota Twins,5,Boston Red Sox,4
+Tampa Bay Rays,7,New York Yankees,5
+Cleveland Guardians,5,Toronto Blue Jays,4
+Athletics,3,Miami Marlins,2
+Arizona Diamondbacks,11,Philadelphia Phillies,9
+Houston Astros,4,Chicago White Sox,5
+Chicago Cubs,0,Milwaukee Brewers,4
+Seattle Mariners,1,Texas Rangers,8
+Colorado Rockies,3,San Francisco Giants,9
+Detroit Tigers,13,Los Angeles Angels,1
+Washington Nationals,4,Cincinnati Reds,1
+Los Angeles Dodgers,3,Atlanta Braves,4
+Los Angeles Dodgers,7,Miami Marlins,4
+San Diego Padres,4,New York Yankees,3
+Cincinnati Reds,0,Atlanta Braves,4
+San Francisco Giants,2,Chicago Cubs,9
+Chicago White Sox,0,Kansas City Royals,3
+Houston Astros,1,Milwaukee Brewers,5
+Pittsburgh Pirates,3,St. Louis Cardinals,6
+New York Mets,5,Arizona Diamondbacks,4
+Seattle Mariners,6,Athletics,7
+Cleveland Guardians,NA,Washington Nationals,NA
+Cleveland Guardians,9,Washington Nationals,10
+Cleveland Guardians,9,Washington Nationals,1
+Los Angeles Dodgers,4,Miami Marlins,5
+Texas Rangers,6,Boston Red Sox,1
+Philadelphia Phillies,8,Tampa Bay Rays,4
+San Diego Padres,3,New York Yankees,12
+Cincinnati Reds,1,Atlanta Braves,2
+San Francisco Giants,14,Chicago Cubs,5
+Baltimore Orioles,1,Minnesota Twins,9
+Chicago White Sox,3,Kansas City Royals,4
+Houston Astros,3,Milwaukee Brewers,4
+Pittsburgh Pirates,1,St. Louis Cardinals,2
+Toronto Blue Jays,3,Los Angeles Angels,8
+New York Mets,1,Arizona Diamondbacks,5
+Seattle Mariners,5,Athletics,3
+Detroit Tigers,NA,Colorado Rockies,NA
+Cleveland Guardians,8,Washington Nationals,6
+Houston Astros,9,Milwaukee Brewers,1
+Pittsburgh Pirates,0,St. Louis Cardinals,5
+San Francisco Giants,3,Chicago Cubs,1
+Seattle Mariners,6,Athletics,5
+New York Mets,7,Arizona Diamondbacks,1
+Los Angeles Dodgers,10,Miami Marlins,1
+Texas Rangers,4,Boston Red Sox,6
+Philadelphia Phillies,7,Tampa Bay Rays,0
+San Diego Padres,3,New York Yankees,4
+Cincinnati Reds,4,Atlanta Braves,3
+Baltimore Orioles,2,Minnesota Twins,5
+Chicago White Sox,1,Kansas City Royals,2
+Detroit Tigers,8,Colorado Rockies,6
+Toronto Blue Jays,4,Los Angeles Angels,5
+Baltimore Orioles,2,Minnesota Twins,5
+Texas Rangers,0,Boston Red Sox,5
+Chicago White Sox,0,Kansas City Royals,10
+Detroit Tigers,10,Colorado Rockies,2
+Detroit Tigers,11,Colorado Rockies,1
+Philadelphia Phillies,7,Tampa Bay Rays,6
+Cincinnati Reds,4,Atlanta Braves,5
+Toronto Blue Jays,8,Los Angeles Angels,5
+Los Angeles Dodgers,3,Arizona Diamondbacks,5
+Texas Rangers,1,Detroit Tigers,2
+Atlanta Braves,2,Pittsburgh Pirates,3
+St. Louis Cardinals,10,Washington Nationals,0
+Milwaukee Brewers,3,Tampa Bay Rays,4
+Chicago Cubs,2,New York Mets,7
+Philadelphia Phillies,0,Cleveland Guardians,6
+Boston Red Sox,1,Kansas City Royals,2
+Miami Marlins,2,Chicago White Sox,6
+Cincinnati Reds,0,Houston Astros,3
+San Francisco Giants,1,Minnesota Twins,3
+San Diego Padres,13,Colorado Rockies,9
+Baltimore Orioles,4,Los Angeles Angels,1
+Los Angeles Dodgers,14,Arizona Diamondbacks,11
+Toronto Blue Jays,6,Seattle Mariners,3
+New York Yankees,10,Athletics,2
+St. Louis Cardinals,4,Washington Nationals,2
+Atlanta Braves,3,Pittsburgh Pirates,2
+New York Yankees,7,Athletics,11
+Milwaukee Brewers,2,Tampa Bay Rays,3
+Texas Rangers,10,Detroit Tigers,3
+Philadelphia Phillies,7,Cleveland Guardians,1
+Cincinnati Reds,13,Houston Astros,9
+Boston Red Sox,10,Kansas City Royals,1
+Miami Marlins,3,Chicago White Sox,1
+Chicago Cubs,6,New York Mets,5
+San Francisco Giants,1,Minnesota Twins,2
+Los Angeles Dodgers,0,Arizona Diamondbacks,3
+San Diego Padres,21,Colorado Rockies,0
+Baltimore Orioles,2,Los Angeles Angels,5
+Toronto Blue Jays,6,Seattle Mariners,3
+Chicago Cubs,2,New York Mets,6
+St. Louis Cardinals,6,Washington Nationals,1
+Atlanta Braves,3,Pittsburgh Pirates,4
+Texas Rangers,6,Detroit Tigers,1
+Milwaukee Brewers,4,Tampa Bay Rays,2
+Cincinnati Reds,0,Houston Astros,6
+Boston Red Sox,3,Kansas City Royals,1
+San Francisco Giants,6,Minnesota Twins,7
+Miami Marlins,2,Chicago White Sox,4
+San Diego Padres,3,Colorado Rockies,9
+New York Yankees,12,Athletics,2
+Baltimore Orioles,7,Los Angeles Angels,3
+Los Angeles Dodgers,8,Arizona Diamondbacks,1
+Toronto Blue Jays,9,Seattle Mariners,1
+Philadelphia Phillies,3,Cleveland Guardians,0
+Milwaukee Brewers,0,Cleveland Guardians,5
+Boston Red Sox,2,Detroit Tigers,14
+St. Louis Cardinals,3,Philadelphia Phillies,2
+Pittsburgh Pirates,3,New York Mets,4
+Washington Nationals,3,Atlanta Braves,4
+Miami Marlins,2,Chicago Cubs,5
+Colorado Rockies,1,Texas Rangers,2
+Kansas City Royals,7,Houston Astros,5
+Los Angeles Angels,9,San Diego Padres,5
+New York Yankees,11,Seattle Mariners,5
+Arizona Diamondbacks,2,San Francisco Giants,1
+Milwaukee Brewers,0,Cleveland Guardians,2
+Boston Red Sox,9,Detroit Tigers,10
+Chicago White Sox,5,Cincinnati Reds,1
+Tampa Bay Rays,11,Toronto Blue Jays,9
+Pittsburgh Pirates,1,New York Mets,2
+Washington Nationals,2,Atlanta Braves,5
+Miami Marlins,4,Chicago Cubs,5
+Colorado Rockies,1,Texas Rangers,4
+Kansas City Royals,1,Houston Astros,2
+Los Angeles Angels,4,San Diego Padres,6
+New York Yankees,1,Seattle Mariners,2
+Arizona Diamondbacks,6,San Francisco Giants,10
+Athletics,11,Los Angeles Dodgers,1
+Minnesota Twins,NA,Baltimore Orioles,NA
+St. Louis Cardinals,NA,Philadelphia Phillies,NA
+Minnesota Twins,6,Baltimore Orioles,3
+Minnesota Twins,8,Baltimore Orioles,6
+St. Louis Cardinals,1,Philadelphia Phillies,2
+St. Louis Cardinals,14,Philadelphia Phillies,7
+Milwaukee Brewers,9,Cleveland Guardians,5
+Arizona Diamondbacks,8,San Francisco Giants,7
+New York Yankees,3,Seattle Mariners,2
+Boston Red Sox,5,Detroit Tigers,6
+Tampa Bay Rays,1,Toronto Blue Jays,3
+Pittsburgh Pirates,4,New York Mets,0
+Chicago White Sox,4,Cincinnati Reds,2
+Washington Nationals,5,Atlanta Braves,4
+Miami Marlins,3,Chicago Cubs,1
+Colorado Rockies,3,Texas Rangers,8
+Kansas City Royals,3,Houston Astros,4
+Los Angeles Angels,1,San Diego Padres,5
+Athletics,3,Los Angeles Dodgers,9
+Washington Nationals,2,Atlanta Braves,5
+Minnesota Twins,4,Baltimore Orioles,0
+Chicago White Sox,1,Cincinnati Reds,7
+Tampa Bay Rays,8,Toronto Blue Jays,3
+Houston Astros,0,Texas Rangers,1
+Athletics,2,Los Angeles Dodgers,19
+Chicago White Sox,3,Chicago Cubs,13
+Cleveland Guardians,4,Cincinnati Reds,5
+Pittsburgh Pirates,4,Philadelphia Phillies,8
+Washington Nationals,4,Baltimore Orioles,3
+New York Mets,2,New York Yankees,6
+Detroit Tigers,5,Toronto Blue Jays,4
+Atlanta Braves,4,Boston Red Sox,2
+Tampa Bay Rays,4,Miami Marlins,9
+St. Louis Cardinals,10,Kansas City Royals,3
+Houston Astros,6,Texas Rangers,3
+Minnesota Twins,3,Milwaukee Brewers,0
+Colorado Rockies,0,Arizona Diamondbacks,8
+Seattle Mariners,5,San Diego Padres,1
+Los Angeles Angels,6,Los Angeles Dodgers,2
+Athletics,1,San Francisco Giants,9
+New York Mets,3,New York Yankees,2
+Chicago White Sox,3,Chicago Cubs,7
+Detroit Tigers,1,Toronto Blue Jays,2
+Washington Nationals,10,Baltimore Orioles,6
+Tampa Bay Rays,4,Miami Marlins,0
+Pittsburgh Pirates,2,Philadelphia Phillies,5
+Cleveland Guardians,1,Cincinnati Reds,4
+Houston Astros,1,Texas Rangers,5
+St. Louis Cardinals,1,Kansas City Royals,0
+Atlanta Braves,6,Boston Red Sox,7
+Minnesota Twins,7,Milwaukee Brewers,0
+Colorado Rockies,14,Arizona Diamondbacks,12
+Seattle Mariners,4,San Diego Padres,1
+Athletics,0,San Francisco Giants,1
+Los Angeles Angels,11,Los Angeles Dodgers,9
+Houston Astros,4,Texas Rangers,3
+Washington Nationals,10,Baltimore Orioles,4
+Pittsburgh Pirates,0,Philadelphia Phillies,1
+Atlanta Braves,10,Boston Red Sox,4
+Detroit Tigers,3,Toronto Blue Jays,2
+Cleveland Guardians,1,Cincinnati Reds,3
+Tampa Bay Rays,1,Miami Marlins,5
+St. Louis Cardinals,1,Kansas City Royals,2
+Minnesota Twins,2,Milwaukee Brewers,5
+Chicago White Sox,2,Chicago Cubs,6
+Athletics,2,San Francisco Giants,3
+Colorado Rockies,0,Arizona Diamondbacks,1
+Los Angeles Angels,6,Los Angeles Dodgers,4
+Seattle Mariners,6,San Diego Padres,1
+New York Mets,2,New York Yankees,8
+Cincinnati Reds,7,Pittsburgh Pirates,1
+Chicago Cubs,7,Miami Marlins,8
+New York Mets,1,Boston Red Sox,3
+Houston Astros,4,Tampa Bay Rays,3
+Cleveland Guardians,5,Minnesota Twins,6
+Seattle Mariners,5,Chicago White Sox,1
+Baltimore Orioles,4,Milwaukee Brewers,5
+Detroit Tigers,4,St. Louis Cardinals,11
+Philadelphia Phillies,9,Colorado Rockies,3
+Kansas City Royals,3,San Francisco Giants,1
+Los Angeles Angels,4,Athletics,3
+Arizona Diamondbacks,9,Los Angeles Dodgers,5
+Cincinnati Reds,0,Pittsburgh Pirates,1
+Chicago Cubs,14,Miami Marlins,1
+New York Mets,0,Boston Red Sox,2
+Atlanta Braves,3,Washington Nationals,5
+Houston Astros,2,Tampa Bay Rays,3
+Texas Rangers,2,New York Yankees,5
+San Diego Padres,0,Toronto Blue Jays,3
+Seattle Mariners,0,Chicago White Sox,1
+Baltimore Orioles,2,Milwaukee Brewers,5
+Detroit Tigers,5,St. Louis Cardinals,4
+Philadelphia Phillies,7,Colorado Rockies,4
+Kansas City Royals,2,San Francisco Giants,3
+Los Angeles Angels,7,Athletics,5
+Arizona Diamondbacks,3,Los Angeles Dodgers,4
+Cleveland Guardians,NA,Minnesota Twins,NA
+Cincinnati Reds,1,Pittsburgh Pirates,3
+Houston Astros,4,Tampa Bay Rays,8
+Cleveland Guardians,5,Minnesota Twins,6
+Chicago Cubs,2,Miami Marlins,1
+Baltimore Orioles,8,Milwaukee Brewers,4
+Detroit Tigers,5,St. Louis Cardinals,1
+Seattle Mariners,6,Chicago White Sox,5
+Kansas City Royals,8,San Francisco Giants,4
+Cleveland Guardians,5,Minnesota Twins,1
+New York Mets,5,Boston Red Sox,1
+Texas Rangers,3,New York Yankees,4
+San Diego Padres,0,Toronto Blue Jays,14
+Philadelphia Phillies,9,Colorado Rockies,5
+Los Angeles Angels,10,Athletics,5
+Arizona Diamondbacks,1,Los Angeles Dodgers,3
+Atlanta Braves,NA,Washington Nationals,NA
+Texas Rangers,0,New York Yankees,1
+San Diego Padres,6,Toronto Blue Jays,7
+Philadelphia Phillies,2,Colorado Rockies,0
+Los Angeles Angels,10,Athletics,5
+Cleveland Guardians,7,Detroit Tigers,0
+Milwaukee Brewers,8,Pittsburgh Pirates,5
+Atlanta Braves,7,Washington Nationals,8
+Seattle Mariners,2,Houston Astros,9
+Baltimore Orioles,NA,Boston Red Sox,NA
+Baltimore Orioles,5,Boston Red Sox,19
+Chicago Cubs,13,Cincinnati Reds,6
+Milwaukee Brewers,5,Pittsburgh Pirates,6
+San Francisco Giants,4,Washington Nationals,0
+Toronto Blue Jays,1,Tampa Bay Rays,3
+Cleveland Guardians,3,Detroit Tigers,1
+Los Angeles Dodgers,7,New York Mets,5
+San Diego Padres,2,Atlanta Braves,1
+Texas Rangers,1,Chicago White Sox,4
+Seattle Mariners,5,Houston Astros,3
+Kansas City Royals,1,Minnesota Twins,3
+Arizona Diamondbacks,3,St. Louis Cardinals,4
+New York Yankees,2,Colorado Rockies,3
+Miami Marlins,4,Los Angeles Angels,7
+Philadelphia Phillies,4,Athletics,3
+Baltimore Orioles,NA,Boston Red Sox,NA
+Baltimore Orioles,5,Boston Red Sox,6
+Baltimore Orioles,2,Boston Red Sox,1
+Kansas City Royals,4,Minnesota Twins,5
+Arizona Diamondbacks,5,St. Louis Cardinals,6
+San Francisco Giants,0,Washington Nationals,3
+Milwaukee Brewers,1,Pittsburgh Pirates,2
+Chicago Cubs,4,Cincinnati Reds,6
+Seattle Mariners,1,Houston Astros,2
+San Diego Padres,1,Atlanta Braves,7
+Texas Rangers,5,Chicago White Sox,10
+New York Yankees,13,Colorado Rockies,1
+Toronto Blue Jays,1,Tampa Bay Rays,3
+Cleveland Guardians,7,Detroit Tigers,5
+Los Angeles Dodgers,2,New York Mets,5
+Philadelphia Phillies,9,Athletics,6
+Miami Marlins,6,Los Angeles Angels,2
+Cleveland Guardians,0,Detroit Tigers,5
+Baltimore Orioles,5,Boston Red Sox,1
+San Francisco Giants,3,Washington Nationals,2
+Milwaukee Brewers,6,Pittsburgh Pirates,5
+Chicago Cubs,11,Cincinnati Reds,8
+Toronto Blue Jays,0,Tampa Bay Rays,13
+Seattle Mariners,3,Houston Astros,5
+Kansas City Royals,2,Minnesota Twins,1
+Texas Rangers,5,Chicago White Sox,4
+Arizona Diamondbacks,3,St. Louis Cardinals,4
+New York Yankees,5,Colorado Rockies,4
+Philadelphia Phillies,4,Athletics,5
+Miami Marlins,3,Los Angeles Angels,0
+San Diego Padres,5,Atlanta Braves,3
+Los Angeles Dodgers,1,New York Mets,3
+San Francisco Giants,1,Detroit Tigers,3
+Boston Red Sox,2,Milwaukee Brewers,3
+Colorado Rockies,1,Chicago Cubs,3
+St. Louis Cardinals,2,Baltimore Orioles,5
+Toronto Blue Jays,2,Texas Rangers,1
+Cincinnati Reds,7,Kansas City Royals,4
+Chicago White Sox,1,New York Mets,2
+Los Angeles Dodgers,7,Cleveland Guardians,2
+Minnesota Twins,2,Tampa Bay Rays,7
+Pittsburgh Pirates,0,Arizona Diamondbacks,5
+Miami Marlins,3,San Diego Padres,4
+New York Yankees,5,Los Angeles Angels,1
+Los Angeles Dodgers,9,Cleveland Guardians,5
+St. Louis Cardinals,7,Baltimore Orioles,4
+San Francisco Giants,1,Detroit Tigers,3
+Atlanta Braves,0,Philadelphia Phillies,2
+Minnesota Twins,4,Tampa Bay Rays,2
+Chicago White Sox,4,New York Mets,6
+Cincinnati Reds,7,Kansas City Royals,2
+Boston Red Sox,1,Milwaukee Brewers,5
+Colorado Rockies,3,Chicago Cubs,4
+Toronto Blue Jays,0,Texas Rangers,2
+Athletics,1,Houston Astros,11
+New York Yankees,3,Los Angeles Angels,2
+Pittsburgh Pirates,9,Arizona Diamondbacks,6
+Washington Nationals,1,Seattle Mariners,9
+Miami Marlins,6,San Diego Padres,8
+Los Angeles Dodgers,4,Cleveland Guardians,7
+San Francisco Giants,3,Detroit Tigers,4
+Minnesota Twins,0,Tampa Bay Rays,5
+Chicago White Sox,9,New York Mets,4
+Boston Red Sox,5,Milwaukee Brewers,6
+Athletics,3,Houston Astros,5
+Pittsburgh Pirates,10,Arizona Diamondbacks,1
+Miami Marlins,10,San Diego Padres,8
+St. Louis Cardinals,6,Baltimore Orioles,4
+Cincinnati Reds,2,Kansas City Royals,3
+Colorado Rockies,1,Chicago Cubs,2
+Toronto Blue Jays,2,Texas Rangers,0
+New York Yankees,1,Los Angeles Angels,0
+Washington Nationals,9,Seattle Mariners,0
+Atlanta Braves,NA,Philadelphia Phillies,NA
+Atlanta Braves,4,Philadelphia Phillies,5
+Atlanta Braves,9,Philadelphia Phillies,3
+Athletics,0,Toronto Blue Jays,12
+Tampa Bay Rays,13,Houston Astros,3
+Washington Nationals,9,Seattle Mariners,3
+Cincinnati Reds,6,Chicago Cubs,2
+Chicago White Sox,1,Baltimore Orioles,2
+Milwaukee Brewers,6,Philadelphia Phillies,2
+Athletics,7,Toronto Blue Jays,11
+Los Angeles Angels,4,Cleveland Guardians,1
+Colorado Rockies,2,New York Mets,4
+San Francisco Giants,2,Miami Marlins,0
+Boston Red Sox,5,Atlanta Braves,1
+St. Louis Cardinals,1,Texas Rangers,11
+Detroit Tigers,7,Kansas City Royals,5
+Tampa Bay Rays,1,Houston Astros,2
+Washington Nationals,9,Arizona Diamondbacks,7
+Pittsburgh Pirates,2,San Diego Padres,3
+Minnesota Twins,12,Seattle Mariners,6
+New York Yankees,5,Los Angeles Dodgers,8
+Cincinnati Reds,0,Chicago Cubs,2
+Athletics,7,Toronto Blue Jays,8
+St. Louis Cardinals,2,Texas Rangers,0
+Chicago White Sox,2,Baltimore Orioles,4
+Milwaukee Brewers,17,Philadelphia Phillies,7
+Los Angeles Angels,5,Cleveland Guardians,7
+Detroit Tigers,0,Kansas City Royals,1
+Colorado Rockies,2,New York Mets,8
+Tampa Bay Rays,16,Houston Astros,3
+Boston Red Sox,0,Atlanta Braves,5
+San Francisco Giants,0,Miami Marlins,1
+Minnesota Twins,4,Seattle Mariners,5
+New York Yankees,2,Los Angeles Dodgers,18
+Pittsburgh Pirates,5,San Diego Padres,0
+Washington Nationals,11,Arizona Diamondbacks,7
+St. Louis Cardinals,1,Texas Rangers,8
+Boston Red Sox,3,Atlanta Braves,1
+Chicago White Sox,2,Baltimore Orioles,3
+Milwaukee Brewers,5,Philadelphia Phillies,2
+Athletics,4,Toronto Blue Jays,8
+Los Angeles Angels,2,Cleveland Guardians,4
+Colorado Rockies,3,New York Mets,5
+San Francisco Giants,4,Miami Marlins,2
+Detroit Tigers,1,Kansas City Royals,0
+Tampa Bay Rays,0,Houston Astros,1
+Cincinnati Reds,3,Chicago Cubs,7
+Washington Nationals,1,Arizona Diamondbacks,3
+Minnesota Twins,1,Seattle Mariners,2
+Pittsburgh Pirates,4,San Diego Padres,6
+New York Yankees,7,Los Angeles Dodgers,3
+Colorado Rockies,6,Miami Marlins,4
+Los Angeles Angels,7,Boston Red Sox,6
+Milwaukee Brewers,3,Cincinnati Reds,2
+Detroit Tigers,13,Chicago White Sox,1
+San Diego Padres,1,San Francisco Giants,0
+Minnesota Twins,10,Athletics,4
+New York Mets,4,Los Angeles Dodgers,3
+Houston Astros,3,Pittsburgh Pirates,0
+Colorado Rockies,3,Miami Marlins,2
+Chicago Cubs,8,Washington Nationals,3
+Cleveland Guardians,2,New York Yankees,3
+Philadelphia Phillies,8,Toronto Blue Jays,3
+Los Angeles Angels,4,Boston Red Sox,3
+Milwaukee Brewers,2,Cincinnati Reds,4
+Arizona Diamondbacks,8,Atlanta Braves,3
+Texas Rangers,1,Tampa Bay Rays,5
+Detroit Tigers,1,Chicago White Sox,8
+Kansas City Royals,10,St. Louis Cardinals,7
+Baltimore Orioles,5,Seattle Mariners,1
+San Diego Padres,3,San Francisco Giants,2
+Minnesota Twins,10,Athletics,3
+New York Mets,5,Los Angeles Dodgers,6
+Colorado Rockies,3,Miami Marlins,2
+Milwaukee Brewers,9,Cincinnati Reds,1
+Los Angeles Angels,9,Boston Red Sox,11
+Houston Astros,0,Pittsburgh Pirates,3
+Chicago Cubs,0,Washington Nationals,2
+Cleveland Guardians,4,New York Yankees,0
+Philadelphia Phillies,1,Toronto Blue Jays,2
+Arizona Diamondbacks,2,Atlanta Braves,1
+Texas Rangers,4,Tampa Bay Rays,5
+Detroit Tigers,5,Chicago White Sox,4
+Baltimore Orioles,3,Seattle Mariners,2
+San Diego Padres,5,San Francisco Giants,6
+Minnesota Twins,6,Athletics,1
+New York Mets,6,Los Angeles Dodgers,1
+Kansas City Royals,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,11,Atlanta Braves,10
+Kansas City Royals,5,St. Louis Cardinals,6
+Kansas City Royals,7,St. Louis Cardinals,5
+Detroit Tigers,2,Chicago White Sox,3
+Philadelphia Phillies,1,Toronto Blue Jays,9
+Minnesota Twins,3,Athletics,14
+Baltimore Orioles,4,Seattle Mariners,3
+San Diego Padres,2,San Francisco Giants,3
+New York Mets,5,Los Angeles Dodgers,6
+Houston Astros,8,Pittsburgh Pirates,2
+Chicago Cubs,7,Washington Nationals,1
+Cleveland Guardians,0,New York Yankees,4
+Texas Rangers,3,Tampa Bay Rays,4
+Miami Marlins,3,Tampa Bay Rays,4
+Philadelphia Phillies,4,Pittsburgh Pirates,5
+Texas Rangers,0,Washington Nationals,2
+Boston Red Sox,6,New York Yankees,9
+Arizona Diamondbacks,3,Cincinnati Reds,4
+Chicago Cubs,1,Detroit Tigers,3
+Houston Astros,4,Cleveland Guardians,2
+Kansas City Royals,2,Chicago White Sox,7
+Toronto Blue Jays,6,Minnesota Twins,4
+San Diego Padres,2,Milwaukee Brewers,0
+Los Angeles Dodgers,0,St. Louis Cardinals,5
+New York Mets,4,Colorado Rockies,2
+Seattle Mariners,4,Los Angeles Angels,5
+Baltimore Orioles,4,Athletics,5
+Atlanta Braves,4,San Francisco Giants,5
+Chicago Cubs,6,Detroit Tigers,1
+Arizona Diamondbacks,3,Cincinnati Reds,4
+Toronto Blue Jays,5,Minnesota Twins,4
+Los Angeles Dodgers,1,St. Louis Cardinals,2
+Texas Rangers,5,Washington Nationals,0
+Philadelphia Phillies,1,Pittsburgh Pirates,2
+Atlanta Braves,2,San Francisco Giants,3
+Arizona Diamondbacks,1,Cincinnati Reds,13
+Houston Astros,5,Cleveland Guardians,3
+Kansas City Royals,1,Chicago White Sox,4
+Miami Marlins,11,Tampa Bay Rays,10
+Boston Red Sox,10,New York Yankees,7
+San Diego Padres,3,Milwaukee Brewers,4
+Seattle Mariners,6,Los Angeles Angels,8
+New York Mets,8,Colorado Rockies,1
+Baltimore Orioles,7,Athletics,4
+Miami Marlins,2,Tampa Bay Rays,3
+San Diego Padres,1,Milwaukee Brewers,0
+Texas Rangers,4,Washington Nationals,2
+Philadelphia Phillies,1,Pittsburgh Pirates,2
+Arizona Diamondbacks,2,Cincinnati Reds,4
+Chicago Cubs,0,Detroit Tigers,4
+Houston Astros,2,Cleveland Guardians,4
+Toronto Blue Jays,3,Minnesota Twins,6
+Kansas City Royals,7,Chicago White Sox,5
+Los Angeles Dodgers,7,St. Louis Cardinals,3
+New York Mets,13,Colorado Rockies,5
+Baltimore Orioles,1,Athletics,5
+Atlanta Braves,3,San Francisco Giants,4
+Seattle Mariners,3,Los Angeles Angels,2
+Boston Red Sox,11,New York Yankees,7
+Cincinnati Reds,7,Cleveland Guardians,4
+Miami Marlins,3,Pittsburgh Pirates,10
+Chicago Cubs,3,Philadelphia Phillies,4
+Tampa Bay Rays,10,Boston Red Sox,8
+Atlanta Braves,7,Milwaukee Brewers,1
+Toronto Blue Jays,5,St. Louis Cardinals,4
+Athletics,4,Los Angeles Angels,7
+Los Angeles Dodgers,8,San Diego Padres,7
+Seattle Mariners,4,Arizona Diamondbacks,8
+Detroit Tigers,5,Baltimore Orioles,3
+Cincinnati Reds,1,Cleveland Guardians,0
+Miami Marlins,3,Pittsburgh Pirates,2
+Chicago Cubs,8,Philadelphia Phillies,4
+Washington Nationals,4,New York Mets,5
+Tampa Bay Rays,1,Boston Red Sox,3
+Texas Rangers,16,Minnesota Twins,4
+New York Yankees,10,Kansas City Royals,2
+Atlanta Braves,1,Milwaukee Brewers,4
+Toronto Blue Jays,10,St. Louis Cardinals,9
+Chicago White Sox,4,Houston Astros,2
+San Francisco Giants,6,Colorado Rockies,5
+Athletics,1,Los Angeles Angels,2
+Los Angeles Dodgers,1,San Diego Padres,11
+Seattle Mariners,3,Arizona Diamondbacks,10
+Miami Marlins,2,Pittsburgh Pirates,5
+Chicago Cubs,2,Philadelphia Phillies,7
+Cincinnati Reds,2,Cleveland Guardians,11
+Atlanta Braves,6,Milwaukee Brewers,2
+Toronto Blue Jays,5,St. Louis Cardinals,2
+Seattle Mariners,2,Arizona Diamondbacks,5
+Athletics,5,Los Angeles Angels,6
+Los Angeles Dodgers,5,San Diego Padres,2
+Detroit Tigers,1,Baltimore Orioles,10
+Washington Nationals,0,New York Mets,5
+Tampa Bay Rays,3,Boston Red Sox,4
+Texas Rangers,2,Minnesota Twins,6
+New York Yankees,6,Kansas City Royals,3
+Chicago White Sox,2,Houston Astros,10
+San Francisco Giants,10,Colorado Rockies,7
+Washington Nationals,3,New York Mets,4
+Texas Rangers,16,Minnesota Twins,3
+San Francisco Giants,7,Colorado Rockies,8
+Detroit Tigers,4,Baltimore Orioles,1
+New York Yankees,1,Kansas City Royals,0
+St. Louis Cardinals,0,Milwaukee Brewers,6
+Pittsburgh Pirates,2,Chicago Cubs,3
+Chicago White Sox,3,Houston Astros,4
+Pittsburgh Pirates,2,Chicago Cubs,1
+Toronto Blue Jays,0,Philadelphia Phillies,8
+Miami Marlins,11,Washington Nationals,9
+Los Angeles Angels,0,Baltimore Orioles,2
+Cincinnati Reds,5,Detroit Tigers,11
+Tampa Bay Rays,7,New York Mets,5
+New York Yankees,1,Boston Red Sox,2
+Colorado Rockies,4,Atlanta Braves,12
+Chicago White Sox,1,Texas Rangers,3
+Athletics,6,Kansas City Royals,4
+Minnesota Twins,3,Houston Astros,10
+St. Louis Cardinals,2,Milwaukee Brewers,3
+San Diego Padres,1,Arizona Diamondbacks,5
+Cleveland Guardians,2,Seattle Mariners,7
+San Francisco Giants,6,Los Angeles Dodgers,2
+Miami Marlins,4,Washington Nationals,3
+Cincinnati Reds,11,Detroit Tigers,1
+Pittsburgh Pirates,1,Chicago Cubs,2
+Los Angeles Angels,5,Baltimore Orioles,6
+Toronto Blue Jays,2,Philadelphia Phillies,3
+Chicago White Sox,4,Texas Rangers,5
+Athletics,4,Kansas City Royals,0
+Tampa Bay Rays,8,New York Mets,4
+Minnesota Twins,2,Houston Astros,3
+Colorado Rockies,1,Atlanta Braves,4
+St. Louis Cardinals,8,Milwaukee Brewers,5
+San Diego Padres,7,Arizona Diamondbacks,8
+New York Yankees,3,Boston Red Sox,4
+Cleveland Guardians,3,Seattle Mariners,4
+San Francisco Giants,5,Los Angeles Dodgers,11
+Cincinnati Reds,8,Detroit Tigers,4
+Los Angeles Angels,2,Baltimore Orioles,11
+Toronto Blue Jays,4,Philadelphia Phillies,11
+Colorado Rockies,10,Atlanta Braves,1
+Miami Marlins,3,Washington Nationals,1
+New York Yankees,0,Boston Red Sox,2
+Tampa Bay Rays,9,New York Mets,0
+Athletics,3,Kansas City Royals,2
+Minnesota Twins,1,Houston Astros,2
+St. Louis Cardinals,2,Milwaukee Brewers,3
+Pittsburgh Pirates,2,Chicago Cubs,3
+Chicago White Sox,1,Texas Rangers,2
+San Diego Padres,8,Arizona Diamondbacks,2
+Cleveland Guardians,0,Seattle Mariners,6
+San Francisco Giants,4,Los Angeles Dodgers,5
+Philadelphia Phillies,5,Miami Marlins,2
+Colorado Rockies,6,Washington Nationals,4
+Los Angeles Angels,1,New York Yankees,0
+Baltimore Orioles,1,Tampa Bay Rays,7
+Boston Red Sox,2,Seattle Mariners,0
+Houston Astros,1,Athletics,3
+San Diego Padres,3,Los Angeles Dodgers,6
+Philadelphia Phillies,3,Miami Marlins,8
+Pittsburgh Pirates,3,Detroit Tigers,7
+Colorado Rockies,10,Washington Nationals,6
+Los Angeles Angels,4,New York Yankees,0
+Arizona Diamondbacks,4,Toronto Blue Jays,5
+Minnesota Twins,5,Cincinnati Reds,6
+New York Mets,4,Atlanta Braves,5
+Baltimore Orioles,5,Tampa Bay Rays,1
+St. Louis Cardinals,12,Chicago White Sox,2
+Kansas City Royals,6,Texas Rangers,1
+Milwaukee Brewers,3,Chicago Cubs,5
+Boston Red Sox,0,Seattle Mariners,8
+Cleveland Guardians,3,San Francisco Giants,2
+Houston Astros,13,Athletics,3
+San Diego Padres,6,Los Angeles Dodgers,8
+Boston Red Sox,3,Seattle Mariners,1
+Philadelphia Phillies,4,Miami Marlins,2
+Colorado Rockies,3,Washington Nationals,1
+Los Angeles Angels,3,New York Yankees,2
+Arizona Diamondbacks,1,Toronto Blue Jays,8
+Minnesota Twins,2,Cincinnati Reds,4
+New York Mets,0,Atlanta Braves,5
+Baltimore Orioles,8,Tampa Bay Rays,12
+Kansas City Royals,6,Texas Rangers,3
+Cleveland Guardians,4,San Francisco Giants,2
+Houston Astros,11,Athletics,4
+San Diego Padres,3,Los Angeles Dodgers,4
+Pittsburgh Pirates,NA,Detroit Tigers,NA
+St. Louis Cardinals,NA,Chicago White Sox,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Minnesota Twins,12,Cincinnati Reds,5
+Colorado Rockies,3,Washington Nationals,4
+Los Angeles Angels,3,New York Yankees,7
+Pittsburgh Pirates,2,Detroit Tigers,9
+Pittsburgh Pirates,8,Detroit Tigers,4
+St. Louis Cardinals,5,Chicago White Sox,4
+St. Louis Cardinals,8,Chicago White Sox,6
+Milwaukee Brewers,8,Chicago Cubs,7
+Kansas City Royals,4,Texas Rangers,1
+Arizona Diamondbacks,9,Toronto Blue Jays,5
+Cleveland Guardians,1,San Francisco Giants,2
+Philadelphia Phillies,2,Miami Marlins,1
+New York Mets,1,Atlanta Braves,7
+Baltimore Orioles,4,Tampa Bay Rays,1
+Houston Astros,4,Athletics,6
+San Diego Padres,5,Los Angeles Dodgers,3
+Seattle Mariners,9,Chicago Cubs,4
+Texas Rangers,6,Pittsburgh Pirates,2
+Detroit Tigers,8,Tampa Bay Rays,14
+Baltimore Orioles,5,New York Yankees,3
+Chicago White Sox,7,Toronto Blue Jays,1
+Atlanta Braves,2,Miami Marlins,6
+Cincinnati Reds,1,St. Louis Cardinals,6
+New York Mets,2,Philadelphia Phillies,10
+Milwaukee Brewers,17,Minnesota Twins,6
+Arizona Diamondbacks,14,Colorado Rockies,8
+Houston Astros,3,Los Angeles Angels,2
+Kansas City Royals,6,San Diego Padres,5
+Cleveland Guardians,1,Athletics,5
+Washington Nationals,5,Los Angeles Dodgers,6
+Boston Red Sox,7,San Francisco Giants,5
+Detroit Tigers,3,Tampa Bay Rays,8
+Baltimore Orioles,0,New York Yankees,9
+Milwaukee Brewers,9,Minnesota Twins,0
+Cincinnati Reds,5,St. Louis Cardinals,6
+Seattle Mariners,7,Chicago Cubs,10
+Chicago White Sox,1,Toronto Blue Jays,7
+Boston Red Sox,2,San Francisco Giants,3
+Texas Rangers,3,Pittsburgh Pirates,2
+Atlanta Braves,7,Miami Marlins,0
+Kansas City Royals,1,San Diego Padres,5
+New York Mets,11,Philadelphia Phillies,4
+Arizona Diamondbacks,5,Colorado Rockies,3
+Houston Astros,1,Los Angeles Angels,9
+Cleveland Guardians,4,Athletics,2
+Washington Nationals,7,Los Angeles Dodgers,3
+Baltimore Orioles,2,New York Yankees,4
+Detroit Tigers,9,Tampa Bay Rays,3
+Texas Rangers,3,Pittsburgh Pirates,8
+Chicago White Sox,4,Toronto Blue Jays,2
+Atlanta Braves,3,Miami Marlins,5
+Milwaukee Brewers,9,Minnesota Twins,8
+Cincinnati Reds,4,St. Louis Cardinals,1
+Seattle Mariners,14,Chicago Cubs,6
+Arizona Diamondbacks,2,Colorado Rockies,4
+Cleveland Guardians,3,Athletics,0
+Boston Red Sox,5,San Francisco Giants,9
+Houston Astros,8,Los Angeles Angels,7
+Washington Nationals,7,Los Angeles Dodgers,13
+Kansas City Royals,2,San Diego Padres,3
+New York Mets,1,Philadelphia Phillies,7
+Texas Rangers,0,Baltimore Orioles,6
+Atlanta Braves,3,New York Mets,2
+New York Yankees,1,Cincinnati Reds,6
+Seattle Mariners,11,Minnesota Twins,2
+Arizona Diamondbacks,10,Chicago White Sox,0
+Pittsburgh Pirates,5,Milwaukee Brewers,4
+Chicago Cubs,2,St. Louis Cardinals,8
+Boston Red Sox,5,Los Angeles Angels,9
+Washington Nationals,10,San Diego Padres,6
+Texas Rangers,6,Baltimore Orioles,5
+Athletics,4,Detroit Tigers,11
+Toronto Blue Jays,10,Cleveland Guardians,6
+Atlanta Braves,7,New York Mets,4
+New York Yankees,4,Cincinnati Reds,5
+Tampa Bay Rays,5,Kansas City Royals,1
+Seattle Mariners,6,Minnesota Twins,5
+Arizona Diamondbacks,4,Chicago White Sox,1
+Pittsburgh Pirates,3,Milwaukee Brewers,9
+Chicago Cubs,7,St. Louis Cardinals,8
+Philadelphia Phillies,0,Houston Astros,1
+Los Angeles Dodgers,9,Colorado Rockies,7
+Boston Red Sox,2,Los Angeles Angels,3
+Washington Nationals,3,San Diego Padres,4
+Miami Marlins,4,San Francisco Giants,2
+Arizona Diamondbacks,3,Chicago White Sox,7
+Pittsburgh Pirates,2,Milwaukee Brewers,4
+Boston Red Sox,2,Los Angeles Angels,5
+Washington Nationals,0,San Diego Padres,1
+Texas Rangers,7,Baltimore Orioles,0
+Athletics,3,Detroit Tigers,0
+Toronto Blue Jays,4,Cleveland Guardians,5
+Atlanta Braves,3,New York Mets,7
+New York Yankees,7,Cincinnati Reds,1
+Tampa Bay Rays,3,Kansas City Royals,0
+Seattle Mariners,0,Minnesota Twins,2
+Chicago Cubs,8,St. Louis Cardinals,0
+Philadelphia Phillies,0,Houston Astros,2
+Los Angeles Dodgers,8,Colorado Rockies,1
+Miami Marlins,8,San Francisco Giants,5
+Athletics,0,Detroit Tigers,8
+Toronto Blue Jays,6,Cleveland Guardians,0
+Seattle Mariners,1,Minnesota Twins,10
+Tampa Bay Rays,4,Kansas City Royals,0
+Philadelphia Phillies,1,Houston Astros,2
+Chicago Cubs,3,St. Louis Cardinals,0
+Los Angeles Dodgers,3,Colorado Rockies,1
+Miami Marlins,12,San Francisco Giants,5
+Atlanta Braves,0,New York Mets,4
+New York Mets,NA,Pittsburgh Pirates,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Athletics,NA,New York Yankees,NA
+San Diego Padres,NA,Cincinnati Reds,NA
+St. Louis Cardinals,NA,Cleveland Guardians,NA
+Toronto Blue Jays,NA,Boston Red Sox,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+Philadelphia Phillies,NA,Atlanta Braves,NA
+San Francisco Giants,NA,Chicago White Sox,NA
+Seattle Mariners,NA,Texas Rangers,NA
+Chicago Cubs,NA,Houston Astros,NA
+Los Angeles Dodgers,NA,Kansas City Royals,NA
+Colorado Rockies,NA,Milwaukee Brewers,NA
+Washington Nationals,NA,Los Angeles Angels,NA
+Miami Marlins,NA,Arizona Diamondbacks,NA
+Athletics,NA,New York Yankees,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+New York Mets,NA,Pittsburgh Pirates,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Seattle Mariners,NA,Texas Rangers,NA
+Los Angeles Dodgers,NA,Kansas City Royals,NA
+San Diego Padres,NA,Cincinnati Reds,NA
+St. Louis Cardinals,NA,Cleveland Guardians,NA
+Toronto Blue Jays,NA,Boston Red Sox,NA
+San Francisco Giants,NA,Chicago White Sox,NA
+Miami Marlins,NA,Arizona Diamondbacks,NA
+Colorado Rockies,NA,Milwaukee Brewers,NA
+Chicago Cubs,NA,Houston Astros,NA
+Philadelphia Phillies,NA,Atlanta Braves,NA
+Washington Nationals,NA,Los Angeles Angels,NA
+St. Louis Cardinals,NA,Cleveland Guardians,NA
+New York Mets,NA,Pittsburgh Pirates,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Toronto Blue Jays,NA,Boston Red Sox,NA
+Philadelphia Phillies,NA,Atlanta Braves,NA
+Athletics,NA,New York Yankees,NA
+San Diego Padres,NA,Cincinnati Reds,NA
+Chicago Cubs,NA,Houston Astros,NA
+Los Angeles Dodgers,NA,Kansas City Royals,NA
+San Francisco Giants,NA,Chicago White Sox,NA
+Colorado Rockies,NA,Milwaukee Brewers,NA
+Seattle Mariners,NA,Texas Rangers,NA
+Washington Nationals,NA,Los Angeles Angels,NA
+Miami Marlins,NA,Arizona Diamondbacks,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+San Diego Padres,NA,Philadelphia Phillies,NA
+St. Louis Cardinals,NA,Pittsburgh Pirates,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Cincinnati Reds,NA,Boston Red Sox,NA
+Athletics,NA,Tampa Bay Rays,NA
+Baltimore Orioles,NA,Texas Rangers,NA
+Kansas City Royals,NA,Seattle Mariners,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+San Diego Padres,NA,Philadelphia Phillies,NA
+St. Louis Cardinals,NA,Pittsburgh Pirates,NA
+Minnesota Twins,NA,Miami Marlins,NA
+Detroit Tigers,NA,Washington Nationals,NA
+Athletics,NA,Tampa Bay Rays,NA
+Cincinnati Reds,NA,Boston Red Sox,NA
+Milwaukee Brewers,NA,New York Mets,NA
+Los Angeles Angels,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Chicago Cubs,NA
+Baltimore Orioles,NA,Texas Rangers,NA
+Houston Astros,NA,Colorado Rockies,NA
+Kansas City Royals,NA,Seattle Mariners,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Chicago White Sox,NA,Los Angeles Dodgers,NA
+Athletics,NA,Tampa Bay Rays,NA
+St. Louis Cardinals,NA,Pittsburgh Pirates,NA
+San Diego Padres,NA,Philadelphia Phillies,NA
+Minnesota Twins,NA,Miami Marlins,NA
+Detroit Tigers,NA,Washington Nationals,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Cincinnati Reds,NA,Boston Red Sox,NA
+Milwaukee Brewers,NA,New York Mets,NA
+Los Angeles Angels,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Chicago Cubs,NA
+Baltimore Orioles,NA,Texas Rangers,NA
+Houston Astros,NA,Colorado Rockies,NA
+Kansas City Royals,NA,Seattle Mariners,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Chicago White Sox,NA,Los Angeles Dodgers,NA
+Minnesota Twins,NA,Miami Marlins,NA
+Houston Astros,NA,Colorado Rockies,NA
+Detroit Tigers,NA,Washington Nationals,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Milwaukee Brewers,NA,New York Mets,NA
+Los Angeles Angels,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Chicago Cubs,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Kansas City Royals,NA,Seattle Mariners,NA
+Chicago White Sox,NA,Los Angeles Dodgers,NA
+Boston Red Sox,NA,Washington Nationals,NA
+Cincinnati Reds,NA,Philadelphia Phillies,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
+New York Yankees,NA,New York Mets,NA
+Pittsburgh Pirates,NA,Seattle Mariners,NA
+Tampa Bay Rays,NA,Minnesota Twins,NA
+Texas Rangers,NA,San Diego Padres,NA
+Los Angeles Angels,NA,Toronto Blue Jays,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+Milwaukee Brewers,NA,Miami Marlins,NA
+Baltimore Orioles,NA,Atlanta Braves,NA
+Chicago White Sox,NA,Colorado Rockies,NA
+Houston Astros,NA,Los Angeles Dodgers,NA
+Kansas City Royals,NA,Arizona Diamondbacks,NA
+San Francisco Giants,NA,Athletics,NA
+Tampa Bay Rays,NA,Minnesota Twins,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
+Los Angeles Angels,NA,Toronto Blue Jays,NA
+Boston Red Sox,NA,Washington Nationals,NA
+Cincinnati Reds,NA,Philadelphia Phillies,NA
+Kansas City Royals,NA,Arizona Diamondbacks,NA
+Baltimore Orioles,NA,Atlanta Braves,NA
+New York Yankees,NA,New York Mets,NA
+Milwaukee Brewers,NA,Miami Marlins,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+Houston Astros,NA,Los Angeles Dodgers,NA
+Chicago White Sox,NA,Colorado Rockies,NA
+Texas Rangers,NA,San Diego Padres,NA
+San Francisco Giants,NA,Athletics,NA
+Pittsburgh Pirates,NA,Seattle Mariners,NA
+Baltimore Orioles,NA,Atlanta Braves,NA
+Boston Red Sox,NA,Washington Nationals,NA
+Cincinnati Reds,NA,Philadelphia Phillies,NA
+Los Angeles Angels,NA,Toronto Blue Jays,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+New York Yankees,NA,New York Mets,NA
+Milwaukee Brewers,NA,Miami Marlins,NA
+Tampa Bay Rays,NA,Minnesota Twins,NA
+Chicago White Sox,NA,Colorado Rockies,NA
+Kansas City Royals,NA,Arizona Diamondbacks,NA
+Houston Astros,NA,Los Angeles Dodgers,NA
+Pittsburgh Pirates,NA,Seattle Mariners,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
+Texas Rangers,NA,San Diego Padres,NA
+San Francisco Giants,NA,Athletics,NA
+Tampa Bay Rays,NA,Detroit Tigers,NA
+Colorado Rockies,NA,Boston Red Sox,NA
+Miami Marlins,NA,Cincinnati Reds,NA
+Pittsburgh Pirates,NA,Kansas City Royals,NA
+Toronto Blue Jays,NA,Chicago White Sox,NA
+Los Angeles Dodgers,NA,Milwaukee Brewers,NA
+Cleveland Guardians,NA,Houston Astros,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Philadelphia Phillies,NA,San Francisco Giants,NA
+New York Mets,NA,Baltimore Orioles,NA
+Tampa Bay Rays,NA,Detroit Tigers,NA
+Seattle Mariners,NA,New York Yankees,NA
+Colorado Rockies,NA,Boston Red Sox,NA
+Miami Marlins,NA,Cincinnati Reds,NA
+Pittsburgh Pirates,NA,Kansas City Royals,NA
+Chicago Cubs,NA,Minnesota Twins,NA
+Toronto Blue Jays,NA,Chicago White Sox,NA
+Los Angeles Dodgers,NA,Milwaukee Brewers,NA
+Washington Nationals,NA,St. Louis Cardinals,NA
+Cleveland Guardians,NA,Houston Astros,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Philadelphia Phillies,NA,San Francisco Giants,NA
+Atlanta Braves,NA,Athletics,NA
+Tampa Bay Rays,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Chicago White Sox,NA
+Los Angeles Dodgers,NA,Milwaukee Brewers,NA
+Philadelphia Phillies,NA,San Francisco Giants,NA
+New York Mets,NA,Baltimore Orioles,NA
+Seattle Mariners,NA,New York Yankees,NA
+Colorado Rockies,NA,Boston Red Sox,NA
+Miami Marlins,NA,Cincinnati Reds,NA
+Pittsburgh Pirates,NA,Kansas City Royals,NA
+Chicago Cubs,NA,Minnesota Twins,NA
+Washington Nationals,NA,St. Louis Cardinals,NA
+Cleveland Guardians,NA,Houston Astros,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Atlanta Braves,NA,Athletics,NA
+New York Mets,NA,Baltimore Orioles,NA
+Chicago Cubs,NA,Minnesota Twins,NA
+Miami Marlins,NA,Cincinnati Reds,NA
+Seattle Mariners,NA,New York Yankees,NA
+Tampa Bay Rays,NA,Boston Red Sox,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+Washington Nationals,NA,St. Louis Cardinals,NA
+Atlanta Braves,NA,Athletics,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Miami Marlins,NA,Baltimore Orioles,NA
+Chicago Cubs,NA,New York Yankees,NA
+Colorado Rockies,NA,Cincinnati Reds,NA
+Seattle Mariners,NA,Detroit Tigers,NA
+Tampa Bay Rays,NA,Boston Red Sox,NA
+New York Mets,NA,Kansas City Royals,NA
+Texas Rangers,NA,Houston Astros,NA
+Pittsburgh Pirates,NA,Minnesota Twins,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+Washington Nationals,NA,Milwaukee Brewers,NA
+Atlanta Braves,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Los Angeles Angels,NA
+Philadelphia Phillies,NA,San Diego Padres,NA
+Toronto Blue Jays,NA,Athletics,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Chicago Cubs,NA,New York Yankees,NA
+Seattle Mariners,NA,Detroit Tigers,NA
+Pittsburgh Pirates,NA,Minnesota Twins,NA
+Atlanta Braves,NA,St. Louis Cardinals,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Miami Marlins,NA,Baltimore Orioles,NA
+Colorado Rockies,NA,Cincinnati Reds,NA
+New York Mets,NA,Kansas City Royals,NA
+Tampa Bay Rays,NA,Boston Red Sox,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+Washington Nationals,NA,Milwaukee Brewers,NA
+Texas Rangers,NA,Houston Astros,NA
+Philadelphia Phillies,NA,San Diego Padres,NA
+Arizona Diamondbacks,NA,Los Angeles Angels,NA
+Toronto Blue Jays,NA,Athletics,NA
+Tampa Bay Rays,NA,Boston Red Sox,NA
+Miami Marlins,NA,Baltimore Orioles,NA
+Chicago Cubs,NA,New York Yankees,NA
+Colorado Rockies,NA,Cincinnati Reds,NA
+Seattle Mariners,NA,Detroit Tigers,NA
+New York Mets,NA,Kansas City Royals,NA
+Texas Rangers,NA,Houston Astros,NA
+Pittsburgh Pirates,NA,Minnesota Twins,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+Washington Nationals,NA,Milwaukee Brewers,NA
+Atlanta Braves,NA,St. Louis Cardinals,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Toronto Blue Jays,NA,Athletics,NA
+Arizona Diamondbacks,NA,Los Angeles Angels,NA
+Philadelphia Phillies,NA,San Diego Padres,NA
+Boston Red Sox,NA,Chicago Cubs,NA
+Chicago White Sox,NA,Pittsburgh Pirates,NA
+San Diego Padres,NA,Washington Nationals,NA
+Los Angeles Angels,NA,Philadelphia Phillies,NA
+San Francisco Giants,NA,Toronto Blue Jays,NA
+Cincinnati Reds,NA,New York Mets,NA
+Athletics,NA,Cleveland Guardians,NA
+Kansas City Royals,NA,Miami Marlins,NA
+New York Yankees,NA,Atlanta Braves,NA
+Baltimore Orioles,NA,Tampa Bay Rays,NA
+Detroit Tigers,NA,Texas Rangers,NA
+Minnesota Twins,NA,Colorado Rockies,NA
+St. Louis Cardinals,NA,Arizona Diamondbacks,NA
+Houston Astros,NA,Seattle Mariners,NA
+Milwaukee Brewers,NA,Los Angeles Dodgers,NA
+San Francisco Giants,NA,Toronto Blue Jays,NA
+Cincinnati Reds,NA,New York Mets,NA
+Kansas City Royals,NA,Miami Marlins,NA
+Los Angeles Angels,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,Pittsburgh Pirates,NA
+San Diego Padres,NA,Washington Nationals,NA
+Baltimore Orioles,NA,Tampa Bay Rays,NA
+Detroit Tigers,NA,Texas Rangers,NA
+Athletics,NA,Cleveland Guardians,NA
+Boston Red Sox,NA,Chicago Cubs,NA
+St. Louis Cardinals,NA,Arizona Diamondbacks,NA
+New York Yankees,NA,Atlanta Braves,NA
+Minnesota Twins,NA,Colorado Rockies,NA
+Milwaukee Brewers,NA,Los Angeles Dodgers,NA
+Houston Astros,NA,Seattle Mariners,NA
+San Francisco Giants,NA,Toronto Blue Jays,NA
+Baltimore Orioles,NA,Tampa Bay Rays,NA
+San Diego Padres,NA,Washington Nationals,NA
+Los Angeles Angels,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,Pittsburgh Pirates,NA
+New York Yankees,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,New York Mets,NA
+Athletics,NA,Cleveland Guardians,NA
+Kansas City Royals,NA,Miami Marlins,NA
+Boston Red Sox,NA,Chicago Cubs,NA
+Detroit Tigers,NA,Texas Rangers,NA
+Minnesota Twins,NA,Colorado Rockies,NA
+Houston Astros,NA,Seattle Mariners,NA
+St. Louis Cardinals,NA,Arizona Diamondbacks,NA
+Milwaukee Brewers,NA,Los Angeles Dodgers,NA
+Baltimore Orioles,NA,Cleveland Guardians,NA
+Detroit Tigers,NA,Pittsburgh Pirates,NA
+San Diego Padres,NA,Miami Marlins,NA
+Cincinnati Reds,NA,Washington Nationals,NA
+Boston Red Sox,NA,Philadelphia Phillies,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Los Angeles Angels,NA,New York Mets,NA
+San Francisco Giants,NA,Atlanta Braves,NA
+Chicago White Sox,NA,Tampa Bay Rays,NA
+Kansas City Royals,NA,Chicago Cubs,NA
+Athletics,NA,Texas Rangers,NA
+St. Louis Cardinals,NA,Colorado Rockies,NA
+Houston Astros,NA,Arizona Diamondbacks,NA
+Milwaukee Brewers,NA,Seattle Mariners,NA
+Minnesota Twins,NA,Los Angeles Dodgers,NA
+Baltimore Orioles,NA,Cleveland Guardians,NA
+Detroit Tigers,NA,Pittsburgh Pirates,NA
+San Diego Padres,NA,Miami Marlins,NA
+Cincinnati Reds,NA,Washington Nationals,NA
+Boston Red Sox,NA,Philadelphia Phillies,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Los Angeles Angels,NA,New York Mets,NA
+San Francisco Giants,NA,Atlanta Braves,NA
+Chicago White Sox,NA,Tampa Bay Rays,NA
+Kansas City Royals,NA,Chicago Cubs,NA
+Athletics,NA,Texas Rangers,NA
+St. Louis Cardinals,NA,Colorado Rockies,NA
+Houston Astros,NA,Arizona Diamondbacks,NA
+Milwaukee Brewers,NA,Seattle Mariners,NA
+Minnesota Twins,NA,Los Angeles Dodgers,NA
+Cincinnati Reds,NA,Washington Nationals,NA
+San Diego Padres,NA,Miami Marlins,NA
+San Francisco Giants,NA,Atlanta Braves,NA
+Detroit Tigers,NA,Pittsburgh Pirates,NA
+Los Angeles Angels,NA,New York Mets,NA
+Kansas City Royals,NA,Chicago Cubs,NA
+St. Louis Cardinals,NA,Colorado Rockies,NA
+Houston Astros,NA,Arizona Diamondbacks,NA
+Milwaukee Brewers,NA,Seattle Mariners,NA
+Minnesota Twins,NA,Los Angeles Dodgers,NA
+Baltimore Orioles,NA,Cleveland Guardians,NA
+Boston Red Sox,NA,Philadelphia Phillies,NA
+New York Yankees,NA,Toronto Blue Jays,NA
+Chicago White Sox,NA,Tampa Bay Rays,NA
+Athletics,NA,Texas Rangers,NA
+Baltimore Orioles,NA,Cleveland Guardians,NA
+Toronto Blue Jays,NA,Detroit Tigers,NA
+San Diego Padres,NA,St. Louis Cardinals,NA
+Athletics,NA,Houston Astros,NA
+Seattle Mariners,NA,Los Angeles Angels,NA
+Miami Marlins,NA,Milwaukee Brewers,NA
+Arizona Diamondbacks,NA,Pittsburgh Pirates,NA
+Colorado Rockies,NA,Baltimore Orioles,NA
+Philadelphia Phillies,NA,New York Yankees,NA
+Los Angeles Dodgers,NA,Boston Red Sox,NA
+Tampa Bay Rays,NA,Cincinnati Reds,NA
+Toronto Blue Jays,NA,Detroit Tigers,NA
+San Diego Padres,NA,St. Louis Cardinals,NA
+Chicago Cubs,NA,Chicago White Sox,NA
+Atlanta Braves,NA,Texas Rangers,NA
+Cleveland Guardians,NA,Kansas City Royals,NA
+Athletics,NA,Houston Astros,NA
+Washington Nationals,NA,Minnesota Twins,NA
+Seattle Mariners,NA,Los Angeles Angels,NA
+New York Mets,NA,San Francisco Giants,NA
+Philadelphia Phillies,NA,New York Yankees,NA
+Toronto Blue Jays,NA,Detroit Tigers,NA
+Arizona Diamondbacks,NA,Pittsburgh Pirates,NA
+Tampa Bay Rays,NA,Cincinnati Reds,NA
+Colorado Rockies,NA,Baltimore Orioles,NA
+Atlanta Braves,NA,Texas Rangers,NA
+Athletics,NA,Houston Astros,NA
+Washington Nationals,NA,Minnesota Twins,NA
+Chicago Cubs,NA,Chicago White Sox,NA
+Miami Marlins,NA,Milwaukee Brewers,NA
+Cleveland Guardians,NA,Kansas City Royals,NA
+Los Angeles Dodgers,NA,Boston Red Sox,NA
+San Diego Padres,NA,St. Louis Cardinals,NA
+New York Mets,NA,San Francisco Giants,NA
+Seattle Mariners,NA,Los Angeles Angels,NA
+Colorado Rockies,NA,Baltimore Orioles,NA
+Los Angeles Dodgers,NA,Boston Red Sox,NA
+Arizona Diamondbacks,NA,Pittsburgh Pirates,NA
+Philadelphia Phillies,NA,New York Yankees,NA
+Tampa Bay Rays,NA,Cincinnati Reds,NA
+Toronto Blue Jays,NA,Detroit Tigers,NA
+Cleveland Guardians,NA,Kansas City Royals,NA
+Athletics,NA,Houston Astros,NA
+Washington Nationals,NA,Minnesota Twins,NA
+Chicago Cubs,NA,Chicago White Sox,NA
+Miami Marlins,NA,Milwaukee Brewers,NA
+San Diego Padres,NA,St. Louis Cardinals,NA
+Atlanta Braves,NA,Texas Rangers,NA
+New York Mets,NA,San Francisco Giants,NA
+Seattle Mariners,NA,Los Angeles Angels,NA
+Toronto Blue Jays,NA,Baltimore Orioles,NA
+Colorado Rockies,NA,Cleveland Guardians,NA
+Arizona Diamondbacks,NA,Detroit Tigers,NA
+Tampa Bay Rays,NA,New York Yankees,NA
+Los Angeles Dodgers,NA,Cincinnati Reds,NA
+Boston Red Sox,NA,Minnesota Twins,NA
+Atlanta Braves,NA,Kansas City Royals,NA
+Philadelphia Phillies,NA,Chicago White Sox,NA
+Chicago Cubs,NA,Milwaukee Brewers,NA
+Miami Marlins,NA,St. Louis Cardinals,NA
+Washington Nationals,NA,Houston Astros,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+New York Mets,NA,San Diego Padres,NA
+Pittsburgh Pirates,NA,San Francisco Giants,NA
+Seattle Mariners,NA,Athletics,NA
+Toronto Blue Jays,NA,Baltimore Orioles,NA
+Toronto Blue Jays,NA,Baltimore Orioles,NA
+Colorado Rockies,NA,Cleveland Guardians,NA
+Arizona Diamondbacks,NA,Detroit Tigers,NA
+Tampa Bay Rays,NA,New York Yankees,NA
+Los Angeles Dodgers,NA,Cincinnati Reds,NA
+Boston Red Sox,NA,Minnesota Twins,NA
+Atlanta Braves,NA,Kansas City Royals,NA
+Philadelphia Phillies,NA,Chicago White Sox,NA
+Chicago Cubs,NA,Milwaukee Brewers,NA
+Miami Marlins,NA,St. Louis Cardinals,NA
+Washington Nationals,NA,Houston Astros,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+New York Mets,NA,San Diego Padres,NA
+Pittsburgh Pirates,NA,San Francisco Giants,NA
+Seattle Mariners,NA,Athletics,NA
+Toronto Blue Jays,NA,Baltimore Orioles,NA
+Arizona Diamondbacks,NA,Detroit Tigers,NA
+Boston Red Sox,NA,Minnesota Twins,NA
+Washington Nationals,NA,Houston Astros,NA
+Atlanta Braves,NA,Kansas City Royals,NA
+Philadelphia Phillies,NA,Chicago White Sox,NA
+Chicago Cubs,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,San Francisco Giants,NA
+New York Mets,NA,San Diego Padres,NA
+Colorado Rockies,NA,Cleveland Guardians,NA
+Tampa Bay Rays,NA,New York Yankees,NA
+Los Angeles Dodgers,NA,Cincinnati Reds,NA
+Miami Marlins,NA,St. Louis Cardinals,NA
+Texas Rangers,NA,Los Angeles Angels,NA
+Seattle Mariners,NA,Athletics,NA
+Tampa Bay Rays,NA,New York Yankees,NA
+Atlanta Braves,NA,Cincinnati Reds,NA
+Texas Rangers,NA,Seattle Mariners,NA
+Atlanta Braves,NA,Cincinnati Reds,NA
+Baltimore Orioles,NA,Chicago Cubs,NA
+Detroit Tigers,NA,Philadelphia Phillies,NA
+Milwaukee Brewers,NA,Washington Nationals,NA
+Kansas City Royals,NA,Toronto Blue Jays,NA
+Houston Astros,NA,Boston Red Sox,NA
+San Francisco Giants,NA,New York Mets,NA
+Minnesota Twins,NA,Cleveland Guardians,NA
+New York Yankees,NA,Miami Marlins,NA
+Los Angeles Dodgers,NA,Tampa Bay Rays,NA
+Pittsburgh Pirates,NA,Colorado Rockies,NA
+Chicago White Sox,NA,Los Angeles Angels,NA
+St. Louis Cardinals,NA,San Diego Padres,NA
+Arizona Diamondbacks,NA,Athletics,NA
+Texas Rangers,NA,Seattle Mariners,NA
+Los Angeles Dodgers,NA,Tampa Bay Rays,NA
+Baltimore Orioles,NA,Chicago Cubs,NA
+Kansas City Royals,NA,Toronto Blue Jays,NA
+Pittsburgh Pirates,NA,Colorado Rockies,NA
+Detroit Tigers,NA,Philadelphia Phillies,NA
+Milwaukee Brewers,NA,Washington Nationals,NA
+Houston Astros,NA,Boston Red Sox,NA
+San Francisco Giants,NA,New York Mets,NA
+Texas Rangers,NA,Seattle Mariners,NA
+Minnesota Twins,NA,Cleveland Guardians,NA
+New York Yankees,NA,Miami Marlins,NA
+Atlanta Braves,NA,Cincinnati Reds,NA
+Arizona Diamondbacks,NA,Athletics,NA
+Chicago White Sox,NA,Los Angeles Angels,NA
+St. Louis Cardinals,NA,San Diego Padres,NA
+Houston Astros,NA,Boston Red Sox,NA
+Los Angeles Dodgers,NA,Tampa Bay Rays,NA
+Detroit Tigers,NA,Philadelphia Phillies,NA
+Milwaukee Brewers,NA,Washington Nationals,NA
+Kansas City Royals,NA,Toronto Blue Jays,NA
+San Francisco Giants,NA,New York Mets,NA
+Minnesota Twins,NA,Cleveland Guardians,NA
+New York Yankees,NA,Miami Marlins,NA
+Baltimore Orioles,NA,Chicago Cubs,NA
+Pittsburgh Pirates,NA,Colorado Rockies,NA
+Arizona Diamondbacks,NA,Athletics,NA
+Chicago White Sox,NA,Los Angeles Angels,NA
+St. Louis Cardinals,NA,San Diego Padres,NA
+Texas Rangers,NA,Seattle Mariners,NA
+San Francisco Giants,NA,Pittsburgh Pirates,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+Houston Astros,NA,Miami Marlins,NA
+Baltimore Orioles,NA,Philadelphia Phillies,NA
+Kansas City Royals,NA,Boston Red Sox,NA
+Cleveland Guardians,NA,New York Mets,NA
+Milwaukee Brewers,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,Chicago Cubs,NA
+New York Yankees,NA,Texas Rangers,NA
+Toronto Blue Jays,NA,Colorado Rockies,NA
+Tampa Bay Rays,NA,Los Angeles Angels,NA
+San Diego Padres,NA,Arizona Diamondbacks,NA
+St. Louis Cardinals,NA,Los Angeles Dodgers,NA
+San Francisco Giants,NA,Pittsburgh Pirates,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+Houston Astros,NA,Miami Marlins,NA
+Athletics,NA,Washington Nationals,NA
+Baltimore Orioles,NA,Philadelphia Phillies,NA
+Kansas City Royals,NA,Boston Red Sox,NA
+Cleveland Guardians,NA,New York Mets,NA
+Milwaukee Brewers,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,Chicago Cubs,NA
+New York Yankees,NA,Texas Rangers,NA
+Toronto Blue Jays,NA,Colorado Rockies,NA
+Tampa Bay Rays,NA,Los Angeles Angels,NA
+San Diego Padres,NA,Arizona Diamondbacks,NA
+Chicago White Sox,NA,Seattle Mariners,NA
+St. Louis Cardinals,NA,Los Angeles Dodgers,NA
+San Francisco Giants,NA,Pittsburgh Pirates,NA
+Baltimore Orioles,NA,Philadelphia Phillies,NA
+Cleveland Guardians,NA,New York Mets,NA
+Minnesota Twins,NA,Detroit Tigers,NA
+Cincinnati Reds,NA,Chicago Cubs,NA
+New York Yankees,NA,Texas Rangers,NA
+Toronto Blue Jays,NA,Colorado Rockies,NA
+Tampa Bay Rays,NA,Los Angeles Angels,NA
+St. Louis Cardinals,NA,Los Angeles Dodgers,NA
+Houston Astros,NA,Miami Marlins,NA
+Athletics,NA,Washington Nationals,NA
+Kansas City Royals,NA,Boston Red Sox,NA
+Milwaukee Brewers,NA,Atlanta Braves,NA
+San Diego Padres,NA,Arizona Diamondbacks,NA
+Chicago White Sox,NA,Seattle Mariners,NA
+Athletics,NA,Washington Nationals,NA
+Chicago White Sox,NA,Seattle Mariners,NA
+Cincinnati Reds,NA,Pittsburgh Pirates,NA
+Miami Marlins,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,Pittsburgh Pirates,NA
+Athletics,NA,Baltimore Orioles,NA
+Houston Astros,NA,New York Yankees,NA
+Los Angeles Angels,NA,Detroit Tigers,NA
+Miami Marlins,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+Philadelphia Phillies,NA,Texas Rangers,NA
+Kansas City Royals,NA,Minnesota Twins,NA
+New York Mets,NA,Milwaukee Brewers,NA
+Chicago Cubs,NA,St. Louis Cardinals,NA
+Colorado Rockies,NA,Arizona Diamondbacks,NA
+Boston Red Sox,NA,San Diego Padres,NA
+Tampa Bay Rays,NA,Seattle Mariners,NA
+Toronto Blue Jays,NA,Los Angeles Dodgers,NA
+Washington Nationals,NA,San Francisco Giants,NA
+Miami Marlins,NA,Atlanta Braves,NA
+Miami Marlins,NA,Atlanta Braves,NA
+Houston Astros,NA,New York Yankees,NA
+Washington Nationals,NA,San Francisco Giants,NA
+Los Angeles Angels,NA,Detroit Tigers,NA
+Cincinnati Reds,NA,Pittsburgh Pirates,NA
+Athletics,NA,Baltimore Orioles,NA
+Kansas City Royals,NA,Minnesota Twins,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+New York Mets,NA,Milwaukee Brewers,NA
+Chicago Cubs,NA,St. Louis Cardinals,NA
+Philadelphia Phillies,NA,Texas Rangers,NA
+Colorado Rockies,NA,Arizona Diamondbacks,NA
+Boston Red Sox,NA,San Diego Padres,NA
+Toronto Blue Jays,NA,Los Angeles Dodgers,NA
+Tampa Bay Rays,NA,Seattle Mariners,NA
+Kansas City Royals,NA,Minnesota Twins,NA
+Athletics,NA,Baltimore Orioles,NA
+Cincinnati Reds,NA,Pittsburgh Pirates,NA
+Miami Marlins,NA,Atlanta Braves,NA
+Houston Astros,NA,New York Yankees,NA
+Los Angeles Angels,NA,Detroit Tigers,NA
+Cleveland Guardians,NA,Chicago White Sox,NA
+New York Mets,NA,Milwaukee Brewers,NA
+Chicago Cubs,NA,St. Louis Cardinals,NA
+Philadelphia Phillies,NA,Texas Rangers,NA
+Washington Nationals,NA,San Francisco Giants,NA
+Colorado Rockies,NA,Arizona Diamondbacks,NA
+Boston Red Sox,NA,San Diego Padres,NA
+Tampa Bay Rays,NA,Seattle Mariners,NA
+Toronto Blue Jays,NA,Los Angeles Dodgers,NA
+Philadelphia Phillies,NA,Cincinnati Reds,NA
+Minnesota Twins,NA,New York Yankees,NA
+Washington Nationals,NA,Kansas City Royals,NA
+Detroit Tigers,NA,Chicago White Sox,NA
+Pittsburgh Pirates,NA,Milwaukee Brewers,NA
+Colorado Rockies,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Texas Rangers,NA
+Boston Red Sox,NA,Houston Astros,NA
+Los Angeles Dodgers,NA,Los Angeles Angels,NA
+San Diego Padres,NA,San Francisco Giants,NA
+Tampa Bay Rays,NA,Athletics,NA
+Seattle Mariners,NA,Baltimore Orioles,NA
+Philadelphia Phillies,NA,Cincinnati Reds,NA
+Miami Marlins,NA,Cleveland Guardians,NA
+Minnesota Twins,NA,New York Yankees,NA
+Chicago Cubs,NA,Toronto Blue Jays,NA
+Atlanta Braves,NA,New York Mets,NA
+Washington Nationals,NA,Kansas City Royals,NA
+Detroit Tigers,NA,Chicago White Sox,NA
+Pittsburgh Pirates,NA,Milwaukee Brewers,NA
+Colorado Rockies,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Texas Rangers,NA
+Boston Red Sox,NA,Houston Astros,NA
+Los Angeles Dodgers,NA,Los Angeles Angels,NA
+San Diego Padres,NA,San Francisco Giants,NA
+Tampa Bay Rays,NA,Athletics,NA
+Washington Nationals,NA,Kansas City Royals,NA
+Detroit Tigers,NA,Chicago White Sox,NA
+Pittsburgh Pirates,NA,Milwaukee Brewers,NA
+Colorado Rockies,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Texas Rangers,NA
+San Diego Padres,NA,San Francisco Giants,NA
+Philadelphia Phillies,NA,Cincinnati Reds,NA
+Seattle Mariners,NA,Baltimore Orioles,NA
+Miami Marlins,NA,Cleveland Guardians,NA
+Minnesota Twins,NA,New York Yankees,NA
+Chicago Cubs,NA,Toronto Blue Jays,NA
+Boston Red Sox,NA,Houston Astros,NA
+Atlanta Braves,NA,New York Mets,NA
+Los Angeles Dodgers,NA,Los Angeles Angels,NA
+Tampa Bay Rays,NA,Athletics,NA
+Seattle Mariners,NA,Baltimore Orioles,NA
+Chicago Cubs,NA,Toronto Blue Jays,NA
+Miami Marlins,NA,Cleveland Guardians,NA
+Philadelphia Phillies,NA,Washington Nationals,NA
+Atlanta Braves,NA,New York Mets,NA
+Detroit Tigers,NA,Minnesota Twins,NA
+Arizona Diamondbacks,NA,Colorado Rockies,NA
+Pittsburgh Pirates,NA,Chicago Cubs,NA
+Milwaukee Brewers,NA,Cincinnati Reds,NA
+Philadelphia Phillies,NA,Washington Nationals,NA
+Texas Rangers,NA,Toronto Blue Jays,NA
+Seattle Mariners,NA,New York Mets,NA
+Atlanta Braves,NA,Cleveland Guardians,NA
+Miami Marlins,NA,Boston Red Sox,NA
+Baltimore Orioles,NA,Houston Astros,NA
+Detroit Tigers,NA,Minnesota Twins,NA
+Chicago White Sox,NA,Kansas City Royals,NA
+New York Yankees,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Colorado Rockies,NA
+Los Angeles Angels,NA,Athletics,NA
+San Diego Padres,NA,Los Angeles Dodgers,NA
+Tampa Bay Rays,NA,San Francisco Giants,NA
+Pittsburgh Pirates,NA,Chicago Cubs,NA
+Texas Rangers,NA,Toronto Blue Jays,NA
+Philadelphia Phillies,NA,Washington Nationals,NA
+Seattle Mariners,NA,New York Mets,NA
+Miami Marlins,NA,Boston Red Sox,NA
+Milwaukee Brewers,NA,Cincinnati Reds,NA
+Baltimore Orioles,NA,Houston Astros,NA
+Atlanta Braves,NA,Cleveland Guardians,NA
+Chicago White Sox,NA,Kansas City Royals,NA
+Detroit Tigers,NA,Minnesota Twins,NA
+New York Yankees,NA,St. Louis Cardinals,NA
+Arizona Diamondbacks,NA,Colorado Rockies,NA
+Tampa Bay Rays,NA,San Francisco Giants,NA
+San Diego Padres,NA,Los Angeles Dodgers,NA
+Los Angeles Angels,NA,Athletics,NA
+Philadelphia Phillies,NA,Washington Nationals,NA
+Miami Marlins,NA,Boston Red Sox,NA
+Texas Rangers,NA,Toronto Blue Jays,NA
+Atlanta Braves,NA,Cleveland Guardians,NA
+Milwaukee Brewers,NA,Cincinnati Reds,NA
+Baltimore Orioles,NA,Houston Astros,NA
+Detroit Tigers,NA,Minnesota Twins,NA
+Chicago White Sox,NA,Kansas City Royals,NA
+New York Yankees,NA,St. Louis Cardinals,NA
+Pittsburgh Pirates,NA,Chicago Cubs,NA
+Arizona Diamondbacks,NA,Colorado Rockies,NA
+Los Angeles Angels,NA,Athletics,NA
+Tampa Bay Rays,NA,San Francisco Giants,NA
+San Diego Padres,NA,Los Angeles Dodgers,NA
+Seattle Mariners,NA,New York Mets,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Houston Astros,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Pittsburgh Pirates,NA
+St. Louis Cardinals,NA,Miami Marlins,NA
+Seattle Mariners,NA,Philadelphia Phillies,NA
+Baltimore Orioles,NA,Boston Red Sox,NA
+Chicago White Sox,NA,Atlanta Braves,NA
+Texas Rangers,NA,Kansas City Royals,NA
+Los Angeles Dodgers,NA,Colorado Rockies,NA
+Cincinnati Reds,NA,Los Angeles Angels,NA
+Cleveland Guardians,NA,Arizona Diamondbacks,NA
+San Francisco Giants,NA,San Diego Padres,NA
+Houston Astros,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Pittsburgh Pirates,NA
+St. Louis Cardinals,NA,Miami Marlins,NA
+New York Mets,NA,Washington Nationals,NA
+Seattle Mariners,NA,Philadelphia Phillies,NA
+Baltimore Orioles,NA,Boston Red Sox,NA
+Chicago White Sox,NA,Atlanta Braves,NA
+New York Yankees,NA,Tampa Bay Rays,NA
+Texas Rangers,NA,Kansas City Royals,NA
+Athletics,NA,Minnesota Twins,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Los Angeles Dodgers,NA,Colorado Rockies,NA
+Cincinnati Reds,NA,Los Angeles Angels,NA
+Cleveland Guardians,NA,Arizona Diamondbacks,NA
+San Francisco Giants,NA,San Diego Padres,NA
+Toronto Blue Jays,NA,Pittsburgh Pirates,NA
+Seattle Mariners,NA,Philadelphia Phillies,NA
+Houston Astros,NA,Detroit Tigers,NA
+Cleveland Guardians,NA,Arizona Diamondbacks,NA
+St. Louis Cardinals,NA,Miami Marlins,NA
+New York Mets,NA,Washington Nationals,NA
+Chicago White Sox,NA,Atlanta Braves,NA
+New York Yankees,NA,Tampa Bay Rays,NA
+Texas Rangers,NA,Kansas City Royals,NA
+Athletics,NA,Minnesota Twins,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Los Angeles Dodgers,NA,Colorado Rockies,NA
+Cincinnati Reds,NA,Los Angeles Angels,NA
+San Francisco Giants,NA,San Diego Padres,NA
+Athletics,NA,Minnesota Twins,NA
+Texas Rangers,NA,Kansas City Royals,NA
+Milwaukee Brewers,NA,Chicago Cubs,NA
+Los Angeles Dodgers,NA,Colorado Rockies,NA
+New York Mets,NA,Washington Nationals,NA
+San Francisco Giants,NA,San Diego Padres,NA
+Houston Astros,NA,Baltimore Orioles,NA
+Boston Red Sox,NA,New York Yankees,NA
+St. Louis Cardinals,NA,Tampa Bay Rays,NA
+Colorado Rockies,NA,Pittsburgh Pirates,NA
+Washington Nationals,NA,Philadelphia Phillies,NA
+Houston Astros,NA,Baltimore Orioles,NA
+Boston Red Sox,NA,New York Yankees,NA
+Kansas City Royals,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Miami Marlins,NA
+New York Mets,NA,Atlanta Braves,NA
+St. Louis Cardinals,NA,Tampa Bay Rays,NA
+Minnesota Twins,NA,Chicago White Sox,NA
+Cleveland Guardians,NA,Texas Rangers,NA
+San Francisco Giants,NA,Milwaukee Brewers,NA
+Chicago Cubs,NA,Los Angeles Angels,NA
+Cincinnati Reds,NA,Arizona Diamondbacks,NA
+Los Angeles Dodgers,NA,San Diego Padres,NA
+Athletics,NA,Seattle Mariners,NA
+Boston Red Sox,NA,New York Yankees,NA
+Toronto Blue Jays,NA,Miami Marlins,NA
+Washington Nationals,NA,Philadelphia Phillies,NA
+Kansas City Royals,NA,Detroit Tigers,NA
+Colorado Rockies,NA,Pittsburgh Pirates,NA
+Houston Astros,NA,Baltimore Orioles,NA
+Cleveland Guardians,NA,Texas Rangers,NA
+Minnesota Twins,NA,Chicago White Sox,NA
+San Francisco Giants,NA,Milwaukee Brewers,NA
+New York Mets,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,Arizona Diamondbacks,NA
+Los Angeles Dodgers,NA,San Diego Padres,NA
+Chicago Cubs,NA,Los Angeles Angels,NA
+Athletics,NA,Seattle Mariners,NA
+Colorado Rockies,NA,Pittsburgh Pirates,NA
+St. Louis Cardinals,NA,Tampa Bay Rays,NA
+Houston Astros,NA,Baltimore Orioles,NA
+Washington Nationals,NA,Philadelphia Phillies,NA
+New York Mets,NA,Atlanta Braves,NA
+Boston Red Sox,NA,New York Yankees,NA
+Kansas City Royals,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Miami Marlins,NA
+Minnesota Twins,NA,Chicago White Sox,NA
+San Francisco Giants,NA,Milwaukee Brewers,NA
+Cleveland Guardians,NA,Texas Rangers,NA
+Chicago Cubs,NA,Los Angeles Angels,NA
+Cincinnati Reds,NA,Arizona Diamondbacks,NA
+Los Angeles Dodgers,NA,San Diego Padres,NA
+Athletics,NA,Seattle Mariners,NA
+Boston Red Sox,NA,Baltimore Orioles,NA
+Tampa Bay Rays,NA,Cleveland Guardians,NA
+Atlanta Braves,NA,Miami Marlins,NA
+Washington Nationals,NA,New York Yankees,NA
+Minnesota Twins,NA,Toronto Blue Jays,NA
+Philadelphia Phillies,NA,New York Mets,NA
+Kansas City Royals,NA,Chicago White Sox,NA
+Arizona Diamondbacks,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,St. Louis Cardinals,NA
+Los Angeles Angels,NA,Texas Rangers,NA
+San Diego Padres,NA,Seattle Mariners,NA
+Detroit Tigers,NA,Athletics,NA
+Cincinnati Reds,NA,Los Angeles Dodgers,NA
+Boston Red Sox,NA,Baltimore Orioles,NA
+Tampa Bay Rays,NA,Cleveland Guardians,NA
+Atlanta Braves,NA,Miami Marlins,NA
+Washington Nationals,NA,New York Yankees,NA
+Minnesota Twins,NA,Toronto Blue Jays,NA
+Philadelphia Phillies,NA,New York Mets,NA
+Kansas City Royals,NA,Chicago White Sox,NA
+Arizona Diamondbacks,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,St. Louis Cardinals,NA
+Los Angeles Angels,NA,Texas Rangers,NA
+Colorado Rockies,NA,Houston Astros,NA
+San Diego Padres,NA,Seattle Mariners,NA
+Chicago Cubs,NA,San Francisco Giants,NA
+Detroit Tigers,NA,Athletics,NA
+Cincinnati Reds,NA,Los Angeles Dodgers,NA
+Washington Nationals,NA,New York Yankees,NA
+Tampa Bay Rays,NA,Cleveland Guardians,NA
+Atlanta Braves,NA,Miami Marlins,NA
+San Diego Padres,NA,Seattle Mariners,NA
+Boston Red Sox,NA,Baltimore Orioles,NA
+Minnesota Twins,NA,Toronto Blue Jays,NA
+Philadelphia Phillies,NA,New York Mets,NA
+Kansas City Royals,NA,Chicago White Sox,NA
+Arizona Diamondbacks,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,St. Louis Cardinals,NA
+Los Angeles Angels,NA,Texas Rangers,NA
+Colorado Rockies,NA,Houston Astros,NA
+Cincinnati Reds,NA,Los Angeles Dodgers,NA
+Chicago Cubs,NA,San Francisco Giants,NA
+Detroit Tigers,NA,Athletics,NA
+Boston Red Sox,NA,Baltimore Orioles,NA
+Colorado Rockies,NA,Houston Astros,NA
+Arizona Diamondbacks,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,St. Louis Cardinals,NA
+Chicago Cubs,NA,San Francisco Giants,NA
+Atlanta Braves,NA,Philadelphia Phillies,NA
+Miami Marlins,NA,New York Mets,NA
+New York Yankees,NA,Chicago White Sox,NA
+St. Louis Cardinals,NA,Cincinnati Reds,NA
+Tampa Bay Rays,NA,Washington Nationals,NA
+Atlanta Braves,NA,Philadelphia Phillies,NA
+Milwaukee Brewers,NA,Toronto Blue Jays,NA
+Pittsburgh Pirates,NA,Boston Red Sox,NA
+Seattle Mariners,NA,Cleveland Guardians,NA
+Miami Marlins,NA,New York Mets,NA
+New York Yankees,NA,Chicago White Sox,NA
+Los Angeles Angels,NA,Houston Astros,NA
+Detroit Tigers,NA,Kansas City Royals,NA
+San Diego Padres,NA,Minnesota Twins,NA
+Chicago Cubs,NA,Colorado Rockies,NA
+Texas Rangers,NA,Athletics,NA
+Arizona Diamondbacks,NA,Los Angeles Dodgers,NA
+Baltimore Orioles,NA,San Francisco Giants,NA
+Milwaukee Brewers,NA,Toronto Blue Jays,NA
+Tampa Bay Rays,NA,Washington Nationals,NA
+Pittsburgh Pirates,NA,Boston Red Sox,NA
+Miami Marlins,NA,New York Mets,NA
+Atlanta Braves,NA,Philadelphia Phillies,NA
+St. Louis Cardinals,NA,Cincinnati Reds,NA
+Los Angeles Angels,NA,Houston Astros,NA
+San Diego Padres,NA,Minnesota Twins,NA
+New York Yankees,NA,Chicago White Sox,NA
+Detroit Tigers,NA,Kansas City Royals,NA
+Seattle Mariners,NA,Cleveland Guardians,NA
+Baltimore Orioles,NA,San Francisco Giants,NA
+Chicago Cubs,NA,Colorado Rockies,NA
+Arizona Diamondbacks,NA,Los Angeles Dodgers,NA
+Texas Rangers,NA,Athletics,NA
+St. Louis Cardinals,NA,Cincinnati Reds,NA
+San Diego Padres,NA,Minnesota Twins,NA
+Pittsburgh Pirates,NA,Boston Red Sox,NA
+Tampa Bay Rays,NA,Washington Nationals,NA
+Milwaukee Brewers,NA,Toronto Blue Jays,NA
+Seattle Mariners,NA,Cleveland Guardians,NA
+Miami Marlins,NA,New York Mets,NA
+Los Angeles Angels,NA,Houston Astros,NA
+Detroit Tigers,NA,Kansas City Royals,NA
+New York Yankees,NA,Chicago White Sox,NA
+Chicago Cubs,NA,Colorado Rockies,NA
+Baltimore Orioles,NA,San Francisco Giants,NA
+Texas Rangers,NA,Athletics,NA
+Arizona Diamondbacks,NA,Los Angeles Dodgers,NA
+Atlanta Braves,NA,Philadelphia Phillies,NA
+Miami Marlins,NA,Washington Nationals,NA
+New York Mets,NA,Detroit Tigers,NA
+Toronto Blue Jays,NA,Cincinnati Reds,NA
+Cleveland Guardians,NA,Boston Red Sox,NA
+Los Angeles Angels,NA,Houston Astros,NA
+Chicago White Sox,NA,Minnesota Twins,NA
+Athletics,NA,St. Louis Cardinals,NA
+Atlanta Braves,NA,Chicago Cubs,NA
+San Francisco Giants,NA,Colorado Rockies,NA
+Philadelphia Phillies,NA,Milwaukee Brewers,NA
+Baltimore Orioles,NA,San Diego Padres,NA
+Seattle Mariners,NA,Tampa Bay Rays,NA
+Texas Rangers,NA,Arizona Diamondbacks,NA
+New York Mets,NA,Detroit Tigers,NA
+Los Angeles Dodgers,NA,Pittsburgh Pirates,NA
+Toronto Blue Jays,NA,Cincinnati Reds,NA
+Cleveland Guardians,NA,Boston Red Sox,NA
+Miami Marlins,NA,Washington Nationals,NA
+Seattle Mariners,NA,Tampa Bay Rays,NA
+Los Angeles Angels,NA,Kansas City Royals,NA
+Atlanta Braves,NA,Chicago Cubs,NA
+Chicago White Sox,NA,Minnesota Twins,NA
+Athletics,NA,St. Louis Cardinals,NA
+New York Yankees,NA,Houston Astros,NA
+San Francisco Giants,NA,Colorado Rockies,NA
+Baltimore Orioles,NA,San Diego Padres,NA
+Texas Rangers,NA,Arizona Diamondbacks,NA
+Miami Marlins,NA,Washington Nationals,NA
+New York Mets,NA,Detroit Tigers,NA
+Texas Rangers,NA,Arizona Diamondbacks,NA
+Baltimore Orioles,NA,San Diego Padres,NA
+Los Angeles Dodgers,NA,Pittsburgh Pirates,NA
+Toronto Blue Jays,NA,Cincinnati Reds,NA
+Cleveland Guardians,NA,Boston Red Sox,NA
+Seattle Mariners,NA,Tampa Bay Rays,NA
+Los Angeles Angels,NA,Kansas City Royals,NA
+Atlanta Braves,NA,Chicago Cubs,NA
+Chicago White Sox,NA,Minnesota Twins,NA
+Philadelphia Phillies,NA,Milwaukee Brewers,NA
+Athletics,NA,St. Louis Cardinals,NA
+New York Yankees,NA,Houston Astros,NA
+San Francisco Giants,NA,Colorado Rockies,NA
+Philadelphia Phillies,NA,Milwaukee Brewers,NA
+Los Angeles Dodgers,NA,Pittsburgh Pirates,NA
+Cleveland Guardians,NA,Tampa Bay Rays,NA
+Los Angeles Angels,NA,Kansas City Royals,NA
+Chicago White Sox,NA,Minnesota Twins,NA
+New York Yankees,NA,Houston Astros,NA
+Washington Nationals,NA,Chicago Cubs,NA
+New York Mets,NA,Cincinnati Reds,NA
+Chicago White Sox,NA,Detroit Tigers,NA
+Milwaukee Brewers,NA,Pittsburgh Pirates,NA
+Los Angeles Dodgers,NA,Baltimore Orioles,NA
+Toronto Blue Jays,NA,New York Yankees,NA
+Philadelphia Phillies,NA,Miami Marlins,NA
+Seattle Mariners,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Tampa Bay Rays,NA
+Minnesota Twins,NA,Kansas City Royals,NA
+Houston Astros,NA,Texas Rangers,NA
+San Francisco Giants,NA,St. Louis Cardinals,NA
+San Diego Padres,NA,Colorado Rockies,NA
+Athletics,NA,Los Angeles Angels,NA
+Boston Red Sox,NA,Arizona Diamondbacks,NA
+Toronto Blue Jays,NA,New York Yankees,NA
+Washington Nationals,NA,Chicago Cubs,NA
+Philadelphia Phillies,NA,Miami Marlins,NA
+Chicago White Sox,NA,Detroit Tigers,NA
+New York Mets,NA,Cincinnati Reds,NA
+Milwaukee Brewers,NA,Pittsburgh Pirates,NA
+Los Angeles Dodgers,NA,Baltimore Orioles,NA
+Cleveland Guardians,NA,Tampa Bay Rays,NA
+San Francisco Giants,NA,St. Louis Cardinals,NA
+Houston Astros,NA,Texas Rangers,NA
+Minnesota Twins,NA,Kansas City Royals,NA
+Seattle Mariners,NA,Atlanta Braves,NA
+Boston Red Sox,NA,Arizona Diamondbacks,NA
+San Diego Padres,NA,Colorado Rockies,NA
+Athletics,NA,Los Angeles Angels,NA
+Seattle Mariners,NA,Atlanta Braves,NA
+Cleveland Guardians,NA,Tampa Bay Rays,NA
+Los Angeles Dodgers,NA,Baltimore Orioles,NA
+Toronto Blue Jays,NA,New York Yankees,NA
+Milwaukee Brewers,NA,Pittsburgh Pirates,NA
+New York Mets,NA,Cincinnati Reds,NA
+Chicago White Sox,NA,Detroit Tigers,NA
+Philadelphia Phillies,NA,Miami Marlins,NA
+Minnesota Twins,NA,Kansas City Royals,NA
+San Francisco Giants,NA,St. Louis Cardinals,NA
+Washington Nationals,NA,Chicago Cubs,NA
+Houston Astros,NA,Texas Rangers,NA
+San Diego Padres,NA,Colorado Rockies,NA
+Athletics,NA,Los Angeles Angels,NA
+Boston Red Sox,NA,Arizona Diamondbacks,NA
+Kansas City Royals,NA,Cleveland Guardians,NA
+Washington Nationals,NA,Miami Marlins,NA
+New York Mets,NA,Philadelphia Phillies,NA
+Chicago Cubs,NA,Atlanta Braves,NA
+Milwaukee Brewers,NA,Texas Rangers,NA
+Minnesota Twins,NA,Los Angeles Angels,NA
+Cincinnati Reds,NA,San Diego Padres,NA
+St. Louis Cardinals,NA,Seattle Mariners,NA
+Arizona Diamondbacks,NA,San Francisco Giants,NA
+Boston Red Sox,NA,Athletics,NA
+Colorado Rockies,NA,Los Angeles Dodgers,NA
+Pittsburgh Pirates,NA,Baltimore Orioles,NA
+Kansas City Royals,NA,Cleveland Guardians,NA
+Washington Nationals,NA,Miami Marlins,NA
+New York Mets,NA,Philadelphia Phillies,NA
+Detroit Tigers,NA,New York Yankees,NA
+Houston Astros,NA,Toronto Blue Jays,NA
+Chicago Cubs,NA,Atlanta Braves,NA
+Tampa Bay Rays,NA,Chicago White Sox,NA
+Milwaukee Brewers,NA,Texas Rangers,NA
+Minnesota Twins,NA,Los Angeles Angels,NA
+Cincinnati Reds,NA,San Diego Padres,NA
+St. Louis Cardinals,NA,Seattle Mariners,NA
+Arizona Diamondbacks,NA,San Francisco Giants,NA
+Boston Red Sox,NA,Athletics,NA
+Colorado Rockies,NA,Los Angeles Dodgers,NA
+Milwaukee Brewers,NA,Texas Rangers,NA
+Boston Red Sox,NA,Athletics,NA
+Arizona Diamondbacks,NA,San Francisco Giants,NA
+Minnesota Twins,NA,Los Angeles Angels,NA
+Pittsburgh Pirates,NA,Baltimore Orioles,NA
+Kansas City Royals,NA,Cleveland Guardians,NA
+Washington Nationals,NA,Miami Marlins,NA
+New York Mets,NA,Philadelphia Phillies,NA
+Detroit Tigers,NA,New York Yankees,NA
+Houston Astros,NA,Toronto Blue Jays,NA
+Chicago Cubs,NA,Atlanta Braves,NA
+Tampa Bay Rays,NA,Chicago White Sox,NA
+Cincinnati Reds,NA,San Diego Padres,NA
+St. Louis Cardinals,NA,Seattle Mariners,NA
+Colorado Rockies,NA,Los Angeles Dodgers,NA
+Pittsburgh Pirates,NA,Baltimore Orioles,NA
+Tampa Bay Rays,NA,Chicago White Sox,NA
+Houston Astros,NA,Toronto Blue Jays,NA
+Washington Nationals,NA,Miami Marlins,NA
+Detroit Tigers,NA,New York Yankees,NA
+Kansas City Royals,NA,Cleveland Guardians,NA
+New York Mets,NA,Philadelphia Phillies,NA
+Colorado Rockies,NA,San Diego Padres,NA
+Los Angeles Angels,NA,Seattle Mariners,NA
+Tampa Bay Rays,NA,Chicago Cubs,NA
+Pittsburgh Pirates,NA,Washington Nationals,NA
+Kansas City Royals,NA,Philadelphia Phillies,NA
+Baltimore Orioles,NA,Toronto Blue Jays,NA
+Texas Rangers,NA,New York Mets,NA
+Chicago White Sox,NA,Cleveland Guardians,NA
+Detroit Tigers,NA,Miami Marlins,NA
+New York Yankees,NA,Boston Red Sox,NA
+Houston Astros,NA,Atlanta Braves,NA
+Arizona Diamondbacks,NA,Minnesota Twins,NA
+St. Louis Cardinals,NA,Milwaukee Brewers,NA
+Colorado Rockies,NA,San Diego Padres,NA
+Cincinnati Reds,NA,Athletics,NA
+Los Angeles Angels,NA,Seattle Mariners,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Tampa Bay Rays,NA,Chicago Cubs,NA
+Baltimore Orioles,NA,Toronto Blue Jays,NA
+Pittsburgh Pirates,NA,Washington Nationals,NA
+Texas Rangers,NA,New York Mets,NA
+Detroit Tigers,NA,Miami Marlins,NA
+New York Yankees,NA,Boston Red Sox,NA
+Kansas City Royals,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,Cleveland Guardians,NA
+Arizona Diamondbacks,NA,Minnesota Twins,NA
+Houston Astros,NA,Atlanta Braves,NA
+St. Louis Cardinals,NA,Milwaukee Brewers,NA
+Colorado Rockies,NA,San Diego Padres,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Los Angeles Angels,NA,Seattle Mariners,NA
+Cincinnati Reds,NA,Athletics,NA
+Pittsburgh Pirates,NA,Washington Nationals,NA
+Kansas City Royals,NA,Philadelphia Phillies,NA
+Houston Astros,NA,Atlanta Braves,NA
+New York Yankees,NA,Boston Red Sox,NA
+Baltimore Orioles,NA,Toronto Blue Jays,NA
+Texas Rangers,NA,New York Mets,NA
+Chicago White Sox,NA,Cleveland Guardians,NA
+Detroit Tigers,NA,Miami Marlins,NA
+Arizona Diamondbacks,NA,Minnesota Twins,NA
+St. Louis Cardinals,NA,Milwaukee Brewers,NA
+Tampa Bay Rays,NA,Chicago Cubs,NA
+Cincinnati Reds,NA,Athletics,NA
+Los Angeles Dodgers,NA,San Francisco Giants,NA
+Colorado Rockies,NA,San Diego Padres,NA
+Los Angeles Angels,NA,Seattle Mariners,NA
+Chicago Cubs,NA,Pittsburgh Pirates,NA
+Atlanta Braves,NA,Washington Nationals,NA
+Toronto Blue Jays,NA,Tampa Bay Rays,NA
+Baltimore Orioles,NA,Chicago White Sox,NA
+New York Yankees,NA,Minnesota Twins,NA
+Cincinnati Reds,NA,St. Louis Cardinals,NA
+Texas Rangers,NA,Houston Astros,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Philadelphia Phillies,NA,Los Angeles Dodgers,NA
+Atlanta Braves,NA,Washington Nationals,NA
+Atlanta Braves,NA,Washington Nationals,NA
+Cleveland Guardians,NA,Detroit Tigers,NA
+Chicago Cubs,NA,Pittsburgh Pirates,NA
+Athletics,NA,Boston Red Sox,NA
+San Diego Padres,NA,New York Mets,NA
+Toronto Blue Jays,NA,Tampa Bay Rays,NA
+Seattle Mariners,NA,Kansas City Royals,NA
+Baltimore Orioles,NA,Chicago White Sox,NA
+New York Yankees,NA,Minnesota Twins,NA
+Los Angeles Angels,NA,Milwaukee Brewers,NA
+Cincinnati Reds,NA,St. Louis Cardinals,NA
+Texas Rangers,NA,Houston Astros,NA
+Miami Marlins,NA,Colorado Rockies,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Philadelphia Phillies,NA,Los Angeles Dodgers,NA
+Chicago Cubs,NA,Pittsburgh Pirates,NA
+Cincinnati Reds,NA,St. Louis Cardinals,NA
+Baltimore Orioles,NA,Chicago White Sox,NA
+San Francisco Giants,NA,Arizona Diamondbacks,NA
+Atlanta Braves,NA,Washington Nationals,NA
+Cleveland Guardians,NA,Detroit Tigers,NA
+Athletics,NA,Boston Red Sox,NA
+Toronto Blue Jays,NA,Tampa Bay Rays,NA
+San Diego Padres,NA,New York Mets,NA
+Seattle Mariners,NA,Kansas City Royals,NA
+New York Yankees,NA,Minnesota Twins,NA
+Los Angeles Angels,NA,Milwaukee Brewers,NA
+Texas Rangers,NA,Houston Astros,NA
+Miami Marlins,NA,Colorado Rockies,NA
+Philadelphia Phillies,NA,Los Angeles Dodgers,NA
+Cleveland Guardians,NA,Detroit Tigers,NA
+San Diego Padres,NA,New York Mets,NA
+Toronto Blue Jays,NA,Tampa Bay Rays,NA
+Athletics,NA,Boston Red Sox,NA
+Seattle Mariners,NA,Kansas City Royals,NA
+Miami Marlins,NA,Colorado Rockies,NA
+Chicago Cubs,NA,Cincinnati Reds,NA
+New York Yankees,NA,Baltimore Orioles,NA
+Los Angeles Angels,NA,Milwaukee Brewers,NA
+San Francisco Giants,NA,Los Angeles Dodgers,NA
+Chicago Cubs,NA,Cincinnati Reds,NA
+Athletics,NA,Pittsburgh Pirates,NA
+Atlanta Braves,NA,Detroit Tigers,NA
+New York Yankees,NA,Baltimore Orioles,NA
+Washington Nationals,NA,New York Mets,NA
+Boston Red Sox,NA,Tampa Bay Rays,NA
+Toronto Blue Jays,NA,Kansas City Royals,NA
+San Diego Padres,NA,Chicago White Sox,NA
+Miami Marlins,NA,Texas Rangers,NA
+Los Angeles Angels,NA,Colorado Rockies,NA
+Seattle Mariners,NA,Houston Astros,NA
+Cleveland Guardians,NA,Minnesota Twins,NA
+Milwaukee Brewers,NA,St. Louis Cardinals,NA
+Philadelphia Phillies,NA,Arizona Diamondbacks,NA
+San Francisco Giants,NA,Los Angeles Dodgers,NA
+Atlanta Braves,NA,Detroit Tigers,NA
+Cleveland Guardians,NA,Minnesota Twins,NA
+Cleveland Guardians,NA,Minnesota Twins,NA
+Washington Nationals,NA,New York Mets,NA
+Chicago Cubs,NA,Cincinnati Reds,NA
+Athletics,NA,Pittsburgh Pirates,NA
+Boston Red Sox,NA,Tampa Bay Rays,NA
+Miami Marlins,NA,Texas Rangers,NA
+New York Yankees,NA,Baltimore Orioles,NA
+Seattle Mariners,NA,Houston Astros,NA
+Toronto Blue Jays,NA,Kansas City Royals,NA
+San Diego Padres,NA,Chicago White Sox,NA
+Milwaukee Brewers,NA,St. Louis Cardinals,NA
+Los Angeles Angels,NA,Colorado Rockies,NA
+Philadelphia Phillies,NA,Arizona Diamondbacks,NA
+San Francisco Giants,NA,Los Angeles Dodgers,NA
+Athletics,NA,Pittsburgh Pirates,NA
+New York Yankees,NA,Baltimore Orioles,NA
+Chicago Cubs,NA,Cincinnati Reds,NA
+Washington Nationals,NA,New York Mets,NA
+Atlanta Braves,NA,Detroit Tigers,NA
+Seattle Mariners,NA,Houston Astros,NA
+Toronto Blue Jays,NA,Kansas City Royals,NA
+Cleveland Guardians,NA,Minnesota Twins,NA
+San Diego Padres,NA,Chicago White Sox,NA
+Milwaukee Brewers,NA,St. Louis Cardinals,NA
+Miami Marlins,NA,Texas Rangers,NA
+Los Angeles Angels,NA,Colorado Rockies,NA
+San Francisco Giants,NA,Los Angeles Dodgers,NA
+Philadelphia Phillies,NA,Arizona Diamondbacks,NA
+Boston Red Sox,NA,Tampa Bay Rays,NA
+Washington Nationals,NA,Atlanta Braves,NA
+Milwaukee Brewers,NA,San Diego Padres,NA
+St. Louis Cardinals,NA,San Francisco Giants,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+Pittsburgh Pirates,NA,Cincinnati Reds,NA
+Miami Marlins,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,New York Yankees,NA
+Boston Red Sox,NA,Toronto Blue Jays,NA
+Washington Nationals,NA,Atlanta Braves,NA
+New York Mets,NA,Chicago Cubs,NA
+Minnesota Twins,NA,Texas Rangers,NA
+Kansas City Royals,NA,Los Angeles Angels,NA
+Los Angeles Dodgers,NA,Arizona Diamondbacks,NA
+Colorado Rockies,NA,Seattle Mariners,NA
+Milwaukee Brewers,NA,San Diego Padres,NA
+St. Louis Cardinals,NA,San Francisco Giants,NA
+Houston Astros,NA,Athletics,NA
+Washington Nationals,NA,Atlanta Braves,NA
+Milwaukee Brewers,NA,San Diego Padres,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+Pittsburgh Pirates,NA,Cincinnati Reds,NA
+Miami Marlins,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,New York Yankees,NA
+Boston Red Sox,NA,Toronto Blue Jays,NA
+New York Mets,NA,Chicago Cubs,NA
+Minnesota Twins,NA,Texas Rangers,NA
+Kansas City Royals,NA,Los Angeles Angels,NA
+Los Angeles Dodgers,NA,Arizona Diamondbacks,NA
+Colorado Rockies,NA,Seattle Mariners,NA
+St. Louis Cardinals,NA,San Francisco Giants,NA
+Houston Astros,NA,Athletics,NA
+Pittsburgh Pirates,NA,Cincinnati Reds,NA
+Tampa Bay Rays,NA,Baltimore Orioles,NA
+Minnesota Twins,NA,Texas Rangers,NA
+Houston Astros,NA,Athletics,NA
+Los Angeles Dodgers,NA,Arizona Diamondbacks,NA
+Miami Marlins,NA,Philadelphia Phillies,NA
+Detroit Tigers,NA,Cleveland Guardians,NA
+Chicago White Sox,NA,New York Yankees,NA
+Boston Red Sox,NA,Toronto Blue Jays,NA
+New York Mets,NA,Chicago Cubs,NA
+Kansas City Royals,NA,Los Angeles Angels,NA
+Colorado Rockies,NA,Seattle Mariners,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
+Minnesota Twins,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,Washington Nationals,NA
+Baltimore Orioles,NA,New York Yankees,NA
+Tampa Bay Rays,NA,Toronto Blue Jays,NA
+Detroit Tigers,NA,Boston Red Sox,NA
+Texas Rangers,NA,Cleveland Guardians,NA
+New York Mets,NA,Miami Marlins,NA
+Pittsburgh Pirates,NA,Atlanta Braves,NA
+Cincinnati Reds,NA,Milwaukee Brewers,NA
+Houston Astros,NA,Los Angeles Angels,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Los Angeles Dodgers,NA,Seattle Mariners,NA
+Kansas City Royals,NA,Athletics,NA
+Colorado Rockies,NA,San Francisco Giants,NA
+Baltimore Orioles,NA,New York Yankees,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
+Tampa Bay Rays,NA,Toronto Blue Jays,NA
+Colorado Rockies,NA,San Francisco Giants,NA
+Chicago White Sox,NA,Washington Nationals,NA
+Detroit Tigers,NA,Boston Red Sox,NA
+New York Mets,NA,Miami Marlins,NA
+Minnesota Twins,NA,Philadelphia Phillies,NA
+Texas Rangers,NA,Cleveland Guardians,NA
+Cincinnati Reds,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,Atlanta Braves,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Houston Astros,NA,Los Angeles Angels,NA
+Los Angeles Dodgers,NA,Seattle Mariners,NA
+Kansas City Royals,NA,Athletics,NA
+Detroit Tigers,NA,Boston Red Sox,NA
+Kansas City Royals,NA,Athletics,NA
+Colorado Rockies,NA,San Francisco Giants,NA
+Minnesota Twins,NA,Philadelphia Phillies,NA
+Chicago White Sox,NA,Washington Nationals,NA
+Baltimore Orioles,NA,New York Yankees,NA
+Houston Astros,NA,Los Angeles Angels,NA
+Tampa Bay Rays,NA,Toronto Blue Jays,NA
+Arizona Diamondbacks,NA,San Diego Padres,NA
+Los Angeles Dodgers,NA,Seattle Mariners,NA
+Texas Rangers,NA,Cleveland Guardians,NA
+New York Mets,NA,Miami Marlins,NA
+Cincinnati Reds,NA,Milwaukee Brewers,NA
+Pittsburgh Pirates,NA,Atlanta Braves,NA
+St. Louis Cardinals,NA,Chicago Cubs,NA
