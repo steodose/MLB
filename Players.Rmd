@@ -57,8 +57,8 @@ mlb_teamcolors <- read_csv('mlb_teamcolors.csv') %>%
 today <- Sys.Date()-1
 
 # load Fangraohs pitching and batting leaders data
-fg_pitcher_leaders <- baseballr::fg_pitcher_leaders(startseason = 2025, endseason = 2025)
-fg_batter_leaders <- baseballr::fg_batter_leaders(startseason = 2025, endseason = 2025)
+fg_pitcher_leaders <- baseballr::fg_pitcher_leaders(startseason = 2026, endseason = 2026)
+fg_batter_leaders <- baseballr::fg_batter_leaders(startseason = 2026, endseason = 2026)
 
 ```
 
@@ -204,7 +204,7 @@ players <- c("Shohei Ohtani" = 19755,
 safe_fg_logs <- function(player_name, player_id) {
     message("Pulling logs for: ", player_name)
     tryCatch({
-        logs <- fg_batter_game_logs(playerid = player_id, year = 2025)
+        logs <- fg_batter_game_logs(playerid = player_id, year = 2026)
         logs %>%
             mutate(Player = player_name,
                    GameNumber = row_number(),
@@ -254,7 +254,7 @@ hr_data2 %>%
     scale_color_identity() +  # Use actual hex codes in `primary` column
     theme_custom() +
     labs(
-        title = '2025 Home Run Title Chase',
+        title = '2026 Home Run Title Chase',
         subtitle = "Cumulative HRs by game played. Labels show current leader positions.",
         x = "Games Played",
         y = "Total HRs",

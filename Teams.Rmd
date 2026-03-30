@@ -142,7 +142,7 @@ mlb_standings2 %>%
          y = "Runs Allowed/Game",
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
          title = glue("MLB Scoring Performance"),
-        subtitle = glue("2025 season, data thru {today}.")) +
+        subtitle = glue("2026 season, data thru {today}.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
@@ -164,10 +164,10 @@ Evolution of each team's run differential this season.
 
 ```{r, Run Differential, echo = FALSE}
 
-## 2. ---------- Run Differential Evolution Plot (WIP) ----------------------
+## 2. ---------- Run Differential Evolution Plot ----------------------
 
 # load MLB schedule
-games <- baseballr::mlb_schedule(season = "2025") %>%
+games <- baseballr::mlb_schedule(season = "2026") %>%
     filter(game_type == 'R')
 
 # Process data frame to get one row per team-game (long format)
@@ -219,7 +219,7 @@ team_games2 %>%
     geom_image(data = endpoints, aes(x = game_count, y = rd_running, image = team_logo_espn), 
              size = 0.05, inherit.aes = FALSE) +
     labs(x = "", y = "Run Differential",
-         title = "2025 MLB Run Differential",
+         title = "2026 MLB Run Differential",
          subtitle = glue("Daily cumulative run differential totals. Data thru {today} games."),
          caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
          color = "") +
@@ -314,12 +314,12 @@ fg_totals %>%
 ***
 ### Performance vs Expectations
 
-The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2025.
+The below shows current win totals -- expressed in win totals -- compared to pre-season win total expectations, according to FanGraphs. Expected win total data was pulled during Spring Training in early March 2026.
 
 ```{r Expectations, echo = FALSE}
 
 # load preseason win totals from Fangraphs
-projections <- read_csv("conensus_projections_2025.csv")
+projections <- read_csv("fg_projections_2026.csv")
 
 projections <- projections %>% 
     left_join(mlb_teamcolors %>% 
@@ -364,7 +364,7 @@ expectations %>%
        y = "Win % over Expected", 
        caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API/Neil Paine/Clay Davenport | Plot: @steodosescu",
        title = glue("Performance Relative to Expecations"),
-       subtitle = glue("Actual win % vs. preseason model and odds predictions. Estimated totals pulled from various source systems March 26, 2025.")) +
+       subtitle = glue("Actual win % vs. preseason model and odds predictions. Estimated totals pulled from various source systems March 26, 2026.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
@@ -386,7 +386,7 @@ expectations %>%
 ```{r Attendance Leader, echo = FALSE}
 
 # load attendance data
-attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2025)
+attendance <- baseballr::mlb_attendance(league_list_id = 'mlb', season = 2026)
 
 # Get the team with the highest average attendance
 attendance_leader <- attendance %>%
@@ -398,7 +398,7 @@ attendance_leader <- attendance %>%
 
 ```
 
-2025 Attendance totals. `r attendance_leader$leader_line`
+2026 Attendance totals. `r attendance_leader$leader_line`
 
 ```{r Attendance, echo = FALSE}
 
@@ -438,7 +438,7 @@ attendance %>%
        y = "Average Home Attendance", 
        caption = "Data: baseballR (Bill Petti) | Plot: @steodosescu",
        title = glue("Take me out to the Ballgame"),
-       subtitle = glue("Average home attendance totals in 2025. Thru **{today}.**")) +
+       subtitle = glue("Average home attendance totals in 2026. Thru **{today}.**")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
