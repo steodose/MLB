@@ -361,7 +361,7 @@ expectations %>%
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank()) + 
   labs(x = "", 
-       y = "Win % over Expected", 
+       y = "Win % above Expected", 
        caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API/Neil Paine/Clay Davenport | Plot: @steodosescu",
        title = glue("Performance Relative to Expecations"),
        subtitle = glue("Actual win % vs. preseason model and odds predictions. Estimated totals pulled from various source systems March 26, 2026.")) +
