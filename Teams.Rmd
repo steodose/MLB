@@ -352,19 +352,19 @@ expectations %>%
     asp = asp_ratio
   ) +
   geom_hline(yintercept = 0, color = "black", size = 1) +
-  scale_y_continuous(
-      labels = scales::percent_format(),
-      #breaks = scales::pretty_breaks(n = 10)
-      ) +
+   scale_y_continuous(
+    labels = function(x) gsub("^0", "", sprintf("%.3f", x)),
+    breaks = scales::pretty_breaks(n = 10)
+    ) +
   theme_custom() + 
   theme(axis.text.x = element_blank(), 
         panel.grid.major.x = element_blank(),
         panel.grid.major.y = element_blank()) + 
   labs(x = "", 
        y = "Win % above Expected", 
-       caption = "Data: baseballR (Bill Petti/FanGraphs/Odds API/Neil Paine/Clay Davenport | Plot: @steodosescu",
+       caption = "Data: FanGraphs | Plot: @steodosescu",
        title = glue("Performance Relative to Expecations"),
-       subtitle = glue("Actual win % vs. preseason model and odds predictions. Estimated totals pulled from various source systems March 26, 2026.")) +
+       subtitle = glue("Actual win % vs. preseason model predictions. Estimated totals pulled from source systems March 26, 2026.")) +
   theme(plot.title.position = "plot",
         plot.title = element_text(face = "bold", 
                                   size = 20, 
