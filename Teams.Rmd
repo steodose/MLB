@@ -253,9 +253,9 @@ Comparison of team-level pitching (ERA) and hitting (OPS)
 ```{r ERA vs OPS, echo = FALSE}
 
 # load Fangraphs stat categories
-fg_team_batter <- fg_team_batter(startseason = 2025, endseason = 2025, qual = 400)
-fg_team_pitcher <- fg_team_pitcher(startseason = 2025, endseason = 2025)
-fg_team_fielder <- fg_team_fielder(startseason = 2025, endseason = 2025, qual = 400)
+fg_team_batter <- fg_team_batter(startseason = 2026, endseason = 2026, qual = 400)
+fg_team_pitcher <- fg_team_pitcher(startseason = 2026, endseason = 2026)
+fg_team_fielder <- fg_team_fielder(startseason = 2026, endseason = 2026, qual = 400)
 
 fg_team_batter <- fg_team_batter %>% 
     select(team_name, OBP, OPS, WAR, wOBA, wRC, XBR) %>% 
