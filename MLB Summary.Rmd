@@ -22,7 +22,6 @@ Below you'll find figures showing the current MLB standings and key advanced met
 library(baseballr)
 library(tidyverse)
 library(teamcolors) # NFL team colors and logos
-library(oddsapiR)
 library(extrafont) # for extra fonts
 # library(ggrepel) # better labels
 library(ggimage)
