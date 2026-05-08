@@ -2,3 +2,13 @@
 .Rhistory
 .RData
 .Ruserdata
+
+DS_Store
+
+.Rproj.user/
+
+site_libs/
+
+*_files/
+
+*.html
