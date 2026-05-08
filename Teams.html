@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Teams</title>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><div><img src="mlb-logo.png" width="24px"></img> MLB Analytics</div></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="MLB-Summary.html">Summary</a>
+</li>
+<li>
+  <a href="Teams.html">Teams</a>
+</li>
+<li>
+  <a href="Players.html">Players</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://stephanteodosescu.com/">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/steodosescu">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/steodose/MLB">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://betweenthepipes.substack.com/">
+    <span class="fa fa-wordpress fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Teams</h1>
+<h4 class="date">Last updated: 2026-05-07</h4>
+
+</div>
+
+
+<p>Below you’ll find figures showing the latest traditional and advanced
+metrics I’m tracking for all 30 MLB teams.</p>
+<div id="pythagorean-wins" class="section level3">
+<h3>Pythagorean Wins</h3>
+<p>The below shows each team’s actual win percentage vs their
+pythagoroean win percentage. Pythagorean winning percentage is a formula
+developed by renowned statistician Bill James. The concept strives to
+determine the number of games that a team <em>should</em> have won –
+based on its total number of runs scored versus its number of runs
+allowed. It can help identify teams that have either overachieved or
+underachieved, and better predict a team’s future performance.</p>
+<p><img src="Teams_files/figure-html/Pythagorean%20Wins-1.png" width="960" /></p>
+<hr />
+</div>
+<div id="mlb-team-performance" class="section level3">
+<h3>MLB Team Performance</h3>
+<p><img src="Teams_files/figure-html/RS%20vs%20RA-1.png" width="960" /></p>
+</div>
+<div id="run-differential-evolution" class="section level3">
+<h3>Run Differential Evolution</h3>
+<p>Evolution of each team’s run differential this season.</p>
+<p><img src="Teams_files/figure-html/Run%20Differential-1.png" width="960" /></p>
+<hr />
+</div>
+<div id="team-era-vs-team-ops" class="section level3">
+<h3>Team ERA vs Team OPS</h3>
+<p>Comparison of team-level pitching (ERA) and hitting (OPS)</p>
+<p><img src="Teams_files/figure-html/ERA%20vs%20OPS-1.png" width="960" /></p>
+<hr />
+</div>
+<div id="performance-vs-expectations" class="section level3">
+<h3>Performance vs Expectations</h3>
+<p>The below shows current win totals – expressed in win totals –
+compared to pre-season win total expectations, according to FanGraphs.
+Expected win total data was pulled during Spring Training in early March
+2026.</p>
+<p><img src="Teams_files/figure-html/Expectations-1.png" width="960" /></p>
+<hr />
+</div>
+<div id="attendance-profiles" class="section level3">
+<h3>Attendance Profiles</h3>
+<p>2026 Attendance totals. The <strong>Los Angeles Dodgers</strong> lead
+the league in attendance, averaging <strong>51,623</strong> fans per
+game.</p>
+<p><img src="Teams_files/figure-html/Attendance-1.png" width="960" /></p>
+<hr />
+</div>
+<div id="team-ranks" class="section level3">
+<h3>Team Ranks</h3>
+<p>League rankings among several popular advanced stats metrics.</p>
+<div id="sampoaqkya" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sampoaqkya table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sampoaqkya thead, #sampoaqkya tbody, #sampoaqkya tfoot, #sampoaqkya tr, #sampoaqkya td, #sampoaqkya th {
+  border-style: none;
+}
+
+#sampoaqkya p {
+  margin: 0;
+  padding: 0;
+}
+
+#sampoaqkya .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sampoaqkya .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sampoaqkya .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sampoaqkya .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sampoaqkya .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sampoaqkya .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sampoaqkya .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sampoaqkya .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #000000;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sampoaqkya .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sampoaqkya .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sampoaqkya .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sampoaqkya .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sampoaqkya .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sampoaqkya .gt_row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sampoaqkya .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sampoaqkya .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sampoaqkya .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sampoaqkya .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sampoaqkya .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sampoaqkya .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sampoaqkya .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sampoaqkya .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sampoaqkya .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sampoaqkya .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sampoaqkya .gt_sourcenote {
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sampoaqkya .gt_left {
+  text-align: left;
+}
+
+#sampoaqkya .gt_center {
+  text-align: center;
+}
+
+#sampoaqkya .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sampoaqkya .gt_font_normal {
+  font-weight: normal;
+}
+
+#sampoaqkya .gt_font_bold {
+  font-weight: bold;
+}
+
+#sampoaqkya .gt_font_italic {
+  font-style: italic;
+}
+
+#sampoaqkya .gt_super {
+  font-size: 65%;
+}
+
+#sampoaqkya .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sampoaqkya .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sampoaqkya .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sampoaqkya .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sampoaqkya .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sampoaqkya .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sampoaqkya .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#sampoaqkya .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#sampoaqkya div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="13" class="gt_heading gt_title gt_font_normal" style><span class='gt_from_md'><strong>MLB Team Ranks</strong></span></td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="13" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>League rankings (1-30) across several advanced statistical categories sourced from MLB, Fangraphs, and Statcast data. Sorted by overall team WAR (Fangraphs). Data thru games as of 2026-05-06.</td>
+    </tr>
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="font-weight: bold;" scope="col" id="rank"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="font-weight: bold;" scope="col" id="team_logo_espn"></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="2" colspan="1" style="font-weight: bold;" scope="col" id="team_name">Team</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="5" scope="colgroup" id="Batting/Baserunning">
+        <div class="gt_column_spanner">Batting/Baserunning</div>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="Fielding">
+        <div class="gt_column_spanner">Fielding</div>
+      </th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3" scope="colgroup" id="Pitching">
+        <div class="gt_column_spanner">Pitching</div>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="OBP_rank">OBP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="OPS_rank">OPS</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="wOBA_rank">wOBA</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="wRC_rank">wRC</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="XBR_rank">XBR</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="FP_rank">FP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="DRS_rank">DRS</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="ERA_rank">ERA</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="WHIP_rank">WHIP</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="AVG_rank">AVG</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="rank" class="gt_row gt_left">1</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">LAD</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">2</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">2</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">1</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">1</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">2</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYY.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYY</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">1</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">2</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">5</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">3</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CHC</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">21</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">4</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">9</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">3</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">4</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ATL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ATL</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">15</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">3</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">5</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">2</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">5</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PIT.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PIT</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">14</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">8</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">3</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">6</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SEA.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SEA</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">19</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">21</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">6</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">8</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">22</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">7</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SD.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SDP</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">16</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">16</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">11</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">14</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">8</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TOR.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">TOR</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">25</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">18</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">17</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">16</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">19</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">9</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">MIL</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">17</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">21</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">5</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">8</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">10</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIA.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">MIA</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">27</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">15</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">9</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">6</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">11</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/DET.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">DET</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">24</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">17</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">17</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">12</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TB.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">TBR</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">4</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">4</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">4</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">13</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/PHI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">PHI</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">19</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">30</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">20</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">26</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">30</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">14</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/HOU.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">HOU</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">13</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">4</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">20</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">30</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">30</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">28</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">15</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/MIN.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">MIN</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">17</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">13</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">29</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">25</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">21</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">23</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">16</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CHW.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CHW</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">17</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">24</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">18</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">20</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">15</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">17</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CLE.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CLE</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">19</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">23</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">12</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">13</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">18</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/KC.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">KCR</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">16</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">19</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">3</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">19</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">18</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">13</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">19</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/TEX.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">TEX</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">10</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">7</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFE598; color: #000000;">6</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">9</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">20</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/LAA.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">LAA</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">18</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">22</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">23</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">16</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">21</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BOS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">BOS</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">21</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">28</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF6F00; color: #FFFFFF;">1</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">1</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">14</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFC720; color: #000000;">15</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">18</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">22</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/STL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">STL</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">7</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">5</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">23</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">25</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">26</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">23</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/BAL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">BAL</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">18</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">13</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFBD05; color: #000000;">13</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">26</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">29</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">28</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">29</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">24</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/NYM.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">NYM</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">19</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">5</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">11</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">12</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">11</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">25</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/OAK.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ATH</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFDE7A; color: #000000;">23</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">2</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">28</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">24</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">27</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">25</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">26</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/ARI.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">ARI</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">14</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFEDB6; color: #000000;">27</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFD44C; color: #000000;">20</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">13</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF8300; color: #000000;">28</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">19</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">21</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">27</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/CIN.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">CIN</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFE9A7; color: #000000;">26</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFE289; color: #000000;">24</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFA300; color: #000000;">8</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">20</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">21</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF7900; color: #FFFFFF;">29</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">24</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">28</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/COL.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">COL</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFC416; color: #000000;">15</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FF9800; color: #000000;">6</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">9</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">17</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFDB6A; color: #000000;">22</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFC109; color: #000000;">17</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">26</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">22</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">27</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">29</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/WAS.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">WSN</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">17</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">11</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFB903; color: #000000;">12</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFAF00; color: #000000;">10</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FF9300; color: #000000;">5</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFA900; color: #000000;">22</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FF8D00; color: #000000;">27</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FF9E00; color: #000000;">24</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFB401; color: #000000;">20</td></tr>
+    <tr><td headers="rank" class="gt_row gt_left">30</td>
+<td headers="team_logo_espn" class="gt_row gt_left"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/SF.png" style="height:30px;"></td>
+<td headers="team_name" class="gt_row gt_left">SFG</td>
+<td headers="OBP_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="OPS_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="wOBA_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="wRC_rank" class="gt_row gt_right" style="background-color: #FFF8E1; color: #000000;">30</td>
+<td headers="XBR_rank" class="gt_row gt_right" style="background-color: #FFF4D3; color: #000000;">29</td>
+<td headers="FP_rank" class="gt_row gt_right" style="background-color: #FFD75A; color: #000000;">21</td>
+<td headers="DRS_rank" class="gt_row gt_right" style="background-color: #FFF1C4; color: #000000;">3</td>
+<td headers="ERA_rank" class="gt_row gt_right" style="background-color: #FFCD35; color: #000000;">13</td>
+<td headers="WHIP_rank" class="gt_row gt_right" style="background-color: #FFCA27; color: #000000;">14</td>
+<td headers="AVG_rank" class="gt_row gt_right" style="background-color: #FFD041; color: #000000;">12</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="13"><span class='gt_from_md'>DATA: baseballR (Bill Petti)<br>TABLE: @steodosescu</span></td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
