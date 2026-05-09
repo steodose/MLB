@@ -60,6 +60,9 @@ jobs:
         if: steps.gate.outputs.proceed == 'true'
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          # Skip auto-scanning the repo — old .R/.qmd files reference
+          # packages (ggchicklet, ggalt) we don't need for the site render.
+          packages: any::sessioninfo
           extra-packages: |
             any::rmarkdown
             any::tidyverse
@@ -75,10 +78,10 @@ jobs:
             any::prismatic
             any::extrafont
             any::reactable
-            any::reactablefmtr
             any::gt
             any::gtExtras
             any::baseballr
+            github::kcuilla/reactablefmtr
             github::beanumber/teamcolors
 
       - name: Render site
