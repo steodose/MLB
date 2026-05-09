@@ -81,6 +81,7 @@ jobs:
             any::gt
             any::gtExtras
             any::baseballr
+            github::timelyportfolio/dataui
             github::kcuilla/reactablefmtr
             github::beanumber/teamcolors
 
