@@ -2,10 +2,9 @@ name: Render and Deploy MLB Website
 
 on:
   schedule:
-    # 8 AM Pacific year-round: 15:00 UTC during PDT, 16:00 UTC during PST.
-    # The "Pacific-hour gate" step below ensures only one of the two actually proceeds.
+    # One run a day at 15:00 UTC.
+    # That's 8 AM PDT (Mar–Nov) and 7 AM PST (Nov–Mar). DST drift is acceptable.
     - cron: '0 15 * * *'
-    - cron: '0 16 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,38 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Pacific-hour gate
-        id: gate
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "Manual run — proceeding."
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          hour=$(TZ=America/Los_Angeles date +%H)
-          echo "Pacific local hour: $hour"
-          if [ "$hour" = "08" ]; then
-            echo "proceed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "proceed=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Checkout repo
-        if: steps.gate.outputs.proceed == 'true'
         uses: actions/checkout@v4
 
       - name: Set up R
-        if: steps.gate.outputs.proceed == 'true'
         uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
 
       - name: Set up Pandoc
-        if: steps.gate.outputs.proceed == 'true'
         uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install system dependencies
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -57,7 +36,6 @@ jobs:
             libmagick++-dev
 
       - name: Install R dependencies
-        if: steps.gate.outputs.proceed == 'true'
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           # Skip auto-scanning the repo — old .R/.qmd files reference
@@ -86,32 +64,60 @@ jobs:
             github::beanumber/teamcolors
 
       - name: Render site
-        if: steps.gate.outputs.proceed == 'true'
         run: Rscript -e 'rmarkdown::render_site()'
 
       - name: Rename MLB Summary output
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           if [ -f "MLB Summary.html" ]; then
             mv "MLB Summary.html" "MLB-Summary.html"
           fi
 
       - name: Update README Last Updated date
-        if: steps.gate.outputs.proceed == 'true'
         run: |
           sed -i "s|Last Updated:.*|Last Updated: $(TZ=America/Los_Angeles date +'%B %d, %Y')|" README.md
 
-      - name: Commit & push changes
-        if: steps.gate.outputs.proceed == 'true'
+      - name: Show working tree after render (debug)
+        run: |
+          echo "=== ls of root HTML + _files dirs ==="
+          ls -la *.html 2>/dev/null || echo "(no html at root)"
+          for d in *_files; do
+            [ -d "$d" ] && echo "--- $d ---" && ls -la "$d"
+          done
+          echo "=== git status before staging ==="
+          git status --short
+
+      - name: Stage site outputs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add -- '*.html' '*_files' README.md 2>/dev/null || true
+          # Add HTML files explicitly (one per page, plus the renamed Summary).
+          for f in index.html about.html MLB-Summary.html Teams.html Players.html; do
+            if [ -f "$f" ]; then
+              git add -- "$f"
+              echo "staged: $f"
+            else
+              echo "missing: $f"
+            fi
+          done
+          # Add each _files asset directory explicitly (handles spaces in names).
+          for d in *_files; do
+            if [ -d "$d" ]; then
+              git add -- "$d"
+              echo "staged dir: $d"
+            fi
+          done
+          # README has the auto-updated "Last Updated" line.
+          git add -- README.md
+          echo "=== git status after staging ==="
+          git status --short
+
+      - name: Commit & push
+        run: |
           if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Automated site update: $(TZ=America/Los_Angeles date +'%Y-%m-%d')"
-            git push origin main
+            echo "No staged changes — nothing to commit."
+            exit 0
           fi
+          git commit -m "Automated site update: $(TZ=America/Los_Angeles date +'%Y-%m-%d')"
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -13,7 +13,7 @@ navbar:
       href: about.html
   right:
     - icon: fa-home fa-lg
-      href: https://stephanteodosescu.com/      
+      href: https://stephanteodosescu.com/
     - icon: fa-twitter fa-lg
       href: https://twitter.com/steodosescu
     - icon: fa-github fa-lg
@@ -24,3 +24,5 @@ output:
   html_document:
     theme: cosmo
     logo: mlb-logo.png
+    includes:
+      after_body: _footer.html
