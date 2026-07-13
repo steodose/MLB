@@ -4,3 +4,7 @@
 .Ruserdata
 
 .DS_Store
+
+# Large raw data dumps — kept out of the repo to avoid history bloat.
+mlb_elo.csv
+GL*.TXT
