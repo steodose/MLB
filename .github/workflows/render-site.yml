@@ -66,12 +66,6 @@ jobs:
       - name: Render site
         run: Rscript -e 'rmarkdown::render_site()'
 
-      - name: Rename MLB Summary output
-        run: |
-          if [ -f "MLB Summary.html" ]; then
-            mv "MLB Summary.html" "MLB-Summary.html"
-          fi
-
       - name: Update README Last Updated date
         run: |
           sed -i "s|Last Updated:.*|Last Updated: $(TZ=America/Los_Angeles date +'%B %d, %Y')|" README.md
